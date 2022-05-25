@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina Ponces Estilista - Espacio de peluquería</title>
-
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
+
     <header>
         <nav>   
                 
@@ -49,58 +48,57 @@
     
     </header>
 
-    <div class="grid-area">
+    <div class="contactLayout">
+        <section class="contacto"> 
 
-        <div class="contenedorVideo">
-            <video id="videoIntro" loop="true" muted autoplay>                            
-            <source src="./videos/animacion-home.mp4" type="video/mp4" > </video>
-        </div>
+            <h1 class="titlesMainSection"> Contacto </h1>
+            <p> Podes contactarte con nosotros por cualquier medio de los que se encuentran listados abajo. También podes enviarnos una consulta sobre un trabajo que quieras realizarte y una foto de tu pelo actual para que podamos asesortarte y sacarte todas las dudas que tengas. </p>
+
+                <ul>
+                    <li><img src="./imagenes/email.png" alt="email" height="30" width="30"> <span>contacto@rpestilista.com</span> </li>
+                    <li><img src="./imagenes/phone.png" alt="phone-number" height="30" width="30"> <span>+5492645416166</span></li>
+                    <li><img src="./imagenes/location.png" alt="location" height="30" width="30"> <span>Lucia Gentil 79 Sur Bº Rocío de Lujan, San Martin, San Juan</span> </li>
+                </ul>
+
+            <div> <!-- Mapa con localización del local -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.3018710251072!2d-68.35529617078335!3d-31.518460855581605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5082f49ba64e638!2zMzHCsDMxJzA2LjUiUyA2OMKwMjEnMTcuMSJX!5e0!3m2!1sen!2sar!4v1651417615861!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">    
+                </iframe>
+            </div>
     
-        <!-- Primera sección -->
-
-        <div class="qsText">
-                <h2 class="titlesMainSection">Quienes somos</h2>
-                <p>Romina Ponces es un espacio de peluquería y estilista con amplia experencia, trayectoria y pasión por la búsqueda de la belleza, la profesionalidad y la satisfacción de nuestros clientes. Nuestra misión es obtener la imagen deseada por nuestros clientes, fortaleciendo su autoestima y logrando autoafirmación. Abogamos por una percepción disruptiva de la realidad estética, donde múltiples percepciones de belleza conviven entre sí. Sabemos que detrás de cada cliente hay una persona con gustos e intereses muy diversos y nuestra pretensión es saber qué imagen quiere proyectar y ayudarle con nuestra experiencia y profesionalidad a sentirse identificado con un color, un corte o un peinado que potencie sus rasgos y complemente su personalidad.  </p>
-        </div>
-        <span class="qsImg">
-                <img src="./imagenes/quienes-somos.png" alt="QuienesSomos" height="400" width="600">
-        </span>
-
-        <!-- Segunda sección -->
-
-        <span class="salonImg">
-            <img src="./imagenes/salon.jpg" alt="QuienesSomos" height="400" width="600">
-        </span>
-        <div class="salonText">
-            <h2 class="titlesMainSection">Nuestro salón</h2>
-            <div>
-                <p>Nos gusta definir nuestro espacio como una “peluquería boutique”. Hemos logrado crear un espacio de relax, acogedor y tranquilo que responde a nuestra forma de trabajar y a nuestra concepción de cómo debe ser la relación entre el profesional y las personas que acuden a mejorar su imagen. </p>
-                <p>Queremos que nuestros clientes sientan que cuando vienen a nuestra peluquería están dedicándose un tiempo para ellos mismos, para cuidarse, para entablar conversación y sentirse escuchados. Y, sobre todo, para ser asesorados de forma profesional.</p>
-                <p>Todo en nuestro salón está diseñado con un mismo objetivo: la comodidad del cliente. La luz, los espejos, la música, los sillones, cada objeto ha sido seleccionado con cariño y dedicación y el resultado responde a nuestra búsqueda de la calidad y el trabajo bien realizado.</p>
-            </div>
-        </div>
-
-        <!-- Tercera sección -->
-
-        <section class="mosaico">
-            <h2 class="titlesMainSection servTitle">Servicios</h2>
+        </section>
     
-            <div class="mosaico__img">
-                <div class="asesoramientoImg"><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" height="400" width="450"></div>
-                <div class="lavadoImg"><img src="./imagenes/lavado.png" alt="Lavado" height="400" width="450"> </div>
-                <div class="peinadosImg"><img src="./imagenes/peinados.png" alt="Peinados" height="400" width="450"></div>
-            </div>
-        
-            <div class="mosaico__img">
-                <div class="cortesImg"><img src="./imagenes/cortes.png" alt="Cortes" height="400" width="450"></div>
-                <div class="coloracionImg"><img src="./imagenes/coloracion.png" alt="Coloracion" height="400" width="450"></div>
-                <div class="tratamientosImg"><img src="./imagenes/tratamientos.png" alt="Tratamientos" height="400" width="450"></div>
-            </div>
+        <section class="consulta">
+
+            <form action="turnos.php" method="get" enctype="text/plain">
+
+                <h3>Dejanos tu consulta</h3>
+    
+                <p>Nombre</p>
+                <input type="text" id="nombre" name="nombre" required class="footer__menuOptions--text">
+                        
+                <p>Apellido</p>
+                <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text">  
+    
+                <p>Telefono</p>
+                <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text">  
+    
+                <p>Email</p>
+                <input type="email" id="email" name="email" class="footer__menuOptions--text">  
+    
+                <p>Consulta</p>
+                <textarea name="consulta" id="consulta" cols="50" rows="10" placeholder="Escriba aquí su consulta" required 
+                class="footer__menuOptions--text"></textarea>  
+                        
+                <p>Adjuntar archivo</p>
+                <input type="file" id="adjunto" name="adjunto">
+                
+                <div><input type="submit" value="Enviar" class="footer__menuOptions--button"></div>
+                    
+            </form>
+    
         </section>
     </div>
-
-        <!-- Footer -->
-
+    
     <footer>
         <section class="footer__mainSection">
             <div class="footer__menuOptions footer__menuOptions--horarios" >
@@ -155,8 +153,9 @@
         <section class="endPage">
             <p class="final-desc">Copyright - 2022 RP Espacio de peluquería | Todos los derechos reservados | Desarrollado por Dario Quinteros</p>
         </section>
-    </footer>
+    </footer> 
+
+    
 
 </body>
-
 </html>
