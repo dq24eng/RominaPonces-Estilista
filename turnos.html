@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina Ponces Estilista - Espacio de peluquería</title>
-
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
+
     <header>
         <nav>   
                 
@@ -49,57 +48,110 @@
     
     </header>
 
-    <div class="grid-area">
+    <!-- <p>El cambio de look que buscas está a un solo paso! Completa los datos del formulario y reservá un turno con nosotros:  </p> -->
 
-        <div class="contenedorVideo">
-            <video id="videoIntro" loop="true" muted autoplay>                            
-            <source src="./videos/animacion-home.mp4" type="video/mp4" > </video>
-        </div>
-    
-        <!-- Primera sección -->
+    <section class="Turnos">
 
-        <div class="qsText">
-                <h2 class="titlesMainSection">Quienes somos</h2>
-                <p>Romina Ponces es un espacio de peluquería y estilista con amplia experencia, trayectoria y pasión por la búsqueda de la belleza, la profesionalidad y la satisfacción de nuestros clientes. Nuestra misión es obtener la imagen deseada por nuestros clientes, fortaleciendo su autoestima y logrando autoafirmación. Abogamos por una percepción disruptiva de la realidad estética, donde múltiples percepciones de belleza conviven entre sí. Sabemos que detrás de cada cliente hay una persona con gustos e intereses muy diversos y nuestra pretensión es saber qué imagen quiere proyectar y ayudarle con nuestra experiencia y profesionalidad a sentirse identificado con un color, un corte o un peinado que potencie sus rasgos y complemente su personalidad.  </p>
-        </div>
-        <span class="qsImg">
-                <img src="./imagenes/quienes-somos.png" alt="QuienesSomos" height="400" width="600">
-        </span>
+        <section class="reserva">
 
-        <!-- Segunda sección -->
+            <h1 class="titlesMainSection"> Reserva de turnos </h1>
 
-        <span class="salonImg">
-            <img src="./imagenes/salon.jpg" alt="QuienesSomos" height="400" width="600">
-        </span>
-        <div class="salonText">
-            <h2 class="titlesMainSection">Nuestro salón</h2>
-            <div>
-                <p>Nos gusta definir nuestro espacio como una “peluquería boutique”. Hemos logrado crear un espacio de relax, acogedor y tranquilo que responde a nuestra forma de trabajar y a nuestra concepción de cómo debe ser la relación entre el profesional y las personas que acuden a mejorar su imagen. </p>
-                <p>Queremos que nuestros clientes sientan que cuando vienen a nuestra peluquería están dedicándose un tiempo para ellos mismos, para cuidarse, para entablar conversación y sentirse escuchados. Y, sobre todo, para ser asesorados de forma profesional.</p>
-                <p>Todo en nuestro salón está diseñado con un mismo objetivo: la comodidad del cliente. La luz, los espejos, la música, los sillones, cada objeto ha sido seleccionado con cariño y dedicación y el resultado responde a nuestra búsqueda de la calidad y el trabajo bien realizado.</p>
-            </div>
-        </div>
+            <form action="turnos.php" method="get" enctype="text/plain" class="formularioLayout">
+                
+                <!-- <label for="nya">Nombre y Apellido: </label> -->
+                <p>Nombre:</p>
+                <input type="text" id="nya" name="nya" required class="footer__menuOptions--text">  
 
-        <!-- Tercera sección -->
+                <!-- <label for="telefono">Telefono: </label> -->
+                <p>Apellido:</p>
+                <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text">  
 
-        <section class="mosaico">
-            <h2 class="titlesMainSection servTitle">Servicios</h2>
-    
-            <div class="mosaico__img">
-                <div class="asesoramientoImg"><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" height="400" width="450"></div>
-                <div class="lavadoImg"><img src="./imagenes/lavado.png" alt="Lavado" height="400" width="450"> </div>
-                <div class="peinadosImg"><img src="./imagenes/peinados.png" alt="Peinados" height="400" width="450"></div>
-            </div>
-        
-            <div class="mosaico__img">
-                <div class="cortesImg"><img src="./imagenes/cortes.png" alt="Cortes" height="400" width="450"></div>
-                <div class="coloracionImg"><img src="./imagenes/coloracion.png" alt="Coloracion" height="400" width="450"></div>
-                <div class="tratamientosImg"><img src="./imagenes/tratamientos.png" alt="Tratamientos" height="400" width="450"></div>
-            </div>
+                <!-- <label for="telefono">Telefono: </label> -->
+                <p>Teléfono:</p>
+                <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text">  
+
+                <!-- <label for="servicio">Servicio: </label> -->
+                <p>Servicio:</p>
+                <!-- Al seleccionar una opción, debiera aparecer un pequeño texto debajo aclarando costo y duración aproximada del servicio -->
+                <select id="servicio" class="footer__menuOptions--text"> 
+                    <option value="">Asesoramiento</option>
+                    <option value="">Lavado</option>
+                    <option value="">Peinados</option>
+                    <option value="">Corte</option>
+                    <option value="">Coloracion</option>
+                    <option value="">Tratamientos</option>
+                </select>
+
+                <!-- Al seleccionar una fecha en el calendario, el menú desplegable se adapta a la misma y las opciones se muestran de la siguiente forma: FECHA SELECCIONADA + HORARIO (Variable según el día de la semana que fue seleccionado) -->
+                <div>
+                    <p>Seleccioná un horario y una fecha en el calendario:</p>
+                </div>
+
+                <select name="horario" id="horario" class="footer__menuOptions--text" required> 
+                        <option value="" disabled selected>Seleccione una fecha...</option>
+                        <option value="">Sab 28/05 - 10:00 am</option>
+                        <option value="">Sab 28/05 - 11:00 am</option>
+                        <option value="">Sab 28/05 - 12:00 am</option>
+                        <option value="">Sab 28/05 - 13:00 am</option>
+                        <option value="">Sab 28/05 - 14:00 am</option>
+                        <option value="">Sab 28/05 - 15:00 am</option>
+                        <option value="">Sab 28/05 - 16:00 am</option>
+                        <option value="">Sab 28/05 - 17:00 am</option>
+                        <option value="">Sab 28/05 - 18:00 am</option>
+                </select>
+
+                <span>
+                    <input type="submit" value="Enviar" class="footer__menuOptions--button">
+                </span>            
+
+            </form>
         </section>
-    </div>
+    
+        <section class="calendar">
+            <h1 class="tituloCal">Mayo 2022</h1>
+            <ol> <!-- Mayo 2022 -->
+                <li class="dayName">Lun</li>
+                <li class="dayName">Mar</li>
+                <li class="dayName">Mie</li>
+                <li class="dayName">Jue</li>
+                <li class="dayName">Vie</li>
+                <li class="dayName">Sab</li>
+                <li class="dayName">Dom</li>
+                <li class="firstDay day">1</li>
+                <li class="day">2</li>
+                <li class="day">3</li>
+                <li class="day">4</li>
+                <li class="day">5</li>
+                <li class="day">6</li>
+                <li class="day">7</li>
+                <li class="day">8</li>
+                <li class="day">9</li>
+                <li class="day">10</li>
+                <li class="day">11</li>
+                <li class="day">12</li>
+                <li class="day">13</li>
+                <li class="day">14</li>
+                <li class="day">15</li>
+                <li class="day">16</li>
+                <li class="day">17</li>
+                <li class="day">18</li>
+                <li class="day">19</li>
+                <li class="day">20</li>
+                <li class="day">21</li>
+                <li class="day">22</li>
+                <li class="day">23</li>
+                <li class="day">24</li>
+                <li class="day">25</li>
+                <li class="day">26</li>
+                <li class="day">27</li>
+                <li class="day">28</li>
+                <li class="day">29</li>
+                <li class="day">30</li>
+                <li class="day">31</li>
+            </ol>
+        </section>
 
-        <!-- Footer -->
+    </section>
 
     <footer>
         <section class="footer__mainSection">
@@ -155,8 +207,7 @@
         <section class="endPage">
             <p class="final-desc">Copyright - 2022 RP Espacio de peluquería | Todos los derechos reservados | Desarrollado por Dario Quinteros</p>
         </section>
-    </footer>
+    </footer> 
 
 </body>
-
 </html>
