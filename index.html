@@ -8,6 +8,10 @@
 
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Llamada a AOS Animate on screen / https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Llamada a Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 
@@ -34,7 +38,7 @@
     
             </ul>
    
-            <ul class="header__redes">
+            <ul class="header__redes animate__animated animate__flash">
                     
                 <li>
                     <a href="https://www.facebook.com/rominaponcesestilista" target="_blank"><img src="./imagenes/facebook.png" alt="logo" height="30" width="30"></a>
@@ -58,7 +62,7 @@
     
         <!-- Primera sección -->
 
-        <div class="qsText">
+        <div class="qsText" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
                 <h2 class="titlesMainSection">Quienes somos</h2>
                 <p>Romina Ponces es un espacio de peluquería y estilista con amplia experencia, trayectoria y pasión por la búsqueda de la belleza, la profesionalidad y la satisfacción de nuestros clientes. Nuestra misión es obtener la imagen deseada por nuestros clientes, fortaleciendo su autoestima y logrando autoafirmación. Abogamos por una percepción disruptiva de la realidad estética, donde múltiples percepciones de belleza conviven entre sí. Sabemos que detrás de cada cliente hay una persona con gustos e intereses muy diversos y nuestra pretensión es saber qué imagen quiere proyectar y ayudarle con nuestra experiencia y profesionalidad a sentirse identificado con un color, un corte o un peinado que potencie sus rasgos y complemente su personalidad.  </p>
         </div>
@@ -71,7 +75,7 @@
         <span class="salonImg">
             <img src="./imagenes/salon.jpg" alt="QuienesSomos" height="400" width="600">
         </span>
-        <div class="salonText">
+        <div class="salonText" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
             <h2 class="titlesMainSection">Nuestro salón</h2>
             <div>
                 <p>Nos gusta definir nuestro espacio como una “peluquería boutique”. Hemos logrado crear un espacio de relax, acogedor y tranquilo que responde a nuestra forma de trabajar y a nuestra concepción de cómo debe ser la relación entre el profesional y las personas que acuden a mejorar su imagen. </p>
@@ -86,7 +90,7 @@
             <h2 class="titlesMainSection servTitle">Servicios</h2>
     
             <div class="mosaico__img">
-                <div class="asesoramientoImg"><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" height="400" width="450"></div>
+                <div class="asesoramientoImg "><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" height="400" width="450"></div>
                 <div class="lavadoImg"><img src="./imagenes/lavado.png" alt="Lavado" height="400" width="450"> </div>
                 <div class="peinadosImg"><img src="./imagenes/peinados.png" alt="Peinados" height="400" width="450"></div>
             </div>
@@ -157,6 +161,12 @@
         </section>
     </footer>
 
+<<<<<<< HEAD
+=======
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+
+>>>>>>> a0b16a3d96b8d6083c5ede816f8a8194994b7638
 </body>
 
 </html>
