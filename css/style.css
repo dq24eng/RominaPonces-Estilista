@@ -489,7 +489,11 @@ footer{
 
 .calendar ol li{
     text-align: right;
-    padding: 10% 5%;
+    padding: 10%;
+}
+
+ol {
+    padding: 0;
 }
 
 .day:hover{ background-color: rgba(95, 201, 205, 0.634); } /* La idea acá es que la fecha quede seleccionada y se modifique la   lista de opciones con los horarios posibles para esa fecha seleccionada. Probablemente esta información sea tomada de una base de datos. Además de que con algun lenguaje de programación debiera existir un if que evite seleccionar los días Domingo */
