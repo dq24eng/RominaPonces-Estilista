@@ -9,25 +9,30 @@
     /* background-color: rgb(23, 23, 23); */
     /* font-family: sans-serif;  */
     /* background: linear-gradient(rgba(14, 13, 13, 0.74), rgba(16, 16, 16, 0.811), rgba(18, 18, 18, 0.899)); */
+    
 }
 
 body {
     font-family: "Lato";
     color: white; /* Ejemplo */
     background: url(../imagenes/backimg.jpg);
+    overflow-x: hidden;
 }
 
-/* Header */
-
-header{
-    width: 100%;  
+header {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 999;
-    grid-area: header;
-    background: linear-gradient(45deg, rgba(14, 13, 13, 0.95), rgba(42, 41, 41, 0.95));
+    /* grid-area: header;
+    background: linear-gradient(45deg, rgba(14, 13, 13, 0.95), rgba(42, 41, 41, 0.95)); */
 }
 
+/* .col-10{
+    padding-left: 120px;
+} */
+
+/*
 #header__btnMenu{
     display: none;
 }
@@ -38,26 +43,24 @@ header nav label{
 } 
 
 nav{
-    border-bottom: 1px solid white; /* Rever color */
+    border-bottom: 1px solid white; 
     display: flex;
     padding: 15px;
     flex-flow: row nowrap;
-    /* gap: 10px; Para separar los flex-items */
     align-items: center; 
 
 }
 
 .header__menuOptions{
     width: 100%;
-    padding: 0 150px 0 150px; /* Padding de 150px a los costados (left/right) */
+    padding: 0 150px 0 150px; 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 a{
-    text-decoration: none; /* Eliminar subrayado por defecto */
-    color: white; /* Rever color */
+    text-decoration: none;
 }
 
 .header__menuOptions li a{
@@ -66,20 +69,20 @@ a{
 }
 
 .header__menuOptions li a:hover{
-    background-color: white; /* Rever color */
-    border: 1px solid white; /* Rever color */
+    background-color: white; 
+    border: 1px solid white;
     border-radius: 3px;
-    color: black; /* Rever color */
+    color: black; 
     padding: 5px 10px 5px 10px;
 }
 
-.header__redes{ /* Logos Face/Ig menu de navegacion */
+.header__redes{ 
     width: 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    align-items: center;
-}
+    align-items: center; 
+} */
 
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA INDEX ------------------------- */
@@ -108,7 +111,7 @@ a{
 }
 
 #videoIntro {
-    width: 100%;
+    width: 100vw;
 }
 
 /* Primera seccion del Index */
@@ -267,8 +270,6 @@ footer{
     margin-top: 5px;
 }
 
-
-
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA SERVICIOS --------------------- */
 /* ------------------------------------------------------------ */
@@ -412,29 +413,20 @@ footer{
 /* --------------------- PAGINA LOOKBOOK ---------------------- */
 /* ------------------------------------------------------------ */
 
-.gridAreaLookbook{
+/* .gridAreaLookbook{
     display: grid;
     grid-template-areas: 
         "titleLB titleLB titleLB"
         "textLB textLB textLB"
-        "mechas balayage babylight"
-        "iluminacion desgaste contouring"
+        "look look look"
         "footer footer footer";
-        /* height: 100vh; */
     gap: 15px 0px;
 }
 
 .tituloLB{grid-area: titleLB;}
-.textoLB{grid-area: textLB;}
-.mechasBlock { grid-area: mechas; }
-.balayageBlock{ grid-area: balayage; }
-.babylightBlock { grid-area: babylight; }
-.iluminacionBlock { grid-area: iluminacion; }
-.desgasteBlock { grid-area: desgaste; }
-.contouringBlock{ grid-area: contouring; }
+.textoLB{grid-area: textLB;} */
 
-.tituloLB, .textoLB, .mechasBlock, .balayageBlock, .babylightBlock, .iluminacionBlock, 
-    .desgasteBlock, .contouringBlock, .gridAreaLookbook div h2{ 
+.tituloLB, .textoLB, .gridAreaLookbook div h2{ 
         display: grid;
         justify-content: center;
         gap: 10px 0px;
@@ -561,6 +553,27 @@ footer{
     justify-self: start;
 }
 
+/* .----------------. */
+
+.contenedorVideo,  .mosaico{
+    width: 99vw;
+}
+
+.qsImg img, .qsText, .salonImg img, .salonText{
+    width: 49vw;
+}
+
+.mosaico__img div img{
+    width: 32vw;
+}
+
+/* .----------------. */
+
+.inner-item { 
+    text-align: center; 
+}
+
+.inner-item img { margin: 0 auto; } 
 
 @media screen and (max-width: 1024px) {
 
@@ -585,35 +598,35 @@ footer{
 
     /* Header */
 
-    header {background: linear-gradient(45deg, rgba(14, 13, 13, 1), rgba(42, 41, 41, 1));}
+    /* header {background: linear-gradient(45deg, rgba(14, 13, 13, 1), rgba(42, 41, 41, 1));} */
 
-    nav{
+    /* nav{
         justify-content: space-between;
     }
     
     header nav label{
         display: block;
     }
-
-    .header__redes{
+    */
+    .redes{
         display: none;
     }
-
+    /*
     .header__menuOptions{
-        position: fixed; /* Posicion fija para sacarlo del flujo */
-        top: 126px; /* Altura LOGO 92 + 4px margen + padding 15px y 15px + 1px border */
-        bottom: 0%; /* Se acomoda hasta el final */
+        position: fixed; 
+        top: 126px; 
+        bottom: 0%; 
         width: 100%;
         left: 0px; 
         text-align: center;
         flex-direction: column;
-        margin-left: -100%; /* Con esto lo sacamos (ocultamos) de la pantalla y cuando se haga click en el icono aparecerá */
+        margin-left: -100%; 
         background: linear-gradient(45deg, rgba(14, 13, 13, 1), rgba(42, 41, 41, 1));
     }
 
     #header__btnMenu:checked + .header__menuOptions{ 
         margin: 0; 
-    } 
+    }  */
 
     /* Index */
 
@@ -781,5 +794,3 @@ footer{
     }
 
 }
-
-
