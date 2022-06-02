@@ -87,31 +87,36 @@
     
         <section class="consulta">
 
-            <form action="turnos.php" method="get" enctype="text/plain">
-
-                <h3>Dejanos tu consulta</h3>
-    
-                <p>Nombre</p>
-                <input type="text" id="nombre" name="nombre" required class="footer__menuOptions--text">
-                        
-                <p>Apellido</p>
-                <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text">  
-    
-                <p>Telefono</p>
-                <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text">  
-    
-                <p>Email</p>
-                <input type="email" id="email" name="email" class="footer__menuOptions--text">  
-    
-                <p>Consulta</p>
-                <textarea name="consulta" id="consulta" cols="50" rows="10" placeholder="Escriba aquí su consulta" required 
-                class="footer__menuOptions--text"></textarea>  
-                        
-                <p>Adjuntar archivo</p>
-                <input type="file" id="adjunto" name="adjunto">
-                
-                <div><input type="submit" value="Enviar" class="footer__menuOptions--button"></div>
-                    
+            <form>
+                <h2>Dejanos tu consulta</h2>
+                <div class="mb-3 d-flex gap-5 w-75">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre">
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 d-flex gap-5 w-75">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="mb-3 d-flex gap-5 w-75">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono">
+                </div>
+                <div class="mb-3 d-flex gap-5 w-75">
+                    <label for="email" class="form-label">Email </label>
+                    <input type="mail" class="form-control ms-4" id="email">
+                </div>
+                <div class="mb-3 d-flex gap-5 w-75">
+                    <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                </div>
+                <div class="mb-3 d-flex gap-5 w-75">
+                    <label for="formFile" class="form-label">Archivo</label>
+                    <input class="form-control ms-1" type="file" id="formFile">
+                  </div>
+                <div class="d-flex justify-content-center ">
+                    <button type="submit" class="btn btn-primary bg-dark">Enviar</button>
+                </div>
             </form>
     
         </section>

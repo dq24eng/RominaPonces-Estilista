@@ -75,55 +75,60 @@
 
             <h1 class="titlesMainSection"> Reserva de turnos </h1>
 
-            <form action="turnos.php" method="get" enctype="text/plain" class="formularioLayout">
-                
-                <!-- <label for="nya">Nombre y Apellido: </label> -->
-                <p>Nombre:</p>
-                <input type="text" id="nya" name="nya" required class="footer__menuOptions--text">  
-
-                <!-- <label for="telefono">Telefono: </label> -->
-                <p>Apellido:</p>
-                <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text">  
-
-                <!-- <label for="telefono">Telefono: </label> -->
-                <p>Teléfono:</p>
-                <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text">  
-
-                <!-- <label for="servicio">Servicio: </label> -->
-                <p>Servicio:</p>
-                <!-- Al seleccionar una opción, debiera aparecer un pequeño texto debajo aclarando costo y duración aproximada del servicio -->
-                <select id="servicio" class="footer__menuOptions--text"> 
-                    <option value="">Asesoramiento</option>
-                    <option value="">Lavado</option>
-                    <option value="">Peinados</option>
-                    <option value="">Corte</option>
-                    <option value="">Coloracion</option>
-                    <option value="">Tratamientos</option>
-                </select>
-
-                <!-- Al seleccionar una fecha en el calendario, el menú desplegable se adapta a la misma y las opciones se muestran de la siguiente forma: FECHA SELECCIONADA + HORARIO (Variable según el día de la semana que fue seleccionado) -->
-                <div>
+            <form>
+                <div class="mb-3 d-flex gap-5">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre">
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 d-flex gap-5">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="mb-3 d-flex gap-5">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono">
+                </div>
+                <div class="mb-3 text-center d-flex gap-5">
+                    <label for="servicio" class="form-label">Servicio</label>
+                    <select class="form-select w-75 text-center" aria-label="Default select example">
+                        <option selected disabled> Seleccione un servicio</option>
+                        <option value="1">Asesoramiento</option>
+                        <option value="2">Lavado</option>
+                        <option value="3">Peinados</option>
+                        <option value="4">Corte</option>
+                        <option value="5">Coloracion</option>
+                        <option value="6">Tratamientos</option>
+                    </select>
+                </div>
+                <div class="mb-3">
                     <p>Seleccioná un horario y una fecha en el calendario:</p>
                 </div>
-
-                <select name="horario" id="horario" class="footer__menuOptions--text" required> 
-                        <option value="" disabled selected>Seleccione una fecha...</option>
-                        <option value="">Sab 28/05 - 10:00 am</option>
-                        <option value="">Sab 28/05 - 11:00 am</option>
-                        <option value="">Sab 28/05 - 12:00 am</option>
-                        <option value="">Sab 28/05 - 13:00 am</option>
-                        <option value="">Sab 28/05 - 14:00 am</option>
-                        <option value="">Sab 28/05 - 15:00 am</option>
-                        <option value="">Sab 28/05 - 16:00 am</option>
-                        <option value="">Sab 28/05 - 17:00 am</option>
-                        <option value="">Sab 28/05 - 18:00 am</option>
-                </select>
-
-                <span>
-                    <input type="submit" value="Enviar" class="footer__menuOptions--button">
-                </span>            
-
-            </form>
+                <div class="mb-3 row text-center justify-content-center">
+                    <select class="form-select w-75 text-center" aria-label="Default select example">
+                        <option selected disabled> Seleccione una fecha</option>
+                        <option value="1">Sab 28/05 - 10:00 am</option>
+                        <option value="2">Sab 28/05 - 11:00 am</option>
+                        <option value="3">Sab 28/05 - 12:00 am</option>
+                        <option value="4">Sab 28/05 - 13:00 am</option>
+                        <option value="5">Sab 28/05 - 14:00 am</option>
+                        <option value="6">Sab 28/05 - 15:00 am</option>
+                        <option value="7">Sab 28/05 - 16:00 am</option>
+                        <option value="8">Sab 28/05 - 17:00 am</option>
+                        <option value="9">Sab 28/05 - 18:00 am</option>
+                    </select>
+                </div>
+        
+                <!-- <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary bg-dark">Enviar</button>
+                </div>
+                
+              </form>           
+                
         </section>
     
         <section class="calendar">

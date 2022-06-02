@@ -372,14 +372,20 @@ footer{
 
 .gridListaPrecios{
     grid-area: precios;
+
+    }
+/*
+.gridListaPrecios{
+    grid-area: precios;
     display: grid;
     grid-template-rows: 5% 5% auto;
     grid-template-columns: 25% 25% 25% 25%;
-    height: min-content; 
+    height: fit-content; 
     grid-row-gap: 5%;
     padding-bottom: 3%;
+    width: 100%;
 }
-
+ 
 .gridTitleLP, .gridTextLP{
     grid-column: 1/5;
     display: flex;
@@ -407,7 +413,7 @@ footer{
     font-size: 18px;
     font-weight: bold;
     margin-left: -10%;
-}
+} */
 
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA LOOKBOOK ---------------------- */
@@ -475,9 +481,10 @@ footer{
 }
 
 .calendar{
-    width: 80%;
+    width: 90%;
     border: 1px solid #ddd;
     justify-content: center;
+    height: min-content;
 }
 
 .calendar ol{
