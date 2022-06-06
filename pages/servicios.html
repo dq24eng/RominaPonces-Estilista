@@ -9,11 +9,11 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="../styles/style.css">
     <!-- Llamada a AOS Animate on screen / https://michalsnik.github.io/aos/ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -29,36 +29,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
               
-                <div class="collapse navbar-collapse row align-items-center" id="navbarNav">
-                    <div class="col-10">
-                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold">
+                <div class="collapse navbar-collapse row w-100" id="navbarNav">
+                    <div class="col col-10-lg ps-5">
+                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold header__menuOptions">
                             <li class="nav-item">
-                                <a class="nav-link text-light text-center" aria-current="page" href="../index.html">HOME</a>
+                                <a class="nav-link text-light text-center w-100" aria-current="page" href="../index.html">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light text-center" href="./servicios.html">SERVICIOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./lookbook.html">LOOKBOOK</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./turnos.html">TURNOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./contacto.html">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col redes">
+                    <div class="col-2 redes">
                         <ul class="nav justify-content-end gap-1 p-2">
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" aria-current="page" href="#">
-                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" href="#">
-                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                         </ul>
@@ -84,7 +84,7 @@
         <span class="imgBlock2 flexImgPropLeft">
             <img src="../imagenes/serv-lavado.jpg" alt="Lavado" height="400" width="500">
         </span>
-        <div class="textBlock2 flexTextPropRight" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="textBlock2 flexTextPropRight" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
             <h2 >Lavado</h2>
             <p>Uno de los servicios más importantes. Lavarte el cabello previo a un corte o peinado y/o luego de una coloración: hace al inicio y/o la finalización perfecta de tu experiencia en nuestra peluquería.</p> 
             <p>Contamos con las mejores manos en nuestro equipo y una amplia variedad de marcas Premium que te garantizan un momento único. Las grandes marcas de la cosmética argentina y francesa dan garantía de un producto a medida según deseo y necesidad. Contarás con el asesoramiento preciso sobre tu cuero cabelludo y pelo para lograr la excelencia y confort que necesitas.</p>
@@ -103,7 +103,7 @@
         <span class="imgBlock4 flexImgPropLeft">
             <img src="../imagenes/serv-cortes.jpg" alt="Cortes" height="400" width="500">
         </span>
-        <div class="textBlock4 flexTextPropRight" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="textBlock4 flexTextPropRight" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
             <h2 >Cortes</h2>
             <p>Tijeras, máquinas, varios filos, precisión, técnica y sobre todo un estilo único hacen fundamental nuestro corte. Romina Ponces Estilista podrá asesorarte y hacer lucir tu pelo con el look ideal. El pelo es el accesorio más importante que tenemos. Nuestro staff  está en constante perfeccionamiento sobre nuevas técnicas y tendencias de corte y peinado.  Cada uno de ellos se destaca en poder interpretar tu deseo y adaptarlo para un fácil y práctico día a día. Nuestro corte es diseñado exclusivamente para vos y tu vida cotidiana. ¡No te lo pierdas!</p>  
         </div> 
@@ -120,7 +120,7 @@
         <span class="imgBlock6 flexImgPropLeft">
             <img src="../imagenes/serv-tratamientos.jpg" alt="Tratamientos" height="400" width="500">
         </span>
-        <div class="textBlock6 flexTextPropRight" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="textBlock6 flexTextPropRight" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
             <h2 >Tratamientos para tu cabello</h2>
             <p>Ofrecemos distintos tratamientos para cuidar tu pelo, entre ellos:</p>  
             <p>Keratina: Un lavado de limpieza profunda previo hará que las cutículas del cabello se abran al máximo para absorver los nutrientes de esta proteína. </p>
@@ -128,121 +128,66 @@
             <p>Nutrición: Una nutrición capilar busca reponer los nutrientes grasos o lípidos del pelo. La porosidad, el exceso de volumen y el frizz aparecen en los cabellos carentes de una nutrición. Los aceites son los principales compuestos: el aceite de argán, de coco, de oliva, los derivados del trigo y las mantecas.</p>
         </div> 
 
-        <div class="container gridListaPrecios">
-            <h2>Lista de precios</h2>
-            <div class="row d-flex justify-content-center ">
-                <div class="col ms-5">
-                    <li class="fw-bold">Asesoramiento</li>
-                    <ul>
-                        <li>Asesoramiento de imagen ........$500</li>
-                    </ul>
-                    <li class="fw-bold">Lavado</li>
-                    <ul>
-                        <li>Lavado Primont .............................$600</li>
-                        <li>Lavado Hairssime .........................$800</li>
-                    </ul>
-                    <li class="fw-bold">Peinados</li>
-                    <ul>
-                        <li>Recogido S-M .................................$500</li> 
-                        <li >Recogido L-XL.................................$750</li>
-                        <li >Trenzas S-M ....................................$600</li> 
-                        <li >Trenzas L-XL ....................................$900</li>
-                        <li >Waves S-M .......................................$700</li> 
-                        <li >Waves L-XL ......................................$950</li>
-                        <li >Blowdry S-M ...................................$1.000</li> 
-                        <li >Blowdry L-XL ..................................$1.300</li>
-                    </ul>
-                    <li class="fw-bold">Cortes</li>
-                    <ul>
-                        <li >Diseño de corte .............................$800</li> 
-                        <li >BeardCut .........................................$900</li>
-                        <li >BangsCut .........................................$750</li> 
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <li class="fw-bold">Coloración </li>
-                    <ul>
-                        <li >Tonalización/Prfundidad .................................$1.700</li> 
-                        <li >Coloración tradicional ......................................$1.500</li>
-                        <li >Coloración tono sobre tono ...........................$2.300</li> 
-                        <li >Coloración Primont ...........................................$1.800</li> 
-                        <li >Coloración Hairssime .......................................$2.150</li> 
-                        <li >Babylights ..............................................................$2.600</li> 
-                        <li >Balayages ...............................................................$2.900</li> 
-                        <li>Contouring ............................................................$2.700</li> 
-                        <li>Mechas ....................................................................$2.900</li> 
-                        <li>Iluminación ............................................................$3.200</li> 
-                        <li>Desgaste .................................................................$3.000</li> 
-                    </ul>
-                    <li class="fw-bold">Tratamientos</li>
-                    <ul>
-                        <li >Tratamiento Anti Frizz Keratina ....................$1.100</li> 
-                        <li >Tratamiento Anti Frizz Revitalizador ...........$1.100</li>
-                        <li >Tratamiento Caviar ..............................................$1.600</li>
-                        <li >Nutrición ..................................................................$750</li> 
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="gridListaPrecios" id="lista">
+        <div class="gridListaPrecios">
             <h3 class="gridTitleLP">Lista de Precios</h3>
             <p class="gridTextLP">Los valores están sujetos a la aplicación de cargos extras por largo y/o cantidad de cabello. Consultar antes de comenzar el trabajo en caso de presentar dudas.</p>
 
-            <div class="gridFirstList">
-                <li class="tituloPrincipal">Asesoramiento</li>
-                <ul>
-                    <li>Asesoramiento de imagen ........$500</li>
-                </ul>
-                <li class="tituloPrincipal">Lavado</li>
-                <ul>
-                    <li>Lavado Primont .............................$600</li>
-                    <li>Lavado Hairssime .........................$800</li>
-                </ul>
-                <li class="tituloPrincipal">Peinados</li>
-                <ul>
-                    <li>Recogido S-M .................................$500</li> 
-                    <li >Recogido L-XL.................................$750</li>
-                    <li >Trenzas S-M ....................................$600</li> 
-                    <li >Trenzas L-XL ....................................$900</li>
-                    <li >Waves S-M .......................................$700</li> 
-                    <li >Waves L-XL ......................................$950</li>
-                    <li >Blowdry S-M ...................................$1.000</li> 
-                    <li >Blowdry L-XL ..................................$1.300</li>
-                </ul>
-                <li class="tituloPrincipal">Cortes</li>
-                <ul>
-                    <li >Diseño de corte .............................$800</li> 
-                    <li >BeardCut .........................................$900</li>
-                    <li >BangsCut .........................................$750</li> 
-                </ul>
+            <div class="listaPrecios">
+
+                <div>
+                        <li class="tituloPrincipal">Asesoramiento</li>
+                        <ul>
+                            <li>Asesoramiento de imagen ........$500</li>
+                        </ul>
+                        <li class="tituloPrincipal">Lavado</li>
+                        <ul>
+                            <li>Lavado Primont .............................$600</li>
+                            <li>Lavado Hairssime .........................$800</li>
+                        </ul>
+                        <li class="tituloPrincipal">Peinados</li>
+                        <ul>
+                            <li>Recogido S-M .................................$500</li> 
+                            <li >Recogido L-XL.................................$750</li>
+                            <li >Trenzas S-M ....................................$600</li> 
+                            <li >Trenzas L-XL ....................................$900</li>
+                            <li >Waves S-M .......................................$700</li> 
+                            <li >Waves L-XL ......................................$950</li>
+                            <li >Blowdry S-M ...................................$1.000</li> 
+                            <li >Blowdry L-XL ..................................$1.300</li>
+                        </ul>
+                        <li class="tituloPrincipal">Cortes</li>
+                        <ul>
+                            <li >Diseño de corte .............................$800</li> 
+                            <li >BeardCut .........................................$900</li>
+                            <li >BangsCut .........................................$750</li> 
+                        </ul>
+                        <li class="tituloPrincipal">Coloración</li>
+                        <ul>
+                            <li >Tonalización/Prfundidad ................................$1.700</li> 
+                            <li >Coloración tradicional .....................................$1.500</li>
+                            <li >Coloración tono sobre tono ...........................$2.300</li> 
+                            <li >Coloración Primont ...........................................$1.800</li> 
+                            <li >Coloración Hairssime .......................................$2.150</li> 
+                            <li >Babylights .............................................................$2.600</li> 
+                            <li >Balayages ..............................................................$2.900</li> 
+                            <li>Contouring ............................................................$2.700</li> 
+                            <li>Mechas ...................................................................$2.900</li> 
+                            <li>Iluminación ...........................................................$3.200</li> 
+                            <li>Desgaste ...............................................................$3.000</li> 
+                        </ul>
+                        <li class="tituloPrincipal">Tratamientos</li>
+                        <ul>
+                            <li >Tratamiento Anti Frizz Keratina ....................$1.100</li> 
+                            <li >Tratamiento Anti Frizz Revitalizador ...........$1.100</li>
+                            <li >Tratamiento Caviar ..............................................$1.600</li>
+                            <li >Nutrición ................................................................$750</li> 
+                        </ul>
+                </div>
+        
             </div>
 
-            <div class="gridSecList">
-                <li class="tituloPrincipal">Coloración </li>
-                <ul>
-                    <li >Tonalización/Prfundidad .............................$1.700</li> 
-                    <li >Coloración tradicional ................................$1.500</li>
-                    <li >Coloración tono sobre tono ...........................$2.300</li> 
-                    <li >Coloración Primont ....................................$1.800</li> 
-                    <li >Coloración Hairssime .................................$2.150</li> 
-                    <li >Babylights ...............................................$2.600</li> 
-                    <li >Balayages ...................................................$2.900</li> 
-                    <li>Contouring ....................................................$2.700</li> 
-                    <li>Mechas ...........................................................$2.900</li> 
-                    <li>Iluminación ...................................................$3.200</li> 
-                    <li>Desgaste .......................................................$3.000</li> 
-                </ul>
-                <li class="tituloPrincipal">Tratamientos</li>
-                <ul>
-                    <li >Tratamiento Anti Frizz Keratina ....................$1.100</li> 
-                    <li >Tratamiento Anti Frizz Revitalizador ...........$1.100</li>
-                    <li >Tratamiento Caviar ........................................$1.600</li>
-                    <li >Nutrición .....................................................................$750</li> 
-                </ul>
-            </div> 
-
-        </div> -->
-
+        </div>
+        
     <footer>
         <section class="footer__mainSection">
             <div class="footer__menuOptions footer__menuOptions--horarios" >
@@ -303,7 +248,12 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init(); </script>
+    <script> 
+        AOS.init();
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+        });  
+    </script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  

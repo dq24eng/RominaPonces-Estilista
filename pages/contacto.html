@@ -27,36 +27,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
               
-                <div class="collapse navbar-collapse row align-items-center" id="navbarNav">
-                    <div class="col-10">
-                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold">
+                <div class="collapse navbar-collapse row w-100" id="navbarNav">
+                    <div class="col col-10-lg ps-5">
+                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold header__menuOptions">
                             <li class="nav-item">
-                                <a class="nav-link text-light text-center" aria-current="page" href="../index.html">HOME</a>
+                                <a class="nav-link text-light text-center w-100" aria-current="page" href="../index.html">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light text-center" href="./servicios.html">SERVICIOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./lookbook.html">LOOKBOOK</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./turnos.html">TURNOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./contacto.html">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col redes">
+                    <div class="col-2 redes">
                         <ul class="nav justify-content-end gap-1 p-2">
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" aria-current="page" href="#">
-                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" href="#">
-                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                         </ul>
@@ -66,8 +66,8 @@
         </nav>
     </header>
 
-    <div class="contactLayout">
-        <section class="contacto"> 
+    <div class="contactLayout row">
+        <section class="contacto col"> 
 
             <h1 class="titlesMainSection"> Contacto </h1>
             <p> Podes contactarte con nosotros por cualquier medio de los que se encuentran listados abajo. También podes enviarnos una consulta sobre un trabajo que quieras realizarte y una foto de tu pelo actual para que podamos asesortarte y sacarte todas las dudas que tengas. </p>
@@ -84,39 +84,36 @@
             </div>
     
         </section>
-    
-        <section class="consulta">
 
-            <form>
-                <h2>Dejanos tu consulta</h2>
-                <div class="mb-3 d-flex gap-5 w-75">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre">
-                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                </div>
-                <div class="mb-3 d-flex gap-5 w-75">
-                  <label for="apellido" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="apellido">
-                </div>
-                <div class="mb-3 d-flex gap-5 w-75">
-                    <label for="telefono" class="form-label">Telefono</label>
-                    <input type="number" class="form-control" id="telefono">
-                </div>
-                <div class="mb-3 d-flex gap-5 w-75">
-                    <label for="email" class="form-label">Email </label>
-                    <input type="mail" class="form-control ms-4" id="email">
-                </div>
-                <div class="mb-3 d-flex gap-5 w-75">
-                    <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-                </div>
-                <div class="mb-3 d-flex gap-5 w-75">
-                    <label for="formFile" class="form-label">Archivo</label>
-                    <input class="form-control ms-1" type="file" id="formFile">
-                  </div>
-                <div class="d-flex justify-content-center ">
-                    <button type="submit" class="btn btn-primary bg-dark">Enviar</button>
-                </div>
+        <div class="w-100 d-xl-none d-xl-block"></div> 
+    
+        <section class="consulta col">
+
+            <form action="turnos.php" method="get" enctype="text/plain">
+
+                <h3>Dejanos tu consulta</h3>
+    
+                <p>Nombre</p>
+                <input type="text" id="nombre" name="nombre" required class="footer__menuOptions--text">
+                        
+                <p>Apellido</p>
+                <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text">  
+    
+                <p>Telefono</p>
+                <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text">  
+    
+                <p>Email</p>
+                <input type="email" id="email" name="email" class="footer__menuOptions--text">  
+    
+                <p>Consulta</p>
+                <textarea name="consulta" id="consulta" cols="50" rows="10" placeholder="Escriba aquí su consulta" required 
+                class="footer__menuOptions--text"></textarea>  
+                        
+                <p>Adjuntar archivo</p>
+                <input type="file" id="adjunto" name="adjunto">
+                
+                <div><input type="submit" value="Enviar" class="footer__menuOptions--button"></div>
+                    
             </form>
     
         </section>

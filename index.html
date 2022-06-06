@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Romina Ponces Estilista - Espacio de peluquería</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <!-- Llamada a AOS Animate on screen / https://michalsnik.github.io/aos/ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Llamada a Animate CSS -->
@@ -32,36 +32,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
               
-                <div class="collapse navbar-collapse row align-items-center" id="navbarNav">
-                    <div class="col-10">
-                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold">
+                <div class="collapse navbar-collapse row w-100" id="navbarNav">
+                    <div class="col col-10-lg ps-5">
+                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold header__menuOptions">
                             <li class="nav-item">
-                                <a class="nav-link text-light text-center" aria-current="page" href="./index.html">HOME</a>
+                                <a class="nav-link text-light text-center w-100" aria-current="page" href="./index.html">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light text-center" href="./pages/servicios.html">SERVICIOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./pages/lookbook.html">LOOKBOOK</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./pages/turnos.html">TURNOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./pages/contacto.html">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col redes">
+                    <div class="col-2 redes">
                         <ul class="nav justify-content-end gap-1 p-2">
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" aria-current="page" href="#">
-                                    <img src="./imagenes/facebook.png" alt="logo" height="30" width="30" >
+                                    <img src="./imagenes/facebook.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" href="#">
-                                    <img src="./imagenes/instagram.png" alt="logo" height="30" width="30" >
+                                    <img src="./imagenes/instagram.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                         </ul>
@@ -75,7 +75,8 @@
 
         <div class="contenedorVideo">
             <video id="videoIntro" loop="true" muted autoplay>                            
-            <source src="./videos/animacion-home.mp4" type="video/mp4" > </video>
+                <source src="./videos/animacion-home.mp4" type="video/mp4"> 
+            </video>
         </div>
     
         <!-- Primera sección -->
@@ -85,15 +86,16 @@
                 <p>Romina Ponces es un espacio de peluquería y estilista con amplia experencia, trayectoria y pasión por la búsqueda de la belleza, la profesionalidad y la satisfacción de nuestros clientes. Nuestra misión es obtener la imagen deseada por nuestros clientes, fortaleciendo su autoestima y logrando autoafirmación. Abogamos por una percepción disruptiva de la realidad estética, donde múltiples percepciones de belleza conviven entre sí. Sabemos que detrás de cada cliente hay una persona con gustos e intereses muy diversos y nuestra pretensión es saber qué imagen quiere proyectar y ayudarle con nuestra experiencia y profesionalidad a sentirse identificado con un color, un corte o un peinado que potencie sus rasgos y complemente su personalidad.  </p>
         </div>
         <span class="qsImg">
-                <img src="./imagenes/quienes-somos.png" alt="QuienesSomos" height="400" width="500">
+                <img src="./imagenes/quienes-somos.png" alt="QuienesSomos" class="img-thumbnail">
         </span>
 
         <!-- Segunda sección -->
 
         <span class="salonImg">
-            <img src="./imagenes/salon.jpg" alt="QuienesSomos" height="400" width="600">
+            <img src="./imagenes/salon.jpg" alt="QuienesSomos" class="img-thumbnail">
         </span>
-        <div class="salonText" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="salonText " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
+            <!-- data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear" -->
             <h2 class="titlesMainSection">Nuestro salón</h2>
             <div>
                 <p>Nos gusta definir nuestro espacio como una “peluquería boutique”. Hemos logrado crear un espacio de relax, acogedor y tranquilo que responde a nuestra forma de trabajar y a nuestra concepción de cómo debe ser la relación entre el profesional y las personas que acuden a mejorar su imagen. </p>
@@ -104,24 +106,63 @@
 
         <!-- Tercera sección -->
 
-        <section class="mosaico">
+        <section class="mosaico conteiner d-none d-lg-block">
             <h2 class="titlesMainSection servTitle">Servicios</h2>
     
             <div class="mosaico__img">
-                <div class="asesoramientoImg hvr-shrink"><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" height="400" width="450"></div>
-                <div class="lavadoImg hvr-shrink"><img src="./imagenes/lavado.png" alt="Lavado" height="400" width="450"> </div>
-                <div class="peinadosImg hvr-shrink"><img src="./imagenes/peinados.png" alt="Peinados" height="400" width="450"></div>
+                <div class="asesoramientoImg hvr-shrink"><img src="./imagenes/asesoramiento.png" alt="Asesoramiento" class="img-thumbnail">
+                </div>
+                <div class="lavadoImg hvr-shrink"><img src="./imagenes/lavado.png" alt="Lavado" class="img-thumbnail"> </div>
+                <div class="peinadosImg hvr-shrink"><img src="./imagenes/peinados.png" alt="Peinados" class="img-thumbnail"></div>
             </div>
         
             <div class="mosaico__img ">
-                <div class="cortesImg hvr-shrink"><img src="./imagenes/cortes.png" alt="Cortes" height="400" width="450"></div>
-                <div class="coloracionImg hvr-shrink"><img src="./imagenes/coloracion.png" alt="Coloracion" height="400" width="450"></div>
-                <div class="tratamientosImg hvr-shrink"><img src="./imagenes/tratamientos.png" alt="Tratamientos" height="400" width="450"></div>
+                <div class="cortesImg hvr-shrink"><img src="./imagenes/cortes.png" alt="Cortes" class="img-thumbnail"></div>
+                <div class="coloracionImg hvr-shrink"><img src="./imagenes/coloracion.png" alt="Coloracion" class="img-thumbnail"></div>
+                <div class="tratamientosImg hvr-shrink">
+                    <img src="./imagenes/tratamientos.png" alt="Tratamientos" class="img-thumbnail">
+                </div>
             </div>
         </section>
-    </div>
 
-        <!-- Footer -->
+        <!-- Solo visible en mobile <=992px --> 
+
+        <div class="container d-lg-none mosaicoMobile">
+            <div class="row">
+                <div class="col carousel slide " id="control1" >
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active inner-item ">
+                            <img src="./imagenes/asesoramiento.png" class="d-block img-thumbnail" alt="imagen1">
+                        </div>
+                        <div class="carousel-item inner-item">
+                            <img src="./imagenes/lavado.png" class="d-block img-thumbnail" alt="imagen2">
+                        </div>
+                        <div class="carousel-item inner-item">
+                            <img src="./imagenes/peinados.png" class="d-block img-thumbnail" alt="imagen3">
+                        </div>
+                        <div class="carousel-item inner-item">
+                            <img src="./imagenes/cortes.png" class="d-block img-thumbnail" alt="imagen4">
+                        </div>
+                        <div class="carousel-item inner-item">
+                            <img src="./imagenes/coloracion.png" class="d-block img-thumbnail" alt="imagen5">
+                        </div>
+                        <div class="carousel-item inner-item">
+                            <img src="./imagenes/tratamientos.png" class="d-block img-thumbnail" alt="imagen6">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#control1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#control1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <footer>
         <section class="footer__mainSection">
@@ -134,12 +175,18 @@
                 </ul>
             </div>
                 
-            <div class="footer__menuOptions footer__menuOptions--turnos ">
+            <div class="footer__menuOptions footer__menuOptions--turnos align-items-center">
                 <h3>Turnos</h3> 
                 <ul>
-                    <li><a href="./pages/turnos.html" target="_self" class="text-decoration-none text-white">Reservá online</a></li>
-                    <li><a href="./pages/servicios.html" target="_self" class="text-decoration-none text-white">Servicios</a></li>
-                    <li><a href="./pages/servicios.html#lista" target="_self" class="text-decoration-none text-white">Lista de precios</a></li> <!-- Direccionar a la sección "Lista de precios" -->
+                    <li>
+                        <a href="./pages/turnos.html" target="_self" class="text-decoration-none text-white text-center">Reservá online</a>
+                    </li>
+                    <li>
+                        <a href="./pages/servicios.html" target="_self" class="text-decoration-none text-white">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="./pages/servicios.html#lista" target="_self" class="text-decoration-none text-white">Lista de precios</a>
+                    </li> 
                 </ul>
             </div>
         
@@ -179,8 +226,14 @@
         </section>
     </footer>
 
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init(); </script>
+    <script> 
+        AOS.init();
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+        });  
+    </script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  

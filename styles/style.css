@@ -17,6 +17,7 @@ body {
     color: white; /* Ejemplo */
     background: url(../imagenes/backimg.jpg);
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 header {
@@ -26,63 +27,15 @@ header {
     z-index: 999;
     /* grid-area: header;
     background: linear-gradient(45deg, rgba(14, 13, 13, 0.95), rgba(42, 41, 41, 0.95)); */
+    
 }
 
-/* .col-10{
-    padding-left: 120px;
-} */
-
-/*
-#header__btnMenu{
-    display: none;
+.bg-dark{
+    background: linear-gradient(45deg, rgba(14, 13, 13, 0.93), rgba(42, 41, 41, 0.95));
+    /* background-image: url("../imagenes/backimg.jpg"); */
+    opacity: 0.9;
 }
 
-header nav label{
-    display: none;
-    padding: 5px;
-} 
-
-nav{
-    border-bottom: 1px solid white; 
-    display: flex;
-    padding: 15px;
-    flex-flow: row nowrap;
-    align-items: center; 
-
-}
-
-.header__menuOptions{
-    width: 100%;
-    padding: 0 150px 0 150px; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-a{
-    text-decoration: none;
-}
-
-.header__menuOptions li a{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.header__menuOptions li a:hover{
-    background-color: white; 
-    border: 1px solid white;
-    border-radius: 3px;
-    color: black; 
-    padding: 5px 10px 5px 10px;
-}
-
-.header__redes{ 
-    width: 10%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center; 
-} */
 
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA INDEX ------------------------- */
@@ -103,11 +56,10 @@ a{
 
 .contenedorVideo {
     grid-area:video;
-    background-color: black;
-    position: relative;
-    height:633px;
+    /* background-image: url("../imagenes/backimg.jpg"); */
+    max-height: 85vh;
     overflow: hidden;
-    /* margin-top:82px; */
+    max-width: 100vw;
 }
 
 #videoIntro {
@@ -158,6 +110,10 @@ a{
     padding-left: 5%;
 }
 
+.qsImg, .salonImg{
+    justify-content: center;
+} 
+
 /* Tercera seccion del Index - Mosaico */
 
 .mosaico{
@@ -188,6 +144,11 @@ a{
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
     -webkit-transform: scale(0.96);
     transform: scale(0.96);
+}
+
+.img-thumbnail{
+    background-color: rgba(0,0,0, 0);
+    border-style: none;
 }
 
 /* Footer */
@@ -227,13 +188,17 @@ footer{
     margin-bottom: 10px;
 }
 
+.footer__menuOptions--horarios ul, .footer__menuOptions--turnos ul, .footer__menuOptions--contacto ul{
+    padding-left: 0px;
+}
+
 .footer__menuOptions--button{
     font-weight: bold;
     cursor: pointer;
     padding: 4px;
     color: white;
     border: 1px solid #ccc;
-    background: rgba(42, 41, 41, 0.90);
+    background: rgba(26, 25, 25, 0.5);
     border-radius: 3px;
 }
 
@@ -242,7 +207,7 @@ footer{
     padding: 3px;
     color: white;
     border: 1px solid #ccc;
-    background: rgba(42, 41, 41, 0.90);
+    background-color: rgba(26, 25, 25, 0.5);
     border-radius: 2px;
 }
 
@@ -260,7 +225,7 @@ footer{
     gap: 14px;
 }
 
-.footer__menuOptions--redes a img:hover, .header__redes li a img:hover{ /* Efecto de reducción de escala de los logos */
+.footer__menuOptions--redes a img:hover, .header__redes li a img:hover, .redes__logo:hover{ /* Efecto de reducción de escala de los logos */
     -webkit-transform: scale(0.8);
     transform: scale(0.8)
 }
@@ -268,6 +233,10 @@ footer{
 .endPage{
     text-align: center;
     margin-top: 5px;
+}
+
+.mosaicoMobile{
+    margin-bottom: 3%;
 }
 
 /* ------------------------------------------------------------ */
@@ -336,54 +305,8 @@ footer{
     padding-right: 5%;
 }
 
-/* .textBlock1, .textBlock3, .textBlock5, .tituloPrincipal {
-    animation-name: fadeInLeft;
-    animation-fill-mode: both;
-    animation-duration: 1s;
-    animation-delay: 0,4s;
-}
-
-.textBlock2, .textBlock4, .textBlock6, .gridTitleLP {
-    animation-name: fadeInRight;
-    animation-fill-mode: both;
-    animation-duration: 1s;
-    animation-delay: 0,4s;
-}
-  
-@keyframes fadeInLeft {
-    from {
-        opacity:0;
-        transform: translatex(-100px);
-    } to {
-        opacity:1;
-        transform: translatex(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity:0;
-        transform: translatex(100px);
-    } to {
-        opacity:1;
-        transform: translatex(0);
-    }
-} */
-
 .gridListaPrecios{
     grid-area: precios;
-
-    }
-/*
-.gridListaPrecios{
-    grid-area: precios;
-    display: grid;
-    grid-template-rows: 5% 5% auto;
-    grid-template-columns: 25% 25% 25% 25%;
-    height: fit-content; 
-    grid-row-gap: 5%;
-    padding-bottom: 3%;
-    width: 100%;
 }
  
 .gridTitleLP, .gridTextLP{
@@ -392,45 +315,21 @@ footer{
     justify-content: center;
 }
 
-.gridFirstList{ 
-    grid-column: 2/3;
-    grid-row: 3/4;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 20;
-}
-.gridSecList{ 
-    grid-column: 3/4;
-    grid-row: 3/4;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 20;
+.tituloPrincipal{
+    font-size: 25px;
+    font-weight: bold;
+    /* margin-left: -10%; */
 }
 
-.tituloPrincipal{
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: -10%;
-} */
+.listaPrecios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA LOOKBOOK ---------------------- */
 /* ------------------------------------------------------------ */
-
-/* .gridAreaLookbook{
-    display: grid;
-    grid-template-areas: 
-        "titleLB titleLB titleLB"
-        "textLB textLB textLB"
-        "look look look"
-        "footer footer footer";
-    gap: 15px 0px;
-}
-
-.tituloLB{grid-area: titleLB;}
-.textoLB{grid-area: textLB;} */
 
 .tituloLB, .textoLB, .gridAreaLookbook div h2{ 
         display: grid;
@@ -519,6 +418,11 @@ ol {
     margin: 2% 0% 2% 0%;
 }
 
+.formularioLayout p{
+    display: flex;
+    justify-content: center;
+}
+
 /* ------------------------------------------------------------ */
 /* --------------------- PAGINA CONTACTO ---------------------- */
 /* ------------------------------------------------------------ */
@@ -535,6 +439,12 @@ ol {
     justify-content: flex-start;
     gap: 10px;
     padding-right: 5%;
+}
+
+.contacto ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contacto ul li{
@@ -564,29 +474,13 @@ ol {
     justify-self: start;
 }
 
-/* .----------------. */
-
-.contenedorVideo,  .mosaico{
-    width: 99vw;
-}
-
-.qsImg img, .qsText, .salonImg img, .salonText{
-    width: 49vw;
-}
-
-.mosaico__img div img{
-    width: 32vw;
-}
-
-/* .----------------. */
-
 .inner-item { 
     text-align: center; 
 }
 
 .inner-item img { margin: 0 auto; } 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
 
     /* ------------------------------------------------------------ */
     /* --------------------- PAGINA INDEX ------------------------- */
@@ -607,37 +501,9 @@ ol {
         overflow-x: hidden;
     }
 
-    /* Header */
-
-    /* header {background: linear-gradient(45deg, rgba(14, 13, 13, 1), rgba(42, 41, 41, 1));} */
-
-    /* nav{
-        justify-content: space-between;
-    }
-    
-    header nav label{
-        display: block;
-    }
-    */
     .redes{
         display: none;
     }
-    /*
-    .header__menuOptions{
-        position: fixed; 
-        top: 126px; 
-        bottom: 0%; 
-        width: 100%;
-        left: 0px; 
-        text-align: center;
-        flex-direction: column;
-        margin-left: -100%; 
-        background: linear-gradient(45deg, rgba(14, 13, 13, 1), rgba(42, 41, 41, 1));
-    }
-
-    #header__btnMenu:checked + .header__menuOptions{ 
-        margin: 0; 
-    }  */
 
     /* Index */
 
@@ -649,12 +515,12 @@ ol {
         padding: 0% 5% 0% 5%;
     }
 
+    .qsImg, .salonImg{
+        justify-content: center;
+    } 
+
     .qsText, .salonText{ /* Centrado de texto */
         text-align: center;
-    }
-
-    .titlesMainSection{
-        /* Centrar títulos */
     }
 
     .contenedorVideo{
@@ -788,6 +654,7 @@ ol {
         padding: 1% 0% 1% 0%;
         align-items: center;
         gap: 10px;
+
     }
 
     .contacto{
@@ -803,5 +670,42 @@ ol {
         gap: 20px 10px;
         padding: 0% 3% 0% 3%;
     }
+
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .redes{
+        display: none;
+    }
+
+    .contactLayout{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0%;
+    }
+
+    .contacto p{
+        text-align: center;
+    }
+
+    .consulta form {
+        padding-top: 4%;
+    }
+
+    .gridListaPrecios p{
+        text-align: center;
+    }
+
+    .qsImg, .salonImg{
+        justify-content: center;
+    } 
+
 
 }

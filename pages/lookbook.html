@@ -11,6 +11,7 @@
 
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="../styles/style.css">
+
 </head>
 
 <body>
@@ -26,36 +27,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
               
-                <div class="collapse navbar-collapse row align-items-center" id="navbarNav">
-                    <div class="col-10">
-                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold">
+                <div class="collapse navbar-collapse row w-100" id="navbarNav">
+                    <div class="col col-10-lg ps-5">
+                        <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold header__menuOptions">
                             <li class="nav-item">
-                                <a class="nav-link text-light text-center" aria-current="page" href="../index.html">HOME</a>
+                                <a class="nav-link text-light text-center w-100" aria-current="page" href="../index.html">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light text-center" href="./servicios.html">SERVICIOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./lookbook.html">LOOKBOOK</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./turnos.html">TURNOS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center" href="./contacto.html">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col redes">
+                    <div class="col-2 redes">
                         <ul class="nav justify-content-end gap-1 p-2">
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" aria-current="page" href="#">
-                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                             <li class="nav-item justify-content-end d-none d-lg-block">
                                 <a class="navbar-brand" href="#">
-                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" >
+                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" class="redes__logo">
                                 </a>
                             </li>
                         </ul>
@@ -71,11 +72,11 @@
             Te mostramos algunos de nuestros trabajos terminados para que puedas conocer un poco más de nuestros servicios:   
         </p>
 
-        <!-- Slides de varias imagenes. Por el momento cada uno se representa con una sola imagen -->
+        <!-- Slides de varias imagenes -->
 
         <div class="container look">
-            <div class="row gap-2 p-2">
-                <div class="col carousel slide " id="control1" data-bs-ride="carousel">
+            <div class="row gap-2 p-2 ">
+                <div class="col carousel slide " id="control1" >
                     <p class="text-center fs-4 fw-semibold">Mechas</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -94,7 +95,7 @@
                         </button>
                     </div>          
                 </div>
-                <div class="col carousel slide " id="control2" data-bs-ride="carousel">
+                <div class="col carousel slide " id="control2" >
                     <p class="text-center fs-4 fw-semibold">Balayage</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -116,7 +117,7 @@
                         </button>
                     </div>          
                 </div>    
-                <div class="col carousel slide " id="control3" data-bs-ride="carousel">
+                <div class="col carousel slide " id="control3" >
                     <p class="text-center fs-4 fw-semibold">Babylight</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -137,11 +138,8 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>          
-                </div>             
-            </div>
-        
-            <div class="row gap-2 p-2">
-                <div class="col carousel slide " id="control4" data-bs-ride="carousel">
+                </div>            
+                <div class="col carousel slide " id="control4" >
                     <p class="text-center fs-4 fw-semibold">Iluminacion</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -160,7 +158,7 @@
                         </button>
                     </div>          
                 </div>
-                <div class="col carousel slide " id="control5" data-bs-ride="carousel">
+                <div class="col carousel slide " id="control5" >
                     <p class="text-center fs-4 fw-semibold">Desgaste</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -179,7 +177,7 @@
                         </button>
                     </div>          
                 </div>
-                <div class="col carousel slide " id="control6" data-bs-ride="carousel">
+                <div class="col carousel slide " id="control6" >
                     <p class="text-center fs-4 fw-semibold">Contouring</p>
                     <div class="carousel-inner ">
                         <div class="carousel-item active inner-item ">
@@ -201,39 +199,8 @@
                         </button>
                     </div>          
                 </div> 
-                
             </div>
         </div>
-
-<!--         <div class="mechasBlock"> 
-            <h2>Mechas</h2> 
-            <img src="./imagenes/lb-mechas.jpg" alt="Mechas" height="400" width="400" class="imgLB">                                      
-        </div>
-
-        <div class="balayageBlock">
-            <h2>Balayages</h2> 
-            <img src="./imagenes/lb-balayage.jpg" alt="Balayages" height="400" width="400" class="imgLB">                                      
-        </div>
-
-        <div class="babylightBlock">
-            <h2>Babylights</h2> 
-            <img src="./imagenes/lb-babylight.jpg" alt="Babylights" height="400" width="400"         class="imgLB">                                      
-        </div>
-        
-        <div class="iluminacionBlock">
-            <h2>Iluminación</h2>  
-            <img src="./imagenes/lb-iluminacion.jpg" alt="Iluminacion" height="400" width="400" class="imgLB">                                       
-        </div>
-                
-        <div class="desgasteBlock">
-            <h2>Desgaste</h2> 
-            <img src="./imagenes/lb-desgaste.jpg" alt="Desgaste" height="400" width="400" class="imgLB">                                      
-        </div>
-                
-        <div class="contouringBlock">
-            <h2>Contouring</h2> 
-            <img src="./imagenes/lb-contouring.jpg" alt="Contouring" height="400" width="400" class="imgLB">                                      
-        </div> -->
 
         <footer>
             <section class="footer__mainSection">
