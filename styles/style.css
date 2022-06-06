@@ -672,7 +672,6 @@ ol {
         padding: 0% 3% 0% 3%;
     }
 
-
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px){
@@ -712,5 +711,8 @@ ol {
         justify-content: center;
     } 
 
+    .gridAreaServ span img{
+        max-width: 400px;
+    }
 
 }
