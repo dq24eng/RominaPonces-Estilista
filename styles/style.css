@@ -481,6 +481,13 @@ ol {
 
 .inner-item img { margin: 0 auto; } 
 
+@media screen and (max-width: 578px){
+    .gridAreaServ span img{
+        max-width: 350px;
+    }
+}
+
+
 @media screen and (max-width: 992px) {
 
     /* ------------------------------------------------------------ */
@@ -712,7 +719,7 @@ ol {
     } 
 
     .gridAreaServ span img{
-        max-width: 370px;
+        max-width: 380px;
     }
 
 }
