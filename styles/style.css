@@ -676,6 +676,11 @@ ol {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px){
+
+    body{
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
     .redes{
         display: none;
     }
