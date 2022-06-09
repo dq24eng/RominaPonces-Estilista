@@ -1,0 +1,62 @@
+
+/* Colores */
+
+$colorPrincipal: white;
+$colorSecundario: black;
+$nullColor : rgba(0,0,0,0); /* Background color imagenes de Bootstrap */
+$colorStylesFooter: white; 
+$colorBorderFooter: #ccc;
+
+/* Background */
+
+$backgroundImage: url(../imagenes/backimg.jpg);
+$backgroundNav: linear-gradient(45deg, rgba(14, 13, 13, 0.93), rgba(42, 41, 41, 0.95));
+$backgroundOpacity: 0.9;
+$backgroundInput: rgba(26, 25, 25, 0.5);
+
+
+/* Spacing */
+
+$paddingIndexSPpal: 5% 10% 5% 10%; /* Padding index Seccion principal */
+$gapGridIndex: 15px 0px;
+$marginTitleMainSection: 15px;
+$paddLeftST: 5%;
+$gapMosaico: 10px;
+$marginBottomC: 10px;
+$marginMosaicoMobile: 3%;
+$paddMainFooter: 15px;
+$gapFooterMO: 5px;
+$gapFooterRedes: 14px;
+$paddLeftMO: 0px;
+$paddButton: 4px;
+$paddInput: 3px;
+$marginTopFooter: 5px;
+
+/* Styles texts-conteiners */
+
+$titulosIndex: 40px;
+$weightTitulosIndex: bold;
+$borderStyleBS: none;
+$borderTopFooter: 1px solid $colorStylesFooter;
+$borderBottomFooter: 1px solid $colorStylesFooter;
+$borderInput: 1px solid $colorBorderFooter;
+$borderRadiusButton: 3px;
+$borderRadiusTxtInput: 2px;
+
+/* Views */
+
+$fullScreen: 100vw;
+$fullScreenPorc: 100%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%;
+$videoIndexView: 85vh;
+$zIndexHeader: 999;
+
+/* Transitions, Animations, Transformations */
+
+$shrinkTrans: 0.3s;
+$shrinkScale: 0.96;
+$redesLogoScale: 0.8;
+
+
+

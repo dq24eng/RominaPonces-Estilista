@@ -1,0 +1,14 @@
+@import 'vars';
+
+header {
+    width: $fullScreenPorc;
+    position: sticky;
+    top: 0;
+    z-index: $zIndexHeader;
+    .redes__logo {
+        &:hover {
+            transform: scale($redesLogoScale)
+        }
+    }
+}
+

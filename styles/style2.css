@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /* background-color: black;  */
+    /* background-color: rgb(23, 23, 23); */
+    /* font-family: sans-serif;  */
+    /* background: linear-gradient(rgba(14, 13, 13, 0.74), rgba(16, 16, 16, 0.811), rgba(18, 18, 18, 0.899)); */
+    
+}
+
+body {
+    font-family: "Lato";
+    color: white; /* Ejemplo */
+    background: url(../imagenes/backimg.jpg);
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* grid-area: header;
+    background: linear-gradient(45deg, rgba(14, 13, 13, 0.95), rgba(42, 41, 41, 0.95)); */
+    
+}
+
+.bg-dark{
+    background: linear-gradient(45deg, rgba(14, 13, 13, 0.93), rgba(42, 41, 41, 0.95));
+    /* background-image: url("../imagenes/backimg.jpg"); */
+    opacity: 0.9;
+}
+
+
+/* ------------------------------------------------------------ */
+/* --------------------- PAGINA INDEX ------------------------- */
+/* ------------------------------------------------------------ */
+
+.grid-area{
+    display: grid;
+    grid-template-areas: 
+        "video video"
+        "info1 img1"
+        "img2 info2"
+        "serv serv";
+        /* height: 100vh; */
+    gap: 15px 0px;
+}
+
+/* Video principal */
+
+.contenedorVideo {
+    grid-area:video;
+    /* background-image: url("../imagenes/backimg.jpg"); */
+    max-height: 85vh;
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+#videoIntro {
+    width: 100vw;
+}
+
+/* Primera seccion del Index */
+
+.qsText{
+    grid-area: info1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5% 10% 5% 10%;
+}
+
+.qsImg{
+    grid-area: img1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Segunda seccion del Index */
+
+.salonText{
+    grid-area: info2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5% 10% 5% 10%;
+}
+
+.salonImg{
+    grid-area: img2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titlesMainSection{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.servTitle{
+    padding-left: 5%;
+}
+
+.qsImg, .salonImg{
+    justify-content: center;
+} 
+
+/* Tercera seccion del Index - Mosaico */
+
+.mosaico{
+    grid-area: serv;
+}
+
+.mosaico__img{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    
+}
+
+/* Shrink */
+.hvr-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+}
+
+.img-thumbnail{
+    background-color: rgba(0,0,0, 0);
+    border-style: none;
+}
+
+/* Footer */
+
+footer{
+    border-top: 1px solid white ;
+    margin-bottom: 10px;
+    grid-area: footer;
+}
+
+.footer__mainSection{
+    display: flex;
+    padding: 15px;
+    flex-flow: row nowrap;
+    align-items: stretch; 
+    border-bottom: 1px solid white; /* Rever color */
+}
+
+.footer__menuOptions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.footer__menuOptions--horarios{
+    width: 75%;
+}
+
+.footer__menuOptions--turnos{
+    width: 50%;
+}
+
+.footer__menuOptions--horarios ul li, .footer__menuOptions--turnos ul li{
+    margin-bottom: 10px;
+}
+
+.footer__menuOptions--horarios ul, .footer__menuOptions--turnos ul, .footer__menuOptions--contacto ul{
+    padding-left: 0px;
+}
+
+.footer__menuOptions--button{
+    font-weight: bold;
+    cursor: pointer;
+    padding: 4px;
+    color: white;
+    border: 1px solid #ccc;
+    background: rgba(26, 25, 25, 0.5);
+    border-radius: 3px;
+}
+
+.footer__menuOptions--text{
+    cursor: text;
+    padding: 3px;
+    color: white;
+    border: 1px solid #ccc;
+    background-color: rgba(26, 25, 25, 0.5);
+    border-radius: 2px;
+}
+
+.footer__menuOptions--button:hover{ /* Efecto hover botón "Enviar" de suscripción */
+    color: black;
+    border: 1px solid white;
+    background: white;
+}
+
+.footer__menuOptions--redes{ /* Direccion de los flex-items en fila (row) para los logos de las redes */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+}
+
+.footer__menuOptions--redes a img:hover, .header__redes li a img:hover, .redes__logo:hover{ /* Efecto de reducción de escala de los logos */
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8)
+}
+
+.endPage{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.mosaicoMobile{
+    margin-bottom: 3%;
+}
+
+/* ------------------------------------------------------------ */
+/* --------------------- PAGINA SERVICIOS --------------------- */
+/* ------------------------------------------------------------ */
+
+.gridAreaServ{
+    display: grid;
+    grid-template-areas: 
+        "txt1 imgn1"
+        "imgn2 txt2 "
+        "txt3 imgn3 "
+        "imgn4 txt4 "
+        "txt5 imgn5 "
+        "imgn6 txt6 "
+        "precios precios"
+        "footer footer";
+        /* height: 100vh; */
+    gap: 15px 0px;
+}
+
+.textBlock1 { grid-area: txt1; }
+.imgBlock1{ grid-area: imgn1; }
+.textBlock2 { grid-area: txt2; }
+.imgBlock2{ grid-area: imgn2; }
+.textBlock3 { grid-area: txt3; }
+.imgBlock3{ grid-area: imgn3; }
+.textBlock4 { grid-area: txt4; }
+.imgBlock4{ grid-area: imgn4; }
+.textBlock5 { grid-area: txt5; }
+.imgBlock5{ grid-area: imgn5; }
+.textBlock6 { grid-area: txt6; }
+.imgBlock6{ grid-area: imgn6; }
+.textBlock1, .imgBlock1 {margin-top: 3%;}
+
+.flexTextPropLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 7px 0px;
+    padding: 0% 0% 5% 15%;
+    margin-left: 5%;
+}
+
+.flexImgPropRight{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+    flex-direction: column;
+}
+
+.flexTextPropRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 7px 0px;
+    padding: 0% 15% 5% 0%;
+    margin-right: 5%;
+}
+
+.flexImgPropLeft{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.gridListaPrecios{
+    grid-area: precios;
+}
+ 
+.gridTitleLP, .gridTextLP{
+    grid-column: 1/5;
+    display: flex;
+    justify-content: center;
+}
+
+.tituloPrincipal{
+    font-size: 25px;
+    font-weight: bold;
+    /* margin-left: -10%; */
+}
+
+.listaPrecios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
+/* --------------------- PAGINA LOOKBOOK ---------------------- */
+/* ------------------------------------------------------------ */
+
+.tituloLB, .textoLB, .gridAreaLookbook div h2{ 
+        display: grid;
+        justify-content: center;
+        gap: 10px 0px;
+    }
+
+/* ------------------------------------------------------------ */
+/* --------------------- PAGINA TURNOS ------------------------ */
+/* ------------------------------------------------------------ */
+
+.Turnos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1% 0% 1% 0%;
+}
+
+.reserva{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formularioLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 15px 15px;
+    padding: 10px;
+}
+
+.formularioLayout div{
+    grid-column: 1/3;
+    text-align: center;
+}
+
+#horario{
+    grid-row: 6/7;
+    grid-column: 1/3;
+    text-align: center;
+    justify-self: center;
+}
+
+.formularioLayout span{
+    grid-row: 7/8;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.calendar{
+    width: 90%;
+    border: 1px solid #ddd;
+    justify-content: center;
+    height: min-content;
+}
+
+.calendar ol{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.calendar ol li{
+    text-align: right;
+    padding: 10%;
+}
+
+ol {
+    padding: 0;
+}
+
+.day:hover{ background-color: rgba(95, 201, 205, 0.634); } /* La idea acá es que la fecha quede seleccionada y se modifique la   lista de opciones con los horarios posibles para esa fecha seleccionada. Probablemente esta información sea tomada de una base de datos. Además de que con algun lenguaje de programación debiera existir un if que evite seleccionar los días Domingo */
+
+.dayName{
+    background: rgba(35, 39, 77, 0.655);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.firstDay{grid-column-start: 7;}
+
+.tituloCal{
+    text-align: center;
+    margin: 2% 0% 2% 0%;
+}
+
+.formularioLayout p{
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------ */
+/* --------------------- PAGINA CONTACTO ---------------------- */
+/* ------------------------------------------------------------ */
+
+.contactLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1% 3% 1% 3%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-right: 5%;
+}
+
+.contacto ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 1%;
+}
+
+.consulta form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(8, min-content);
+    gap: 35px 0px;
+    padding-top: 10%;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.consulta form div {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.consulta form h3{
+    grid-column: 1/3;
+    justify-self: start;
+}
+
+.inner-item { 
+    text-align: center; 
+}
+
+.inner-item img { margin: 0 auto; } 
+
+@media screen and (max-width: 992px) {
+
+    /* ------------------------------------------------------------ */
+    /* --------------------- PAGINA INDEX ------------------------- */
+    /* ------------------------------------------------------------ */
+    
+    .grid-area{
+        display: grid;
+        grid-template-areas: 
+            "video"
+            "info1"
+            "img1"
+            "info2"
+            "img2"
+            "serv";
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .redes{
+        display: none;
+    }
+
+    /* Index */
+
+    .contenedorVideo, .qsImg img, .qsText, .salonImg img, .salonText, .mosaico, .mosaico__img div img{
+        width: 100vw;
+    }
+
+    .qsImg img, .salonImg img, .mosaico__img div img{
+        padding: 0% 5% 0% 5%;
+    }
+
+    .qsImg, .salonImg{
+        justify-content: center;
+    } 
+
+    .qsText, .salonText{ /* Centrado de texto */
+        text-align: center;
+    }
+
+    .contenedorVideo{
+        height: min-content;
+    }
+
+    .qsText, .salonText{
+        align-items: flex-start;
+        padding: 3%;
+    }
+
+    .mosaico__img{
+        flex-direction: column;
+        gap: none;
+    }
+
+    .lavadoImg, .peinadosImg, .cortesImg, .coloracionImg, .tratamientosImg{
+        /* Se oculta temporalmente estas imagenes. La idea es (como indica el Wireframe) crear un menu deslizante horizontal de imagenes */
+        display: none;
+    }
+
+    /* Footer */
+
+    .footer__mainSection{
+        flex-direction: column;
+        border-bottom: none;
+        align-items: center;
+
+    }
+
+    .footer__menuOptions--suscr, .endPage, .footer__menuOptions--contacto p{
+        display: none;
+    }
+
+    .footer__menuOptions--horarios ul li, .footer__menuOptions--turnos ul li, .footer__menuOptions--contacto ul li{
+        margin-bottom: 5px;
+    }
+
+    .footer__menuOptions--horarios ul li, .footer__menuOptions--turnos ul li a, .footer__menuOptions--contacto ul li {
+        color: rgb(148, 142, 142);
+    }
+
+    /* ------------------------------------------------------------ */
+    /* --------------------- PAGINA SERVICIOS --------------------- */
+    /* ------------------------------------------------------------ */
+
+    ::-webkit-scrollbar {
+        display: none;
+        overflow-y: hidden;
+    }
+
+    .gridAreaServ span img {
+        width: fit-content;
+    }
+
+    .textBlock1, .textBlock2, .textBlock3, .textBlock4, .textBlock5, .textBlock6, .imgBlock1, .imgBlock2, .imgBlock3, .imgBlock4, .imgBlock5, .imgBlock6, .gridListaPrecios, .flexTextPropLeft, .flexImgPropLeft, .flexTextPropRight, .flexImgPropRight{
+        width: 100vw;
+        padding: 0% 5% 0% 5%;
+        text-align: center;
+    }
+
+    .gridAreaServ{
+        grid-template-areas: 
+        "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6"
+        "precios"
+        "footer";
+    }
+
+    .gridListaPrecios{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gridFirstList, .gridSecList, .gridTextLP, .gridTitleLP {padding: 1% 0% 1% 0%}
+
+    .gridFirstList, .gridSecList{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flexTextPropLeft, .flexImgPropLeft, .flexTextPropRight, .flexImgPropRight{
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 0;
+                
+    }
+
+    /* ------------------------------------------------------------ */
+    /* --------------------- PAGINA LOOKBOOK ---------------------- */
+    /* ------------------------------------------------------------ */
+
+    .gridAreaLookbook{
+        display: flex;
+        flex-direction: column;
+        padding: 0% 1% 0% 1%;
+    }
+
+    .imgLB{
+        width: 65vw;
+    }
+
+    .tituloLB, .textoLB, .mechasBlock, .balayageBlock, .babylightBlock, .iluminacionBlock, 
+    .desgasteBlock, .contouringBlock, .gridAreaLookbook div h2{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* ------------------------------------------------------------ */
+    /* --------------------- PAGINA TURNOS ------------------------ */
+    /* ------------------------------------------------------------ */
+
+    .Turnos{
+        display: flex;
+        flex-direction: column;
+        padding: 1% 0% 1% 0%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* ------------------------------------------------------------ */
+    /* --------------------- PAGINA CONTACTO ---------------------- */
+    /* ------------------------------------------------------------ */
+
+    .contactLayout{
+        display: flex;
+        flex-direction: column;
+        padding: 1% 0% 1% 0%;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .contacto{
+        text-align: center;
+        padding: 0% 3% 0% 3%;
+    }
+
+    .contactLayout iframe {
+        width: 80vw;
+    }
+
+    .consulta form{
+        gap: 20px 10px;
+        padding: 0% 3% 0% 3%;
+    }
+
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .redes{
+        display: none;
+    }
+
+    .contactLayout{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0%;
+    }
+
+    .contacto p{
+        text-align: center;
+    }
+
+    .consulta form {
+        padding-top: 4%;
+    }
+
+    .gridListaPrecios p{
+        text-align: center;
+    }
+
+    .qsImg, .salonImg{
+        justify-content: center;
+    } 
+
+
+}

@@ -1,0 +1,120 @@
+
+//Mobile-Tablet
+
+@media screen and (max-width: 992px) {
+
+    body {
+        overflow-x: hidden;
+        header {
+            .redes {
+                display: none;
+            }
+        }
+        .grid-area{
+            display: grid;
+            grid-template-areas: "video" "info1" "img1" "info2" "img2" "serv";
+            .contenedorVideo {
+                width: 100vw;
+                height: min-content;
+            }
+            .qsText{
+                text-align: center;
+                align-items: flex-start;
+                padding: 3%;
+            }
+            .salonText{
+                text-align: center;
+                align-items: flex-start;
+                padding: 3%;
+            }
+            .qsImg {
+                width: 100vw;
+                justify-content: center;
+                img {
+                    padding: 0% 5% 0% 5%;
+                }
+            }
+            .salonImg {
+                width: 100vw;
+                justify-content: center;
+                img {
+                    padding: 0% 5% 0% 5%;
+                }
+            }
+            .mosaico{
+                width: 100vw;
+                .mosaico__img {
+                    flex-direction: column;
+                    gap: none;
+                    div {
+                        img{
+                            width: 100vw;
+                            padding: 0% 5% 0% 5%;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            .footer__mainSection{
+                flex-direction: column;
+                border-bottom: none;
+                align-items: center;
+                .footer__menuOptions--horarios {
+                    ul {
+                        li {
+                            margin-bottom: 5px;
+                            color: rgb(148, 142, 142);
+                        }
+                    }
+                }
+                .footer__menuOptions--turnos {
+                    ul {
+                        li {
+                            margin-bottom: 5px;
+                            a {
+                                color: rgb(148, 142, 142);
+                            }
+                        }
+                    }
+                }
+                .footer__menuOptions--suscr{
+                    display: none;
+                }
+                .footer__menuOptions--contacto{
+                    p{
+                        display: none;
+                    }
+                    ul {
+                        li {
+                            margin-bottom: 5px;
+                            color: rgb(148, 142, 142);
+                        }
+                    }
+                }
+            }
+            .endPage{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+        header {
+            .redes {
+                display: none;
+            }
+        }
+        .grid-area {
+            .qsImg {
+                justify-content: center;
+            }
+            .salonImg {
+                justify-content: center;
+            }
+        }
+    }
+}

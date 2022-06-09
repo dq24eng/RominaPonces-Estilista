@@ -1,0 +1,97 @@
+@import 'vars';
+
+@mixin cFlexDisplay {
+    display: flex;
+    flex-direction: column;
+}
+@mixin rFlexDisplay {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    grid-area: footer;
+    border-top: $borderTopFooter;
+    margin-bottom: $marginBottomC;
+
+        .footer__mainSection{
+            display: flex;
+            padding: $paddMainFooter;
+            flex-flow: row nowrap;
+            align-items: stretch; 
+            border-bottom: $borderBottomFooter;
+    
+            .footer__menuOptions{
+                width: $fullScreenPorc;
+                @include cFlexDisplay;
+                align-items: center;
+                text-align: center;
+                gap: $gapFooterMO;
+                .footer__menuOptions--button{
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding: $paddButton;
+                    color: $colorPrincipal;
+                    border: $borderInput;
+                    background: $backgroundInput;
+                    border-radius: $borderRadiusButton;
+                    &:hover{
+                        color: $colorSecundario;
+                        border: $borderInput;
+                        background: $colorPrincipal;
+                    }
+                }
+                .footer__menuOptions--text{
+                    cursor: text;
+                    padding: $paddInput;
+                    color: $colorPrincipal;
+                    border: $borderInput;
+                    background-color: $backgroundInput;
+                    border-radius: $borderRadiusTxtInput;
+                }
+            }
+    
+            .footer__menuOptions--horarios{
+                width: $tQuarScreenPorc;
+                ul{
+                    padding-left: $paddLeftMO;
+                    li{
+                        margin-bottom: $marginBottomC;
+                    }
+                }
+            }
+            
+            .footer__menuOptions--turnos{
+                width: $halfScreenPorc;
+                ul {
+                    padding-left: $paddLeftMO;
+                    li {
+                        margin-bottom: $marginBottomC;
+                    }
+                }
+            }
+            .footer__menuOptions--contacto{
+                ul{
+                    padding-left: $paddLeftMO;
+                }
+                .footer__menuOptions--redes{
+                    @include rFlexDisplay;
+                    width: $fullScreenPorc;
+                    justify-content: center;
+                    gap: $gapFooterRedes;
+                    a{
+                        img{
+                            &:hover{
+                                transform: scale($redesLogoScale)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .endPage {
+            text-align: center;
+            margin-top: $marginTopFooter;
+        }    
+
+}
