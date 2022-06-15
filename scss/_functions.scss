@@ -1,0 +1,63 @@
+@import 'vars';
+
+// Functions & Styling 
+
+@mixin cFlexDisplay { //Display flex con flex-direction columnas 
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin rFlexDisplay { //Display flex con flex-direction filas (por defecto) 
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin styleRespServ { //Estilado en resoluciones hasta 992px en pagina Servicios 
+    width: $fullScreen;
+    padding: $paddingMobileServ;
+    text-align: center;
+}
+
+@mixin styleRespBlocks {
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.inputOptionsProperties {
+    color: $colorPrincipal;
+    border: $borderInput;  
+}
+
+@mixin menuOptions--text { 
+    cursor: text;
+    padding: $paddInput;
+    border-radius: $borderRadiusTxtInput;
+    background-color: $backgroundInput;
+    @extend .inputOptionsProperties;
+}
+
+@mixin menuOptions--button { 
+    font-weight: bold;
+    cursor: pointer;
+    padding: $paddButton;
+    background: $backgroundInput;
+    border-radius: $borderRadiusButton;
+    @extend .inputOptionsProperties;
+    &:hover{
+        color: $colorSecundario;
+        border: $borderInput;
+        background: $colorPrincipal;
+    }
+}
+
+@mixin titlesMainSection{ 
+    font: {
+        size: $titulosIndex;
+        weight: $weightTitulos;
+        margin-bottom: $marginTitleMainSection;
+    }
+}
+
+

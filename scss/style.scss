@@ -3,11 +3,7 @@
 @import 'header';
 @import 'footer';
 @import 'responsive';
-
-@mixin cFlexDisplay {
-    display: flex;
-    flex-direction: column;
-}
+@import 'functions';
 
 *{
     padding: 0;
@@ -24,6 +20,7 @@ body {
     background: $backgroundImage;
     overflow-x: hidden;
     max-width: $fullScreen;
+    ol { padding: 0; }
 }
 
 /* --------------------- PAGINA INDEX ------------------------- */
@@ -32,7 +29,7 @@ body {
 
     display: grid;
     grid-template-areas: "video video" "info1 img1" "img2 info2" "serv serv";
-    gap: $gapGridIndex;
+    gap: $gapGrid;
 
     .contenedorVideo {
         grid-area:video;
@@ -75,12 +72,8 @@ body {
     }
 
     div {
-        .titlesMainSection{
-            font: {
-                size: $titulosIndex;
-                weight: $weightTitulosIndex;
-                margin-bottom: $marginTitleMainSection;
-            }
+        h2 {
+            @include titlesMainSection;
         }
     }
 
@@ -106,10 +99,225 @@ body {
                 } 
             }    
         }
+        h2 {
+            @include titlesMainSection;
+        }
     }  
 
-    .mosaicoMobile { //Carrusel que aprece solo en Mobile
+    .mosaicoMobile {        //Carrusel que aprece solo en Mobile
         margin-bottom: $marginMosaicoMobile;
+    }
+}
+
+/* --------------------- PAGINA SERVICIOS ------------------------- */
+
+.gridAreaServ {
+    display: grid;
+    grid-template-areas: 
+        "txt1 imgn1" "imgn2 txt2" "txt3 imgn3" "imgn4 txt4" "txt5 imgn5" "imgn6 txt6" "precios precios" "footer footer";
+    gap: $gapGrid;
+
+    div {
+        h1 { @include titlesMainSection; }
+    }
+
+    @for $i from 1 to 7 {
+        .textBlock#{$i} { grid-area: txt + $i; }
+        .imgBlock#{$i} { grid-area: imgn + $i; }
+    }
+
+    .textBlock1, .imgBlock1 {margin-top: $marginTopServ;}
+
+    .flexTextPropLeft{
+        @include cFlexDisplay;
+        align-items: flex-start;
+        justify-content: center;
+        gap: $gapTextServ;
+        padding: $paddingTextServL;
+        margin-left: $marginServ;
+    }
+
+    .flexTextPropRight{
+        @include cFlexDisplay;
+        align-items: flex-start;
+        justify-content: center;
+        gap: $gapTextServ;
+        padding: $paddingTextServR;
+        margin-right: $marginServ;
+    }
+
+    .flexImgPropRight{
+        @include cFlexDisplay;
+        justify-content: flex-start;
+        padding-left: $paddImagesServ;
+    }
+        
+    .flexImgPropLeft{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: $paddImagesServ;
+    }
+
+    .gridListaPrecios{
+        grid-area: precios;
+        .gridTitleLP, .gridTextLP {
+            grid-column: 1/5;
+            display: flex;
+            justify-content: center;
+        }
+        .listaPrecios{
+            @include cFlexDisplay;
+            align-items: center;
+            .tituloPrincipal{
+                font-size: $titulosLP;
+                font-weight: $weightTitulos;
+            }
+        }
+    }
+}
+
+/* --------------------- PAGINA LOOKBOOK -------------------------- */
+
+.gridAreaLookbook{
+    .tituloLB, .textoLB, & div h2{ 
+        display: grid;
+        justify-content: center;
+        gap: $gapLookbook;
+    }
+}
+
+/* --------------------- PAGINA TURNOS ---------------------------- */
+
+.Turnos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: $paddingGridTurnos;
+    .reserva{
+        @include cFlexDisplay;
+        justify-content: center;
+        align-items: center;
+        h1 { @include titlesMainSection; }
+        .formularioLayout{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; //repeat(7, 1fr);
+            gap: $gapTurnos;
+            padding: $paddFormulario;
+            div{
+                grid-column: 1/3;
+                text-align: center;
+            }
+            #horario{
+                grid-row: 6/7;
+                grid-column: 1/3;
+                text-align: center;
+                justify-self: center;
+            }
+            span{
+                grid-row: 7/8;
+                grid-column: 1/3;
+                text-align: center;
+            }
+            p{
+                display: flex;
+                justify-content: center;
+            }
+        }   
+        form {
+            #nya, #apellido, #telefono, #servicio, #horario{
+                @include menuOptions--text;
+            } 
+            span {
+                #enviarBtn {
+                    @include menuOptions--button;
+                }
+            }
+        }
+    }
+    .calendar{
+        width: map-get($ScreenViewsPerc, "calendar");
+        border: $borderCalendar;
+        justify-content: center;
+        height: min-content;
+        .tituloCal{
+            text-align: center;
+            margin: $marginTitCal;
+        }
+        ol{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; //repeat(7, 1fr);
+            justify-content: center;
+            align-content: center;
+            li{
+                text-align: right;
+                padding: $paddListCal;
+            }
+            .day {
+                &:hover{
+                    background-color: $backgroundCalDays;
+                }
+            }
+            .dayName{
+                background: $backgroundWeekDays;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+            .firstDay{grid-column-start: 7;}
+        }
+    }
+}
+
+/* --------------------- PAGINA CONTACTO -------------------------- */
+
+.contactLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: $paddingContactGrid;
+    .contacto{
+        @include cFlexDisplay;
+        justify-content: flex-start;
+        gap: $gapContacto;
+        padding-right: $paddContacto;
+        h1 { @include titlesMainSection; }
+        ul{
+            @include cFlexDisplay;
+            justify-content: center;
+            li{
+                display: flex;
+                align-items: center;
+                gap: $gapContacto;
+                padding-bottom: $paddBottomLi;
+            }
+        }
+    }
+    .consulta {
+        form{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content; // repeat(8, min-content);
+            gap: $gapFormConsulta;
+            padding-top: $paddCons;
+            justify-content: space-evenly;
+            align-content: space-around;
+            div {
+                grid-column: 1/3;
+                justify-self: center;
+                input {
+                    @include menuOptions--button;
+                }
+            }
+            h3{
+                grid-column: 1/3;
+                justify-self: start;
+            }
+            #nombre, #apellido, #telefono, #email {
+                @include menuOptions--text;
+            }
+            textarea {
+                @include menuOptions--text;
+            }
+        }
     }
 }
 

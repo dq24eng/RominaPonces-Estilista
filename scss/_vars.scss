@@ -6,6 +6,7 @@ $colorSecundario: black;
 $nullColor : rgba(0,0,0,0); /* Background color imagenes de Bootstrap */
 $colorStylesFooter: white; 
 $colorBorderFooter: #ccc;
+$colorCalendar: #ddd;
 
 /* Background */
 
@@ -13,43 +14,74 @@ $backgroundImage: url(../imagenes/backimg.jpg);
 $backgroundNav: linear-gradient(45deg, rgba(14, 13, 13, 0.93), rgba(42, 41, 41, 0.95));
 $backgroundOpacity: 0.9;
 $backgroundInput: rgba(26, 25, 25, 0.5);
+$backgroundCalDays: rgba(95, 201, 205, 0.634);
+$backgroundWeekDays: rgba(35, 39, 77, 0.655);
 
 
 /* Spacing */
 
 $paddingIndexSPpal: 5% 10% 5% 10%; /* Padding index Seccion principal */
-$gapGridIndex: 15px 0px;
+$paddingTextServL: 0% 0% 5% 15%; // Padding texto en pagina Servicios Left
+$paddingTextServR: 0% 15% 5% 0%; // Padding texto en pagina Servicios Right
+$paddingMobileServ: 0% 5% 0% 5%;
+$paddingMobileTitleLP: 1% 0% 1% 0%;
+$paddingGridTurnos: 1% 0% 1% 0%; //Tambien mobile Contacto
+$paddingMobileLBook: 0% 1% 0% 1%;
+$paddingContactGrid: 1% 3% 1% 3%;
+$paddContactoMobile: 0% 3% 0% 3%;
+$gapGrid: 15px 0px; //Index y Servicios
+$gapTextServ: 7px 0px; 
+$gapLookbook: 10px 0px; // Gap pagina Lookbook
+$gapTurnos: 15px 15px;
+$gapFormConsulta: 35px 0px;
+$gapMobileContacto: 20px 10px;
 $marginTitleMainSection: 15px;
-$paddLeftST: 5%;
-$gapMosaico: 10px;
+$paddLeftST: 5%; //Padding left ServTitle 
+$paddImagesServ: 5%; // imagenes servicios pagina
+$paddFormulario: 10px; // Padding formulario pagina turnos
+$paddListCal: 10%; //Padding dias calendario
+$paddContacto: 5%;
+$paddBottomLi: 1%; //Padding-bottom listas 
+$paddCons: 10%; //Padding top Formulario consulta
+$gapMosaico: 10px; //Mismo que calendar mobile
 $marginBottomC: 10px;
 $marginMosaicoMobile: 3%;
 $paddMainFooter: 15px;
 $gapFooterMO: 5px;
 $gapFooterRedes: 14px;
+$gapContacto: 10px;
 $paddLeftMO: 0px;
 $paddButton: 4px;
 $paddInput: 3px;
+$paddTopTabletContacto: 4%;
 $marginTopFooter: 5px;
+$marginTopServ: 3%;
+$marginServ: 5%; // Margin izq/der texto en pagina Servicios
+$marginTitCal: 2% 0% 2% 0%; //Margin titulo calendario
 
 /* Styles texts-conteiners */
 
 $titulosIndex: 40px;
-$weightTitulosIndex: bold;
+$titulosLP: 25px; //Titulos lista de precios
+$weightTitulos: bold;
 $borderStyleBS: none;
 $borderTopFooter: 1px solid $colorStylesFooter;
 $borderBottomFooter: 1px solid $colorStylesFooter;
 $borderInput: 1px solid $colorBorderFooter;
+$borderCalendar: 1px solid $colorCalendar;
 $borderRadiusButton: 3px;
 $borderRadiusTxtInput: 2px;
 
 /* Views */
 
 $fullScreen: 100vw;
-$fullScreenPorc: 100%;
+$ScreenViewsPerc:("full":100%, "calendar":90%, "tQuar":75%, "half":50% );
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
 $tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%;
+$halfScreenPorc: 50%; */
 $videoIndexView: 85vh;
+$googleMap: 80vw;
 $zIndexHeader: 999;
 
 /* Transitions, Animations, Transformations */

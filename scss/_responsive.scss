@@ -1,3 +1,4 @@
+@import 'vars';
 
 //Mobile-Tablet
 
@@ -5,12 +6,16 @@
 
     body {
         overflow-x: hidden;
+        ::-webkit-scrollbar {
+            display: none;
+            overflow-y: hidden;
+        }
         header {
             .redes {
                 display: none;
             }
         }
-        .grid-area{
+        .grid-area{ //Pagina Index 
             display: grid;
             grid-template-areas: "video" "info1" "img1" "info2" "img2" "serv";
             .contenedorVideo {
@@ -97,6 +102,65 @@
                 display: none;
             }
         }
+        .gridAreaServ {  // Pagina Servicios
+            grid-template-areas: "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6" "precios"    "footer";
+            span {
+                img {
+                    width: fit-content;
+                }
+            }
+            @for $i from 1 to 7 {
+                .textBlock#{$i} { 
+                    @include styleRespServ;
+                }
+                .imgBlock#{$i} { 
+                    @include styleRespServ;
+                }
+            }
+            .flexTextPropLeft, .flexImgPropLeft, .flexTextPropRight, .flexImgPropRight{
+                @include styleRespServ;
+                @include styleRespBlocks;
+            }
+            .gridListaPrecios{
+                @include styleRespServ;
+                @include cFlexDisplay;
+                .gridTextLP, .gridTitleLP {padding: $paddingMobileTitleLP}
+            }
+        }
+        .gridAreaLookbook { // Pagina Lookbook
+            @include cFlexDisplay;
+            padding: $paddingMobileLBook;
+            .tituloLB, .textoLB, & div h2{ 
+                @include cFlexDisplay;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .Turnos { //Pagina Turnos
+            @include cFlexDisplay;
+            padding: $paddingGridTurnos;
+            align-items: center;
+            gap: $gapMosaico;
+        }
+        .contactLayout{ //Pagina Contacto
+            @include cFlexDisplay;
+            padding: $paddingGridTurnos;
+            align-items: center;
+            gap: $gapContacto;
+            .contacto{
+                text-align: center;
+                padding: $paddContactoMobile;
+                div {
+                    iframe {
+                        width: $googleMap;
+                    }  
+                }
+            }  
+            .consulta {
+                gap: $gapMobileContacto;
+                padding: $paddContactoMobile;
+            }
+        }
     }
 }
 
@@ -108,12 +172,26 @@
                 display: none;
             }
         }
-        .grid-area {
-            .qsImg {
+        .grid-area { // Pagina Index 
+            .qsImg, .salonImg {
                 justify-content: center;
             }
-            .salonImg {
-                justify-content: center;
+        }
+        .gridAreaServ { // Pagina Servicios
+            .gridListaPrecios {
+                text-align: center;
+            }
+        }
+        .contactLayout{ //Pagina Contacto
+            @include rFlexDisplay;
+            .contacto {
+                @include cFlexDisplay;
+                align-items: center;
+                padding-right: 0%;
+                p { text-align: center; }
+            }
+            .consulta{
+                form { padding-top: $paddTopTabletContacto; }
             }
         }
     }

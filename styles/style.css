@@ -6,6 +6,10 @@
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
 /* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
 /* Colores */
 /* Background color imagenes de Bootstrap */
@@ -14,6 +18,10 @@
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
 /* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
 header {
   width: 100%;
@@ -35,8 +43,32 @@ header .redes__logo:hover {
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
 /* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+/* Colores */
+/* Background color imagenes de Bootstrap */
+/* Background */
+/* Spacing */
+/* Padding index Seccion principal */
+/* Styles texts-conteiners */
+/* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
+/* Transitions, Animations, Transformations */
+.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form textarea {
+  color: white;
+  border: 1px solid #ccc;
+}
+
 footer {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: footer;
   border-top: 1px solid white;
   margin-bottom: 10px;
@@ -71,31 +103,6 @@ footer .footer__mainSection .footer__menuOptions {
           align-items: center;
   text-align: center;
   gap: 5px;
-}
-
-footer .footer__mainSection .footer__menuOptions .footer__menuOptions--button {
-  font-weight: bold;
-  cursor: pointer;
-  padding: 4px;
-  color: white;
-  border: 1px solid #ccc;
-  background: rgba(26, 25, 25, 0.5);
-  border-radius: 3px;
-}
-
-footer .footer__mainSection .footer__menuOptions .footer__menuOptions--button:hover {
-  color: black;
-  border: 1px solid #ccc;
-  background: white;
-}
-
-footer .footer__mainSection .footer__menuOptions .footer__menuOptions--text {
-  cursor: text;
-  padding: 3px;
-  color: white;
-  border: 1px solid #ccc;
-  background-color: rgba(26, 25, 25, 0.5);
-  border-radius: 2px;
 }
 
 footer .footer__mainSection .footer__menuOptions--horarios {
@@ -146,14 +153,51 @@ footer .footer__mainSection .footer__menuOptions--contacto .footer__menuOptions-
           transform: scale(0.8);
 }
 
+footer .footer__mainSection div #nombre {
+  cursor: text;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgba(26, 25, 25, 0.5);
+}
+
+footer .footer__mainSection div #sendBtn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  background: rgba(26, 25, 25, 0.5);
+  border-radius: 3px;
+}
+
+footer .footer__mainSection div #sendBtn:hover {
+  color: black;
+  border: 1px solid #ccc;
+  background: white;
+}
+
 footer .endPage {
   text-align: center;
   margin-top: 5px;
 }
 
+/* Colores */
+/* Background color imagenes de Bootstrap */
+/* Background */
+/* Spacing */
+/* Padding index Seccion principal */
+/* Styles texts-conteiners */
+/* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
+/* Transitions, Animations, Transformations */
 @media screen and (max-width: 992px) {
   body {
     overflow-x: hidden;
+  }
+  body ::-webkit-scrollbar {
+    display: none;
+    overflow-y: hidden;
   }
   body header .redes {
     display: none;
@@ -248,6 +292,164 @@ footer .endPage {
   body footer .endPage {
     display: none;
   }
+  body .gridAreaServ {
+        grid-template-areas: "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6" "precios"    "footer";
+  }
+  body .gridAreaServ span img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .gridAreaServ .textBlock1 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock1 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .textBlock2 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock2 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .textBlock3 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock3 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .textBlock4 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock4 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .textBlock5 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock5 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .textBlock6 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .imgBlock6 {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  body .gridAreaServ .flexTextPropLeft, body .gridAreaServ .flexImgPropLeft, body .gridAreaServ .flexTextPropRight, body .gridAreaServ .flexImgPropRight {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  body .gridAreaServ .gridListaPrecios {
+    width: 100vw;
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .gridAreaServ .gridListaPrecios .gridTextLP, body .gridAreaServ .gridListaPrecios .gridTitleLP {
+    padding: 1% 0% 1% 0%;
+  }
+  body .gridAreaLookbook {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0% 1% 0% 1%;
+  }
+  body .gridAreaLookbook .tituloLB, body .gridAreaLookbook .textoLB, body .gridAreaLookbook div h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  body .Turnos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1% 0% 1% 0%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  body .contactLayout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1% 0% 1% 0%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  body .contactLayout .contacto {
+    text-align: center;
+    padding: 0% 3% 0% 3%;
+  }
+  body .contactLayout .contacto div iframe {
+    width: 80vw;
+  }
+  body .contactLayout .consulta {
+    gap: 20px 10px;
+    padding: 0% 3% 0% 3%;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -257,16 +459,59 @@ footer .endPage {
   body header .redes {
     display: none;
   }
-  body .grid-area .qsImg {
+  body .grid-area .qsImg, body .grid-area .salonImg {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .grid-area .salonImg {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  body .gridAreaServ .gridListaPrecios {
+    text-align: center;
   }
+  body .contactLayout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .contactLayout .contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 0%;
+  }
+  body .contactLayout .contacto p {
+    text-align: center;
+  }
+  body .contactLayout .consulta form {
+    padding-top: 4%;
+  }
+}
+
+/* Colores */
+/* Background color imagenes de Bootstrap */
+/* Background */
+/* Spacing */
+/* Padding index Seccion principal */
+/* Styles texts-conteiners */
+/* Views */
+/* $fullScreenPorc: 100%;
+$calendarScreen: 90%;
+$tQuarScreenPorc: 75%;
+$halfScreenPorc: 50%; */
+/* Transitions, Animations, Transformations */
+.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form textarea {
+  color: white;
+  border: 1px solid #ccc;
 }
 
 * {
@@ -283,6 +528,10 @@ body {
   background: url(../imagenes/backimg.jpg);
   overflow-x: hidden;
   max-width: 100vw;
+}
+
+body ol {
+  padding: 0;
 }
 
 /* --------------------- PAGINA INDEX ------------------------- */
@@ -379,7 +628,7 @@ body {
           justify-content: center;
 }
 
-.grid-area div .titlesMainSection {
+.grid-area div h2 {
   font-size: 40px;
   font-weight: bold;
   font-margin-bottom: 15px;
@@ -427,8 +676,482 @@ body {
           transform: scale(0.96);
 }
 
+.grid-area .mosaico h2 {
+  font-size: 40px;
+  font-weight: bold;
+  font-margin-bottom: 15px;
+}
+
 .grid-area .mosaicoMobile {
   margin-bottom: 3%;
+}
+
+/* --------------------- PAGINA SERVICIOS ------------------------- */
+.gridAreaServ {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "txt1 imgn1" "imgn2 txt2" "txt3 imgn3" "imgn4 txt4" "txt5 imgn5" "imgn6 txt6" "precios precios" "footer footer";
+  gap: 15px 0px;
+}
+
+.gridAreaServ div h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-margin-bottom: 15px;
+}
+
+.gridAreaServ .textBlock1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: txt1;
+}
+
+.gridAreaServ .imgBlock1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: imgn1;
+}
+
+.gridAreaServ .textBlock2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: txt2;
+}
+
+.gridAreaServ .imgBlock2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: imgn2;
+}
+
+.gridAreaServ .textBlock3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: txt3;
+}
+
+.gridAreaServ .imgBlock3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: imgn3;
+}
+
+.gridAreaServ .textBlock4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: txt4;
+}
+
+.gridAreaServ .imgBlock4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: imgn4;
+}
+
+.gridAreaServ .textBlock5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: txt5;
+}
+
+.gridAreaServ .imgBlock5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: imgn5;
+}
+
+.gridAreaServ .textBlock6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: txt6;
+}
+
+.gridAreaServ .imgBlock6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: imgn6;
+}
+
+.gridAreaServ .textBlock1, .gridAreaServ .imgBlock1 {
+  margin-top: 3%;
+}
+
+.gridAreaServ .flexTextPropLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7px 0px;
+  padding: 0% 0% 5% 15%;
+  margin-left: 5%;
+}
+
+.gridAreaServ .flexTextPropRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7px 0px;
+  padding: 0% 15% 5% 0%;
+  margin-right: 5%;
+}
+
+.gridAreaServ .flexImgPropRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.gridAreaServ .flexImgPropLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 5%;
+}
+
+.gridAreaServ .gridListaPrecios {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: precios;
+}
+
+.gridAreaServ .gridListaPrecios .gridTitleLP, .gridAreaServ .gridListaPrecios .gridTextLP {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridAreaServ .gridListaPrecios .listaPrecios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gridAreaServ .gridListaPrecios .listaPrecios .tituloPrincipal {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* --------------------- PAGINA LOOKBOOK -------------------------- */
+.gridAreaLookbook .tituloLB, .gridAreaLookbook .textoLB, .gridAreaLookbook div h2 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px 0px;
+}
+
+/* --------------------- PAGINA TURNOS ---------------------------- */
+.Turnos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 1% 0% 1% 0%;
+}
+
+.Turnos .reserva {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Turnos .reserva h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-margin-bottom: 15px;
+}
+
+.Turnos .reserva .formularioLayout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px 15px;
+  padding: 10px;
+}
+
+.Turnos .reserva .formularioLayout div {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.Turnos .reserva .formularioLayout #horario {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.Turnos .reserva .formularioLayout span {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7/8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.Turnos .reserva .formularioLayout p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario {
+  cursor: text;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgba(26, 25, 25, 0.5);
+}
+
+.Turnos .reserva form span #enviarBtn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  background: rgba(26, 25, 25, 0.5);
+  border-radius: 3px;
+}
+
+.Turnos .reserva form span #enviarBtn:hover {
+  color: black;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.Turnos .calendar {
+  width: 90%;
+  border: 1px solid #ddd;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.Turnos .calendar .tituloCal {
+  text-align: center;
+  margin: 2% 0% 2% 0%;
+}
+
+.Turnos .calendar ol {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.Turnos .calendar ol li {
+  text-align: right;
+  padding: 10%;
+}
+
+.Turnos .calendar ol .day:hover {
+  background-color: rgba(95, 201, 205, 0.634);
+}
+
+.Turnos .calendar ol .dayName {
+  background: rgba(35, 39, 77, 0.655);
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Turnos .calendar ol .firstDay {
+  -ms-grid-column: 7;
+      grid-column-start: 7;
+}
+
+/* --------------------- PAGINA CONTACTO -------------------------- */
+.contactLayout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 1% 3% 1% 3%;
+}
+
+.contactLayout .contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  padding-right: 5%;
+}
+
+.contactLayout .contacto h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-margin-bottom: 15px;
+}
+
+.contactLayout .contacto ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactLayout .contacto ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding-bottom: 1%;
+}
+
+.contactLayout .consulta form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: min-content min-content min-content min-content min-content min-content min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content;
+  gap: 35px 0px;
+  padding-top: 10%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.contactLayout .consulta form div {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contactLayout .consulta form div input {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  background: rgba(26, 25, 25, 0.5);
+  border-radius: 3px;
+}
+
+.contactLayout .consulta form div input:hover {
+  color: black;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.contactLayout .consulta form h3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email {
+  cursor: text;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgba(26, 25, 25, 0.5);
+}
+
+.contactLayout .consulta form textarea {
+  cursor: text;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgba(26, 25, 25, 0.5);
 }
 
 .bg-dark {

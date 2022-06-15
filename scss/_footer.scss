@@ -1,13 +1,5 @@
 @import 'vars';
-
-@mixin cFlexDisplay {
-    display: flex;
-    flex-direction: column;
-}
-@mixin rFlexDisplay {
-    display: flex;
-    flex-direction: row;
-}
+@import 'functions';
 
 footer {
     grid-area: footer;
@@ -22,37 +14,15 @@ footer {
             border-bottom: $borderBottomFooter;
     
             .footer__menuOptions{
-                width: $fullScreenPorc;
+                width: map-get($ScreenViewsPerc, "full");;
                 @include cFlexDisplay;
                 align-items: center;
                 text-align: center;
                 gap: $gapFooterMO;
-                .footer__menuOptions--button{
-                    font-weight: bold;
-                    cursor: pointer;
-                    padding: $paddButton;
-                    color: $colorPrincipal;
-                    border: $borderInput;
-                    background: $backgroundInput;
-                    border-radius: $borderRadiusButton;
-                    &:hover{
-                        color: $colorSecundario;
-                        border: $borderInput;
-                        background: $colorPrincipal;
-                    }
-                }
-                .footer__menuOptions--text{
-                    cursor: text;
-                    padding: $paddInput;
-                    color: $colorPrincipal;
-                    border: $borderInput;
-                    background-color: $backgroundInput;
-                    border-radius: $borderRadiusTxtInput;
-                }
             }
     
             .footer__menuOptions--horarios{
-                width: $tQuarScreenPorc;
+                width: map-get($ScreenViewsPerc, "tQuar");;
                 ul{
                     padding-left: $paddLeftMO;
                     li{
@@ -62,7 +32,7 @@ footer {
             }
             
             .footer__menuOptions--turnos{
-                width: $halfScreenPorc;
+                width: map-get($ScreenViewsPerc, "half");;
                 ul {
                     padding-left: $paddLeftMO;
                     li {
@@ -76,7 +46,7 @@ footer {
                 }
                 .footer__menuOptions--redes{
                     @include rFlexDisplay;
-                    width: $fullScreenPorc;
+                    width: map-get($ScreenViewsPerc, "full");;
                     justify-content: center;
                     gap: $gapFooterRedes;
                     a{
@@ -86,6 +56,15 @@ footer {
                             }
                         }
                     }
+                }
+            }
+
+            div {
+                #nombre {
+                    @include menuOptions--text;
+                }
+                #sendBtn {
+                    @include menuOptions--button;
                 }
             }
         }
