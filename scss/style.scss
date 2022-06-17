@@ -106,6 +106,15 @@ body {
 
     .mosaicoMobile {        //Carrusel que aprece solo en Mobile
         margin-bottom: $marginMosaicoMobile;
+        .row {
+            #control1 {
+                .carousel-inner {
+                    .carousel-control-prev, .carousel-control-next {
+                        display: none; 
+                    }
+                }
+            }
+        }
     }
 }
 

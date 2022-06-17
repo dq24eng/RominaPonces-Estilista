@@ -10,5 +10,12 @@ header {
             transform: scale($redesLogoScale)
         }
     }
+    .navbar-toggler {
+        border-color: $colorBorderHambMenu;
+        .navbar-toggler-icon{
+            background-image: $backgroungImageHambMenu;
+        }
+    }
+    
 }
 

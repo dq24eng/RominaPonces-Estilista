@@ -36,6 +36,14 @@ header .redes__logo:hover {
           transform: scale(0.8);
 }
 
+header .navbar-toggler {
+  border-color: #505252;
+}
+
+header .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../imagenes/hamb_icon.png);
+}
+
 /* Colores */
 /* Background color imagenes de Bootstrap */
 /* Background */
@@ -258,6 +266,9 @@ $halfScreenPorc: 50%; */
   body .grid-area .mosaico .mosaico__img div img {
     width: 100vw;
     padding: 0% 5% 0% 5%;
+  }
+  body .grid-area .mosaicoMobile {
+    text-align: center;
   }
   body footer .footer__mainSection {
     -webkit-box-orient: vertical;
@@ -631,7 +642,7 @@ body ol {
 .grid-area div h2 {
   font-size: 40px;
   font-weight: bold;
-  font-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .grid-area .mosaico {
@@ -679,11 +690,15 @@ body ol {
 .grid-area .mosaico h2 {
   font-size: 40px;
   font-weight: bold;
-  font-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .grid-area .mosaicoMobile {
   margin-bottom: 3%;
+}
+
+.grid-area .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev, .grid-area .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
+  display: none;
 }
 
 /* --------------------- PAGINA SERVICIOS ------------------------- */
@@ -697,7 +712,7 @@ body ol {
 .gridAreaServ div h1 {
   font-size: 40px;
   font-weight: bold;
-  font-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .gridAreaServ .textBlock1 {
@@ -913,7 +928,7 @@ body ol {
 .Turnos .reserva h1 {
   font-size: 40px;
   font-weight: bold;
-  font-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .Turnos .reserva .formularioLayout {
@@ -1066,7 +1081,7 @@ body ol {
 .contactLayout .contacto h1 {
   font-size: 40px;
   font-weight: bold;
-  font-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .contactLayout .contacto ul {
