@@ -106,15 +106,6 @@ body {
 
     .mosaicoMobile {        //Carrusel que aprece solo en Mobile
         margin-bottom: $marginMosaicoMobile;
-        .row {
-            #control1 {
-                .carousel-inner {
-                    .carousel-control-prev, .carousel-control-next {
-                        display: none; 
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -137,13 +128,20 @@ body {
 
     .textBlock1, .imgBlock1 {margin-top: $marginTopServ;}
 
+    span {
+        img {
+            max-width: 500px;
+            height: auto;
+        }
+    }
+
     .flexTextPropLeft{
         @include cFlexDisplay;
         align-items: flex-start;
         justify-content: center;
         gap: $gapTextServ;
         padding: $paddingTextServL;
-        margin-left: $marginServ;
+        //margin-left: $marginServ;
     }
 
     .flexTextPropRight{
@@ -152,7 +150,7 @@ body {
         justify-content: center;
         gap: $gapTextServ;
         padding: $paddingTextServR;
-        margin-right: $marginServ;
+        //margin-right: $marginServ;
     }
 
     .flexImgPropRight{

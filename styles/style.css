@@ -199,6 +199,37 @@ $calendarScreen: 90%;
 $tQuarScreenPorc: 75%;
 $halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+@media screen and (max-width: 576px) {
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev {
+    left: -1vw;
+  }
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
+    right: -1vw;
+  }
+  .gridAreaServ span img {
+    max-width: 375px;
+    max-height: 325px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev {
+    left: 5vw;
+  }
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
+    right: 5vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev {
+    left: 14vw;
+  }
+  .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
+    right: 14vw;
+  }
+}
+
 @media screen and (max-width: 992px) {
   body {
     overflow-x: hidden;
@@ -697,10 +728,6 @@ body ol {
   margin-bottom: 3%;
 }
 
-.grid-area .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev, .grid-area .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
-  display: none;
-}
-
 /* --------------------- PAGINA SERVICIOS ------------------------- */
 .gridAreaServ {
   display: -ms-grid;
@@ -791,6 +818,11 @@ body ol {
   margin-top: 3%;
 }
 
+.gridAreaServ span img {
+  max-width: 500px;
+  height: auto;
+}
+
 .gridAreaServ .flexTextPropLeft {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -807,7 +839,6 @@ body ol {
           justify-content: center;
   gap: 7px 0px;
   padding: 0% 0% 5% 15%;
-  margin-left: 5%;
 }
 
 .gridAreaServ .flexTextPropRight {
@@ -826,7 +857,6 @@ body ol {
           justify-content: center;
   gap: 7px 0px;
   padding: 0% 15% 5% 0%;
-  margin-right: 5%;
 }
 
 .gridAreaServ .flexImgPropRight {

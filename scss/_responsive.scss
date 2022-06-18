@@ -2,8 +2,63 @@
 
 //Mobile-Tablet
 
-@media screen and (max-width: 768px){
-    // -------------
+@media screen and (max-width: 576px){
+    .mosaicoMobile {
+        .row {
+            #control1 {
+                .carousel-inner {
+                    .carousel-control-prev {
+                        left: -1vw; 
+                    }
+                    .carousel-control-next{
+                        right: -1vw;
+                    }
+                }
+            }
+        }
+    }
+    .gridAreaServ {
+        span {
+            img {
+                max-width: 375px;
+                max-height: 325px;
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .mosaicoMobile {
+        .row {
+            #control1 {
+                .carousel-inner {
+                    .carousel-control-prev {
+                        left: 5vw; 
+                    }
+                    .carousel-control-next{
+                        right: 5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .mosaicoMobile {
+        .row {
+            #control1 {
+                .carousel-inner {
+                    .carousel-control-prev {
+                        left: 14vw; 
+                    }
+                    .carousel-control-next{
+                        right: 14vw;
+                    } 
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
