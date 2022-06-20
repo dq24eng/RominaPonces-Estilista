@@ -14,7 +14,7 @@ footer {
             border-bottom: $borderBottomFooter;
     
             .footer__menuOptions{
-                width: map-get($ScreenViewsPerc, "full");;
+                width: map-get($ScreenViewsPerc, "full");
                 @include cFlexDisplay;
                 align-items: center;
                 text-align: center;
@@ -22,7 +22,7 @@ footer {
             }
     
             .footer__menuOptions--horarios{
-                width: map-get($ScreenViewsPerc, "tQuar");;
+                width: map-get($ScreenViewsPerc, "tQuar");
                 ul{
                     padding-left: $paddLeftMO;
                     li{
@@ -32,7 +32,7 @@ footer {
             }
             
             .footer__menuOptions--turnos{
-                width: map-get($ScreenViewsPerc, "half");;
+                width: map-get($ScreenViewsPerc, "half");
                 ul {
                     padding-left: $paddLeftMO;
                     li {
@@ -46,7 +46,7 @@ footer {
                 }
                 .footer__menuOptions--redes{
                     @include rFlexDisplay;
-                    width: map-get($ScreenViewsPerc, "full");;
+                    width: map-get($ScreenViewsPerc, "full");
                     justify-content: center;
                     gap: $gapFooterRedes;
                     a{

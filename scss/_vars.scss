@@ -29,13 +29,13 @@ $paddingMobileServ: 0% 5% 0% 5%;
 $paddingMobileTitleLP: 1% 0% 1% 0%;
 $paddingGridTurnos: 1% 0% 1% 0%; //Tambien mobile Contacto
 $paddingMobileLBook: 0% 1% 0% 1%;
-$paddingContactGrid: 1% 3% 1% 3%;
+$marginContactGrid: 1% 0% 1% 2%;
 $paddContactoMobile: 0% 3% 0% 3%;
 $gapGrid: 15px 0px; //Index y Servicios
 $gapTextServ: 7px 0px; 
 $gapLookbook: 10px 0px; // Gap pagina Lookbook
 $gapTurnos: 15px 15px;
-$gapFormConsulta: 35px 0px;
+$gapFormConsulta: 30px 0px;
 $gapMobileContacto: 20px 10px;
 $marginTitleMainSection: 15px;
 $paddLeftST: 5%; //Padding left ServTitle 
@@ -74,14 +74,15 @@ $borderCalendar: 1px solid $colorCalendar;
 $borderRadiusButton: 3px;
 $borderRadiusTxtInput: 2px;
 
+/* Images */
+
+$maxImgServ: 500px;
+$maxImgServ1200: 450px;
+
 /* Views */
 
 $fullScreen: 100vw;
-$ScreenViewsPerc:("full":100%, "calendar":90%, "tQuar":75%, "half":50% );
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
+$ScreenViewsPerc:("full":100%, "calendar":90%, "tQuar":75%, "half":50%);
 $videoIndexView: 85vh;
 $googleMap: 80vw;
 $zIndexHeader: 999;
@@ -91,6 +92,10 @@ $zIndexHeader: 999;
 $shrinkTrans: 0.3s;
 $shrinkScale: 0.96;
 $redesLogoScale: 0.8;
+
+/* Variables */
+
+$firstDay: 7;
 
 
 

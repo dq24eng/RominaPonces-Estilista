@@ -5,24 +5,20 @@
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+/* Variables */
 /* Colores */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+/* Variables */
 header {
   width: 100%;
   position: -webkit-sticky;
@@ -50,27 +46,25 @@ header .navbar-toggler .navbar-toggler-icon {
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+/* Variables */
 /* Colores */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
-.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form textarea {
+/* Variables */
+.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form #consulta {
   color: white;
   border: 1px solid #ccc;
+  max-height: 32px;
+  width: auto;
 }
 
 footer {
@@ -193,12 +187,10 @@ footer .endPage {
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
+/* Variables */
 @media screen and (max-width: 576px) {
   .mosaicoMobile .row #control1 .carousel-inner .carousel-control-prev {
     left: -1vw;
@@ -209,6 +201,16 @@ $halfScreenPorc: 50%; */
   .gridAreaServ span img {
     max-width: 375px;
     max-height: 325px;
+  }
+  .Turnos .reserva .formularioLayout {
+    -ms-grid-rows: none !important;
+        grid-template-rows: none !important;
+  }
+  .contactLayout .contacto ul li span {
+    text-align: left;
+  }
+  .contactLayout .contacto div iframe {
+    max-height: 55vh;
   }
 }
 
@@ -467,6 +469,9 @@ $halfScreenPorc: 50%; */
             align-items: center;
     gap: 10px;
   }
+  body .Turnos .calendar {
+    margin-top: 0;
+  }
   body .contactLayout {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,6 +497,18 @@ $halfScreenPorc: 50%; */
     gap: 20px 10px;
     padding: 0% 3% 0% 3%;
   }
+  body .contactLayout .consulta form {
+    padding-top: 2%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactLayout .consulta form p {
+    padding-right: 10px;
+  }
+  body .contactLayout .consulta form #adjunto {
+    padding-left: 2vw;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -505,6 +522,9 @@ $halfScreenPorc: 50%; */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  body .gridAreaServ .flexImgPropLeft img, body .gridAreaServ .flexImgPropRight img {
+    max-width: 450px;
   }
   body .gridAreaServ .gridListaPrecios {
     text-align: center;
@@ -536,6 +556,15 @@ $halfScreenPorc: 50%; */
   }
   body .contactLayout .consulta form {
     padding-top: 4%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactLayout .consulta form p {
+    padding-right: 10px;
+  }
+  body .contactLayout .consulta form #adjunto {
+    padding-left: 25px;
   }
 }
 
@@ -545,15 +574,15 @@ $halfScreenPorc: 50%; */
 /* Spacing */
 /* Padding index Seccion principal */
 /* Styles texts-conteiners */
+/* Images */
 /* Views */
-/* $fullScreenPorc: 100%;
-$calendarScreen: 90%;
-$tQuarScreenPorc: 75%;
-$halfScreenPorc: 50%; */
 /* Transitions, Animations, Transformations */
-.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form textarea {
+/* Variables */
+.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form #consulta {
   color: white;
   border: 1px solid #ccc;
+  max-height: 32px;
+  width: auto;
 }
 
 * {
@@ -676,6 +705,12 @@ body ol {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 576px) {
+  .grid-area div h2 {
+    font-size: 30px;
+  }
+}
+
 .grid-area .mosaico {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -724,6 +759,12 @@ body ol {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 576px) {
+  .grid-area .mosaico h2 {
+    font-size: 30px;
+  }
+}
+
 .grid-area .mosaicoMobile {
   margin-bottom: 3%;
 }
@@ -740,6 +781,12 @@ body ol {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .gridAreaServ div h1 {
+    font-size: 30px;
+  }
 }
 
 .gridAreaServ .textBlock1 {
@@ -961,6 +1008,12 @@ body ol {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 576px) {
+  .Turnos .reserva h1 {
+    font-size: 30px;
+  }
+}
+
 .Turnos .reserva .formularioLayout {
   display: -ms-grid;
   display: grid;
@@ -1040,6 +1093,7 @@ body ol {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  margin-top: 5%;
 }
 
 .Turnos .calendar .tituloCal {
@@ -1064,10 +1118,6 @@ body ol {
   padding: 10%;
 }
 
-.Turnos .calendar ol .day:hover {
-  background-color: rgba(95, 201, 205, 0.634);
-}
-
 .Turnos .calendar ol .dayName {
   background: rgba(35, 39, 77, 0.655);
   font-weight: bold;
@@ -1084,13 +1134,17 @@ body ol {
       grid-column-start: 7;
 }
 
+.Turnos .calendar ol .day:hover {
+  background-color: rgba(95, 201, 205, 0.634);
+}
+
 /* --------------------- PAGINA CONTACTO -------------------------- */
 .contactLayout {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  padding: 1% 3% 1% 3%;
+  margin: 1% 0% 1% 2%;
 }
 
 .contactLayout .contacto {
@@ -1112,6 +1166,12 @@ body ol {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .contactLayout .contacto h1 {
+    font-size: 30px;
+  }
 }
 
 .contactLayout .contacto ul {
@@ -1146,7 +1206,7 @@ body ol {
   -ms-grid-rows: min-content min-content min-content min-content min-content min-content min-content min-content;
       grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
       grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content;
-  gap: 35px 0px;
+  gap: 30px 0px;
   padding-top: 10%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -1192,11 +1252,12 @@ body ol {
   background-color: rgba(26, 25, 25, 0.5);
 }
 
-.contactLayout .consulta form textarea {
+.contactLayout .consulta form #consulta {
   cursor: text;
   padding: 3px;
   border-radius: 2px;
   background-color: rgba(26, 25, 25, 0.5);
+  max-height: none;
 }
 
 .bg-dark {

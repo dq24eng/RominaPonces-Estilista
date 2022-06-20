@@ -72,9 +72,7 @@ body {
     }
 
     div {
-        h2 {
-            @include titlesMainSection;
-        }
+        h2 { @include titlesMainSection; }
     }
 
     .mosaico{
@@ -96,8 +94,8 @@ body {
                 transition-property: transform;
                 &:hover, &:focus, &:active {
                     transform: scale($shrinkScale);
-                } 
-            }    
+                }  
+            }  
         }
         h2 {
             @include titlesMainSection;
@@ -130,7 +128,7 @@ body {
 
     span {
         img {
-            max-width: 500px;
+            max-width: $maxImgServ;
             height: auto;
         }
     }
@@ -141,7 +139,6 @@ body {
         justify-content: center;
         gap: $gapTextServ;
         padding: $paddingTextServL;
-        //margin-left: $marginServ;
     }
 
     .flexTextPropRight{
@@ -150,7 +147,6 @@ body {
         justify-content: center;
         gap: $gapTextServ;
         padding: $paddingTextServR;
-        //margin-right: $marginServ;
     }
 
     .flexImgPropRight{
@@ -207,7 +203,7 @@ body {
         .formularioLayout{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; //repeat(7, 1fr);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
             gap: $gapTurnos;
             padding: $paddFormulario;
             div{
@@ -246,23 +242,19 @@ body {
         border: $borderCalendar;
         justify-content: center;
         height: min-content;
+        margin-top: 5%;
         .tituloCal{
             text-align: center;
             margin: $marginTitCal;
         }
         ol{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; //repeat(7, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
             justify-content: center;
             align-content: center;
             li{
                 text-align: right;
                 padding: $paddListCal;
-            }
-            .day {
-                &:hover{
-                    background-color: $backgroundCalDays;
-                }
             }
             .dayName{
                 background: $backgroundWeekDays;
@@ -270,7 +262,12 @@ body {
                 display: flex;
                 justify-content: center;
             }
-            .firstDay{grid-column-start: 7;}
+            .firstDay{grid-column-start: $firstDay;}
+            .day {
+                &:hover{
+                    background-color: $backgroundCalDays; 
+                }
+            }
         }
     }
 }
@@ -280,7 +277,7 @@ body {
 .contactLayout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: $paddingContactGrid;
+    margin: $marginContactGrid;
     .contacto{
         @include cFlexDisplay;
         justify-content: flex-start;
@@ -302,7 +299,7 @@ body {
         form{
             display: grid;
             grid-template-columns: auto auto;
-            grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content; // repeat(8, min-content);
+            grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content;
             gap: $gapFormConsulta;
             padding-top: $paddCons;
             justify-content: space-evenly;
@@ -321,8 +318,9 @@ body {
             #nombre, #apellido, #telefono, #email {
                 @include menuOptions--text;
             }
-            textarea {
+            #consulta {
                 @include menuOptions--text;
+                max-height: none;
             }
         }
     }

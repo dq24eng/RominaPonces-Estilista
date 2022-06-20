@@ -28,6 +28,8 @@
 .inputOptionsProperties {
     color: $colorPrincipal;
     border: $borderInput;  
+    max-height: 32px;
+    width: auto;
 }
 
 @mixin menuOptions--text { 
@@ -58,6 +60,9 @@
         weight: $weightTitulos;
     }
     margin-bottom: $marginTitleMainSection;
+    @media screen and (max-width: 576px){
+        font-size: 30px;
+    }
 }
 
 
