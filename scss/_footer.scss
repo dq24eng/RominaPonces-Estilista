@@ -2,6 +2,7 @@
 @import 'functions';
 
 footer {
+    font-size: 15px;
     grid-area: footer;
     border-top: $borderTopFooter;
     margin-bottom: $marginBottomC;
@@ -37,6 +38,18 @@ footer {
                     padding-left: $paddLeftMO;
                     li {
                         margin-bottom: $marginBottomC;
+                        /* Underline From Left */
+                        .hvr-underline-from-left {
+                            @include underline-from-left;
+                        }
+                        .hvr-underline-from-left:before {
+                            @include underline-from-left-before;
+                            height: 2px;
+                        }
+                        .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, 
+                        .hvr-underline-from-left:active:before { 
+                            right: 0; 
+                        }
                     }
                 }
             }

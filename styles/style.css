@@ -1,24 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-/* Colores */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
-/* Colores */
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
+/* Colores  */
+/* Background color imagenes de Bootstrap */
+/* Background */
+/* Spacing */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
+/* Styles texts-conteiners */
+/* Images */
+/* Views */
+/* Transitions, Animations, Transformations */
+/* Variables */
+.inputOptionsProperties, footer .footer__mainSection div #nombre, footer .footer__mainSection div #sendBtn, .Turnos .reserva form #nya, .Turnos .reserva form #apellido, .Turnos .reserva form #telefono, .Turnos .reserva form #servicio, .Turnos .reserva form #horario, .Turnos .reserva form span #enviarBtn, .contactLayout .consulta form div input, .contactLayout .consulta form #nombre, .contactLayout .consulta form #apellido, .contactLayout .consulta form #telefono, .contactLayout .consulta form #email, .contactLayout .consulta form #consulta {
+  color: white;
+  border: 1px solid #ccc;
+  max-height: 32px;
+  width: auto;
+}
+
 header {
   width: 100%;
   position: -webkit-sticky;
@@ -27,34 +47,36 @@ header {
   z-index: 999;
 }
 
-header .redes__logo:hover {
+header nav div .navbar-toggler {
+  border-color: #505252;
+}
+
+header nav div .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../imagenes/hamb_icon.png);
+}
+
+header nav div div div .redes__logo:hover {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-header .navbar-toggler {
-  border-color: #505252;
-}
-
-header .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../imagenes/hamb_icon.png);
-}
-
-/* Colores */
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
-/* Colores */
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -68,6 +90,7 @@ header .navbar-toggler .navbar-toggler-icon {
 }
 
 footer {
+  font-size: 15px;
   -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -129,6 +152,40 @@ footer .footer__mainSection .footer__menuOptions--turnos ul {
 
 footer .footer__mainSection .footer__menuOptions--turnos ul li {
   margin-bottom: 10px;
+  /* Underline From Left */
+}
+
+footer .footer__mainSection .footer__menuOptions--turnos ul li .hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer__mainSection .footer__menuOptions--turnos ul li .hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #ccc;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  height: 2px;
+}
+
+footer .footer__mainSection .footer__menuOptions--turnos ul li .hvr-underline-from-left:hover:before, footer .footer__mainSection .footer__menuOptions--turnos ul li .hvr-underline-from-left:focus:before,
+footer .footer__mainSection .footer__menuOptions--turnos ul li .hvr-underline-from-left:active:before {
+  right: 0;
 }
 
 footer .footer__mainSection .footer__menuOptions--contacto ul {
@@ -181,11 +238,12 @@ footer .endPage {
   margin-top: 5px;
 }
 
-/* Colores */
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -201,6 +259,10 @@ footer .endPage {
   .gridAreaServ span img {
     max-width: 375px;
     max-height: 325px;
+  }
+  .gridAreaServ .gridListaPrecios .precios {
+    -ms-grid-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
+        grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
   }
   .Turnos .reserva .formularioLayout {
     -ms-grid-rows: none !important;
@@ -221,6 +283,10 @@ footer .endPage {
   .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
     right: 5vw;
   }
+  .gridAreaServ .gridListaPrecios .precios {
+    -ms-grid-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
+        grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -229,6 +295,10 @@ footer .endPage {
   }
   .mosaicoMobile .row #control1 .carousel-inner .carousel-control-next {
     right: 14vw;
+  }
+  .gridAreaServ .gridListaPrecios .precios {
+    -ms-grid-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
+        grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
   }
 }
 
@@ -338,6 +408,11 @@ footer .endPage {
   }
   body .gridAreaServ {
         grid-template-areas: "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6" "precios"    "footer";
+    /* .gridListaPrecios{
+                @include styleRespServ;
+                @include cFlexDisplay;
+                .gridTextLP, .gridTitleLP {padding: $paddingMobileTitleLP}
+            } */
   }
   body .gridAreaServ span img {
     width: -webkit-fit-content;
@@ -416,21 +491,6 @@ footer .endPage {
             justify-content: center;
     margin-right: 0;
     margin-left: 0;
-  }
-  body .gridAreaServ .gridListaPrecios {
-    width: 100vw;
-    padding: 0% 5% 0% 5%;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .gridAreaServ .gridListaPrecios .gridTextLP, body .gridAreaServ .gridListaPrecios .gridTitleLP {
-    padding: 1% 0% 1% 0%;
   }
   body .gridAreaLookbook {
     display: -webkit-box;
@@ -518,16 +578,47 @@ footer .endPage {
   body header .redes {
     display: none;
   }
-  body .grid-area .qsImg, body .grid-area .salonImg {
+  body .grid-area {
+    gap: 0;
+  }
+  body .grid-area .qsImg {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 550px;
+    margin-right: 2%;
+    padding-top: 5%;
+  }
+  body .grid-area .salonImg {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 505px;
+    margin-left: 5%;
+  }
+  body .grid-area .qsText, body .grid-area .salonText {
+    padding: 5% 5% 2% 5%;
+  }
+  body .grid-area .mosaico {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 1%;
+  }
+  body .grid-area .mosaico .mosaico__img {
+    gap: 5px;
   }
   body .gridAreaServ .flexImgPropLeft img, body .gridAreaServ .flexImgPropRight img {
-    max-width: 450px;
+    max-width: 400px;
   }
-  body .gridAreaServ .gridListaPrecios {
-    text-align: center;
+  body .gridAreaServ .flexTextPropLeft {
+    padding: 0% 0% 5% 15%;
+  }
+  body .gridAreaServ .flexTextPropRight {
+    padding: 0% 15% 5% 0%;
+  }
+  body .gridAreaServ .gridListaPrecios .precios {
+    -ms-grid-columns: 1.75fr 1fr 0.75fr 1fr;
+        grid-template-columns: 1.75fr 1fr 0.75fr 1fr;
   }
   body .contactLayout {
     display: -webkit-box;
@@ -549,7 +640,6 @@ footer .endPage {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-right: 0%;
   }
   body .contactLayout .contacto p {
     text-align: center;
@@ -568,11 +658,63 @@ footer .endPage {
   }
 }
 
-/* Colores */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  body header nav div div div ul li {
+    /* Underline From Left   */
+  }
+  body header nav div div div ul li .hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  body header nav div div div ul li .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #ccc;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    height: 4px;
+  }
+  body header nav div div div ul li .hvr-underline-from-left:hover:before, body header nav div div div ul li .hvr-underline-from-left:focus:before,
+  body header nav div div div ul li .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+  body .grid-area .salonImg {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  body .grid-area .qsImg {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  body .grid-area .mosaico {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+/* Colores  */
 /* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding index Seccion principal */
+/* Padding izq index Seccion principal */
+/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -594,7 +736,7 @@ footer .endPage {
 }
 
 body {
-  font-family: "Lato";
+  font-family: 'Ubuntu', sans-serif;
   color: white;
   background: url(../imagenes/backimg.jpg);
   overflow-x: hidden;
@@ -641,7 +783,7 @@ body ol {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 5% 10% 5% 10%;
+  padding: 5% 2% 5% 10%;
 }
 
 .grid-area .qsImg {
@@ -677,7 +819,7 @@ body ol {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 5% 10% 5% 10%;
+  padding: 5% 10% 5% 2%;
 }
 
 .grid-area .salonImg {
@@ -733,24 +875,16 @@ body ol {
           justify-content: center;
 }
 
-.grid-area .mosaico .mosaico__img .hvr-shrink {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-          transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+.grid-area .mosaico .mosaico__img .peinadosImg figcaption, .grid-area .mosaico .mosaico__img .cortesImg figcaption {
+  background-image: url("../imagenes/fondo-marron.png");
 }
 
-.grid-area .mosaico .mosaico__img .hvr-shrink:hover, .grid-area .mosaico .mosaico__img .hvr-shrink:focus, .grid-area .mosaico .mosaico__img .hvr-shrink:active {
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+.grid-area .mosaico .mosaico__img .asesoramientoImg figcaption, .grid-area .mosaico .mosaico__img .coloracionImg figcaption {
+  background-image: url("../imagenes/fondo-negro.png");
+}
+
+.grid-area .mosaico .mosaico__img .lavadoImg figcaption, .grid-area .mosaico .mosaico__img .tratamientosImg figcaption {
+  background-image: url("../imagenes/fondo-gris.png");
 }
 
 .grid-area .mosaico h2 {
@@ -885,7 +1019,7 @@ body ol {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 7px 0px;
-  padding: 0% 0% 5% 15%;
+  padding: 0% 0% 5% 25%;
 }
 
 .gridAreaServ .flexTextPropRight {
@@ -903,7 +1037,7 @@ body ol {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 7px 0px;
-  padding: 0% 15% 5% 0%;
+  padding: 0% 25% 5% 0%;
 }
 
 .gridAreaServ .flexImgPropRight {
@@ -937,7 +1071,7 @@ body ol {
   grid-area: precios;
 }
 
-.gridAreaServ .gridListaPrecios .gridTitleLP, .gridAreaServ .gridListaPrecios .gridTextLP {
+.gridAreaServ .gridListaPrecios .gridTextLP, .gridAreaServ .gridListaPrecios .gridTitleLP {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -947,22 +1081,40 @@ body ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  padding: 0% 5% 0% 5%;
 }
 
-.gridAreaServ .gridListaPrecios .listaPrecios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.gridAreaServ .gridListaPrecios .gridTitleLP {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.gridAreaServ .gridListaPrecios .listaPrecios .tituloPrincipal {
+.gridAreaServ .gridListaPrecios .precios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1.25fr;
+      grid-template-columns: 2fr 1fr 1fr 1.25fr;
+  padding: 1% 0 1% 0;
+}
+
+.gridAreaServ .gridListaPrecios .precios .pServ {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.gridAreaServ .gridListaPrecios .precios .pPrecio {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.gridAreaServ .gridListaPrecios .precios .titulosLP {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+  margin-left: -5%;
   font-size: 25px;
   font-weight: bold;
 }

@@ -1,5 +1,5 @@
 
-/* Colores */
+/* Colores  */
 
 $colorPrincipal: white;
 $colorSecundario: black;
@@ -22,9 +22,10 @@ $backgroundWeekDays: rgba(35, 39, 77, 0.655);
 
 /* Spacing */
 
-$paddingIndexSPpal: 5% 10% 5% 10%; /* Padding index Seccion principal */
-$paddingTextServL: 0% 0% 5% 15%; // Padding texto en pagina Servicios Left
-$paddingTextServR: 0% 15% 5% 0%; // Padding texto en pagina Servicios Right
+$paddingLeftIndexSPpal: 5% 2% 5% 10%; /* Padding izq index Seccion principal */
+$paddingRightIndexSPpal: 5% 10% 5% 2% ;  /* Padding derecho index Seccion principal */
+$paddingTextServL: 0% 0% 5% 25%; // Padding texto en pagina Servicios Left
+$paddingTextServR: 0% 25% 5% 0%; // Padding texto en pagina Servicios Right
 $paddingMobileServ: 0% 5% 0% 5%;
 $paddingMobileTitleLP: 1% 0% 1% 0%;
 $paddingGridTurnos: 1% 0% 1% 0%; //Tambien mobile Contacto
@@ -46,6 +47,7 @@ $paddContacto: 5%;
 $paddBottomLi: 1%; //Padding-bottom listas 
 $paddCons: 10%; //Padding top Formulario consulta
 $gapMosaico: 10px; //Mismo que calendar mobile
+$gapMosaicoMobile: 5px;
 $marginBottomC: 10px;
 $marginMosaicoMobile: 3%;
 $paddMainFooter: 15px;
@@ -77,14 +79,15 @@ $borderRadiusTxtInput: 2px;
 /* Images */
 
 $maxImgServ: 500px;
-$maxImgServ1200: 450px;
+$maxImgServ1200: 400px;
 
 /* Views */
 
-$fullScreen: 100vw;
 $ScreenViewsPerc:("full":100%, "calendar":90%, "tQuar":75%, "half":50%);
+$fullScreen: 100vw;
 $videoIndexView: 85vh;
 $googleMap: 80vw;
+$paddingSide: 1vw;
 $zIndexHeader: 999;
 
 /* Transitions, Animations, Transformations */

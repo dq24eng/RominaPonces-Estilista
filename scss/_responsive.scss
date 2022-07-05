@@ -17,6 +17,11 @@
                 max-width: 375px;
                 max-height: 325px;
             }
+        }
+        .gridListaPrecios {
+            .precios {
+                grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
+            }
         }    
     }
     .Turnos {
@@ -52,6 +57,13 @@
             }
         }
     }
+    .gridAreaServ {
+        .gridListaPrecios {
+            .precios {
+                grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
@@ -62,6 +74,13 @@
                     .carousel-control-prev { left: 14vw; }
                     .carousel-control-next{ right: 14vw; } 
                 }
+            }
+        }
+    }
+    .gridAreaServ {
+        .gridListaPrecios {
+            .precios {
+                grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
             }
         }
     }
@@ -76,7 +95,9 @@
             overflow-y: hidden;
         }
         header {
-            .redes { display: none; }
+            .redes { 
+                display: none; 
+            } 
         }
         .grid-area{ //Pagina Index 
             display: grid;
@@ -171,9 +192,7 @@
         .gridAreaServ {  // Pagina Servicios
             grid-template-areas: "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6" "precios"    "footer";
             span {
-                img {
-                    width: fit-content;
-                }
+                img { width: fit-content; }
             }
             @for $i from 1 to 7 {
                 .textBlock#{$i} { 
@@ -187,11 +206,11 @@
                 @include styleRespServ;
                 @include styleRespBlocks;
             }
-            .gridListaPrecios{
+            /* .gridListaPrecios{
                 @include styleRespServ;
                 @include cFlexDisplay;
                 .gridTextLP, .gridTitleLP {padding: $paddingMobileTitleLP}
-            }
+            } */
         }
         .gridAreaLookbook { // Pagina Lookbook
             @include cFlexDisplay;
@@ -247,16 +266,45 @@
             }
         }
         .grid-area { // Pagina Index 
-            .qsImg, .salonImg {
+            gap: 0;
+            .qsImg {
                 justify-content: center;
+                max-width: 550px;
+                margin-right: 2%;
+                padding-top: 5%;
+            }
+            .salonImg {
+                justify-content: center;
+                max-width: 505px;
+                margin-left: 5%;
+            }
+            .qsText, .salonText {
+                padding: 5% 5% 2% 5%;
+            }
+            .mosaico{
+                padding-left: $paddingSide;
+                padding-right: $paddingSide;
+                margin-top: 1%;
+                .mosaico__img {
+                    gap: $gapMosaicoMobile;
+                }
             }
         }
         .gridAreaServ { // Pagina Servicios
             .flexImgPropLeft, .flexImgPropRight{
                 img { max-width: $maxImgServ1200; }
             }
+            .flexTextPropLeft {
+                padding: 0% 0% 5% 15%;
+            } 
+            .flexTextPropRight{
+                padding: 0% 15% 5% 0%;
+            }
             .gridListaPrecios {
-                text-align: center;
+                //text-align: center;
+                .precios {
+                    grid-template-columns: 1.75fr 1fr 0.75fr 1fr;
+                }
             }
         }
         .contactLayout{ //Pagina Contacto
@@ -264,7 +312,7 @@
             .contacto {
                 @include cFlexDisplay;
                 align-items: center;
-                padding-right: 0%;
+                //padding-right: 0%;
                 p { text-align: center; }
             }
             .consulta{
@@ -274,6 +322,52 @@
                     p {padding-right: 10px;}
                     #adjunto { padding-left: 25px; }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+        header {
+            nav {
+                div {
+                    div {
+                        div { 
+                            ul {
+                                li {
+                                    /* Underline From Left   */
+                                    .hvr-underline-from-left {
+                                        @include underline-from-left;
+                                    }
+                                    .hvr-underline-from-left:before {
+                                        @include underline-from-left-before;
+                                        height: 4px;
+                                    }
+                                    .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, 
+                                    .hvr-underline-from-left:active:before { 
+                                        right: 0; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .grid-area {
+            .salonImg {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            .qsImg{
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+            .mosaico {
+                padding-left: 2%;
+                padding-right: 2%;
             }
         }
     }

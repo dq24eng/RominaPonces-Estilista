@@ -1,21 +1,31 @@
 @import 'vars';
+@import 'functions';
 
 header {
     width: map-get($ScreenViewsPerc, "full");
     position: sticky;
     top: 0;
     z-index: $zIndexHeader;
-    .redes__logo {
-        &:hover {
-            transform: scale($redesLogoScale)
+    nav {
+        div {
+            .navbar-toggler {
+                border-color: $colorBorderHambMenu;
+                .navbar-toggler-icon{
+                    background-image: $backgroungImageHambMenu;
+                }
+            }
+            div {
+                div {
+                    .redes__logo {
+                        &:hover {
+                            transform: scale($redesLogoScale)
+                        }
+                    }
+                }
+            }
         }
-    }
-    .navbar-toggler {
-        border-color: $colorBorderHambMenu;
-        .navbar-toggler-icon{
-            background-image: $backgroungImageHambMenu;
-        }
-    }
-    
+    }    
 }
+
+
 
