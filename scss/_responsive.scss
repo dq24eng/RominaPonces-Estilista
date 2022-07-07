@@ -5,8 +5,8 @@
         .row {
             #control1 {
                 .carousel-inner {
-                    .carousel-control-prev { left: -1vw; }
-                    .carousel-control-next{ right: -1vw; }
+                    .carousel-control-prev { left: -$paddingSide; }
+                    .carousel-control-next{ right: -$paddingSide; }
                 }
             }
         }
@@ -14,13 +14,13 @@
     .gridAreaServ {
         span {
             img {
-                max-width: 375px;
-                max-height: 325px;
+                max-width: $maxWidthAreaServ;
+                max-height: $maxHeightAreaServ;
             }
         }
         .gridListaPrecios {
             .precios {
-                grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
+                grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr;
             }
         }    
     }
@@ -28,7 +28,6 @@
         .reserva {
             .formularioLayout {
                 grid-template-rows: none !important;
-                //input, select { max-width: 170px; }
             }
         }
     }
@@ -40,7 +39,7 @@
                 }
             }
             div {
-                iframe { max-height: 55vh; }
+                iframe { max-height: $maxHeightIFrame; }
             }
         }
     }
@@ -51,8 +50,8 @@
         .row {
             #control1 {
                 .carousel-inner {
-                    .carousel-control-prev { left: 5vw; }
-                    .carousel-control-next { right: 5vw; }
+                    .carousel-control-prev { left: $carruselInner768; }
+                    .carousel-control-next { right: $carruselInner768; }
                 }
             }
         }
@@ -60,7 +59,7 @@
     .gridAreaServ {
         .gridListaPrecios {
             .precios {
-                grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
+                grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr;
             }
         }
     }
@@ -71,8 +70,8 @@
         .row {
             #control1 {
                 .carousel-inner {
-                    .carousel-control-prev { left: 14vw; }
-                    .carousel-control-next{ right: 14vw; } 
+                    .carousel-control-prev { left: $carruselInner992; }
+                    .carousel-control-next{ right: $carruselInner992; } 
                 }
             }
         }
@@ -80,7 +79,7 @@
     .gridAreaServ {
         .gridListaPrecios {
             .precios {
-                grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
+                grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr;
             }
         }
     }
@@ -103,42 +102,42 @@
             display: grid;
             grid-template-areas: "video" "info1" "img1" "info2" "img2" "serv";
             .contenedorVideo {
-                width: 100vw;
+                width: $fullScreen;
                 height: min-content;
             }
             .qsText{
                 text-align: center;
                 align-items: flex-start;
-                padding: 3%;
+                padding: $paddTextServ;
             }
             .salonText{
                 text-align: center;
                 align-items: flex-start;
-                padding: 3%;
+                padding: $paddTextServ;
             }
             .qsImg {
-                width: 100vw;
+                width: $fullScreen;
                 justify-content: center;
                 img {
-                    padding: 0% 5% 0% 5%;
+                    padding: $paddingMobileServ;
                 }
             }
             .salonImg {
-                width: 100vw;
+                width: $fullScreen;
                 justify-content: center;
                 img {
-                    padding: 0% 5% 0% 5%;
+                    padding: $paddingMobileServ;
                 }
             }
             .mosaico{
-                width: 100vw;
+                width: $fullScreen;
                 .mosaico__img {
                     flex-direction: column;
                     gap: none;
                     div {
                         img{
-                            width: 100vw;
-                            padding: 0% 5% 0% 5%;
+                            width: $fullScreen;
+                            padding: $paddingMobileServ;
                         }
                     }
                 }
@@ -155,17 +154,17 @@
                 .footer__menuOptions--horarios {
                     ul {
                         li {
-                            margin-bottom: 5px;
-                            color: rgb(148, 142, 142);
+                            margin-bottom: $marginTopFooter;
+                            color: $colorFooterMO;
                         }
                     }
                 }
                 .footer__menuOptions--turnos {
                     ul {
                         li {
-                            margin-bottom: 5px;
+                            margin-bottom: $marginTopFooter;
                             a {
-                                color: rgb(148, 142, 142);
+                                color: $colorFooterMO;
                             }
                         }
                     }
@@ -179,8 +178,8 @@
                     }
                     ul {
                         li {
-                            margin-bottom: 5px;
-                            color: rgb(148, 142, 142);
+                            margin-bottom: $marginTopFooter;
+                            color: $colorFooterMO;
                         }
                     }
                 }
@@ -206,11 +205,6 @@
                 @include styleRespServ;
                 @include styleRespBlocks;
             }
-            /* .gridListaPrecios{
-                @include styleRespServ;
-                @include cFlexDisplay;
-                .gridTextLP, .gridTitleLP {padding: $paddingMobileTitleLP}
-            } */
         }
         .gridAreaLookbook { // Pagina Lookbook
             @include cFlexDisplay;
@@ -246,10 +240,10 @@
                 gap: $gapMobileContacto;
                 padding: $paddContactoMobile;
                 form {
-                    padding-top: 2%;
+                    padding-top: $paddForm;
                     justify-content: center;
-                    p {padding-right: 10px;}
-                    #adjunto { padding-left: 2vw; }
+                    p {padding-right: $paddFormulario;}
+                    #adjunto { padding-left: $paddArchAdj; }
                 }
 
             }
@@ -269,22 +263,22 @@
             gap: 0;
             .qsImg {
                 justify-content: center;
-                max-width: 550px;
-                margin-right: 2%;
-                padding-top: 5%;
+                max-width: $maxWidthImgIndex;
+                margin-right: $marginImgIndex;
+                padding-top: $paddImagesServ;
             }
             .salonImg {
                 justify-content: center;
-                max-width: 505px;
-                margin-left: 5%;
+                max-width: $maxWidthImgSalon;
+                margin-left: $marginServ;
             }
             .qsText, .salonText {
-                padding: 5% 5% 2% 5%;
+                padding: $paddTextIndex;
             }
             .mosaico{
                 padding-left: $paddingSide;
                 padding-right: $paddingSide;
-                margin-top: 1%;
+                margin-top: $marginTopMosaico;
                 .mosaico__img {
                     gap: $gapMosaicoMobile;
                 }
@@ -295,13 +289,12 @@
                 img { max-width: $maxImgServ1200; }
             }
             .flexTextPropLeft {
-                padding: 0% 0% 5% 15%;
+                padding: $paddingTextPropLeft;
             } 
             .flexTextPropRight{
-                padding: 0% 15% 5% 0%;
+                padding: $paddingTextPropRight;
             }
             .gridListaPrecios {
-                //text-align: center;
                 .precios {
                     grid-template-columns: 1.75fr 1fr 0.75fr 1fr;
                 }
@@ -312,15 +305,14 @@
             .contacto {
                 @include cFlexDisplay;
                 align-items: center;
-                //padding-right: 0%;
                 p { text-align: center; }
             }
             .consulta{
                 form { 
                     padding-top: $paddTopTabletContacto;
                     justify-content: center;
-                    p {padding-right: 10px;}
-                    #adjunto { padding-left: 25px; }
+                    p {padding-right: $paddFormulario;}
+                    #adjunto { padding-left: $paddAdjunto; }
                 }
             }
         }
@@ -329,7 +321,7 @@
 
 @media screen and (min-width: 1200px) {
     body {
-        font-size: 18px;
+        font-size: $fontBody;
         header {
             nav {
                 div {
@@ -343,7 +335,7 @@
                                     }
                                     .hvr-underline-from-left:before {
                                         @include underline-from-left-before;
-                                        height: 4px;
+                                        height: $heightUnderline;
                                     }
                                     .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, 
                                     .hvr-underline-from-left:active:before { 
@@ -358,17 +350,26 @@
         }
         .grid-area {
             .salonImg {
-                padding-left: 5%;
-                padding-right: 5%;
+                padding-left: $paddImagesServ;
+                padding-right: $paddImagesServ;
             }
             .qsImg{
-                padding-right: 5%;
-                padding-left: 5%;
+                padding-right: $paddImagesServ;
+                padding-left: $paddImagesServ;
             }
             .mosaico {
-                padding-left: 2%;
-                padding-right: 2%;
+                padding-left: $paddForm;
+                padding-right: $paddForm;
+            }
+        }
+        .gridAreaServ{
+            .gridListaPrecios {
+                .precios {
+                    grid-template-columns: 2fr 1fr 1fr 1.25fr;
+                }
             }
         }
     }
 }
+
+

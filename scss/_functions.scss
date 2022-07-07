@@ -28,7 +28,7 @@
 .inputOptionsProperties {
     color: $colorPrincipal;
     border: $borderInput;  
-    max-height: 32px;
+    max-height: $inputOptionsHeight;
     width: auto;
 }
 
@@ -61,7 +61,7 @@
     }
     margin-bottom: $marginTitleMainSection;
     @media screen and (max-width: 576px){
-        font-size: 30px;
+        font-size: $fontTitlesMobile;
     }
 }
 
@@ -69,7 +69,7 @@
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: $boxShadowUnderline;
     position: relative;
     overflow: hidden;
 }

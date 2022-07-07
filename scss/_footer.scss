@@ -2,7 +2,7 @@
 @import 'functions';
 
 footer {
-    font-size: 15px;
+    font-size: $fontFooter;
     grid-area: footer;
     border-top: $borderTopFooter;
     margin-bottom: $marginBottomC;
@@ -44,7 +44,7 @@ footer {
                         }
                         .hvr-underline-from-left:before {
                             @include underline-from-left-before;
-                            height: 2px;
+                            height: $borderRadiusTxtInput;
                         }
                         .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, 
                         .hvr-underline-from-left:active:before { 

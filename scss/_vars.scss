@@ -1,13 +1,13 @@
-
 /* Colores  */
 
 $colorPrincipal: white;
 $colorSecundario: black;
-$nullColor : rgba(0,0,0,0); /* Background color imagenes de Bootstrap */
+$nullColor : rgba(0,0,0,0); // Background color imagenes de Bootstrap
 $colorStylesFooter: white; 
 $colorBorderFooter: #ccc;
 $colorCalendar: #ddd;
 $colorBorderHambMenu: rgb(80, 82, 82) ;
+$colorFooterMO: rgb(148, 142, 142);
 
 /* Background */
 
@@ -22,8 +22,8 @@ $backgroundWeekDays: rgba(35, 39, 77, 0.655);
 
 /* Spacing */
 
-$paddingLeftIndexSPpal: 5% 2% 5% 10%; /* Padding izq index Seccion principal */
-$paddingRightIndexSPpal: 5% 10% 5% 2% ;  /* Padding derecho index Seccion principal */
+$paddingLeftIndexSPpal: 5% 2% 5% 10%; // Padding izq index Seccion principal
+$paddingRightIndexSPpal: 5% 10% 5% 2% ;  // Padding derecho index Seccion principal
 $paddingTextServL: 0% 0% 5% 25%; // Padding texto en pagina Servicios Left
 $paddingTextServR: 0% 25% 5% 0%; // Padding texto en pagina Servicios Right
 $paddingMobileServ: 0% 5% 0% 5%;
@@ -32,6 +32,9 @@ $paddingGridTurnos: 1% 0% 1% 0%; //Tambien mobile Contacto
 $paddingMobileLBook: 0% 1% 0% 1%;
 $marginContactGrid: 1% 0% 1% 2%;
 $paddContactoMobile: 0% 3% 0% 3%;
+$paddTextIndex: 5% 5% 2% 5%;
+$paddingTextPropLeft: 0% 0% 5% 15%;
+$paddingTextPropRight: 0% 15% 5% 0%;
 $gapGrid: 15px 0px; //Index y Servicios
 $gapTextServ: 7px 0px; 
 $gapLookbook: 10px 0px; // Gap pagina Lookbook
@@ -46,6 +49,8 @@ $paddListCal: 10%; //Padding dias calendario
 $paddContacto: 5%;
 $paddBottomLi: 1%; //Padding-bottom listas 
 $paddCons: 10%; //Padding top Formulario consulta
+$paddTextServ: 3%;
+$paddForm: 2%;
 $gapMosaico: 10px; //Mismo que calendar mobile
 $gapMosaicoMobile: 5px;
 $marginBottomC: 10px;
@@ -57,29 +62,44 @@ $gapContacto: 10px;
 $paddLeftMO: 0px;
 $paddButton: 4px;
 $paddInput: 3px;
+$paddAdjunto: 25px;
 $paddTopTabletContacto: 4%;
 $marginTopFooter: 5px;
 $marginTopServ: 3%;
 $marginServ: 5%; // Margin izq/der texto en pagina Servicios
 $marginTitCal: 2% 0% 2% 0%; //Margin titulo calendario
+$marginTitulosLP: -5%;
+$marginTopCal: 5%;
+$marginImgIndex: 2%;
+$marginTopMosaico: 1%;
 
 /* Styles texts-conteiners */
 
 $titulosIndex: 40px;
 $titulosLP: 25px; //Titulos lista de precios
+$fontFooter: 15px;
+$fontTitlesMobile: 30px;
+$fontBody: 18px;
 $weightTitulos: bold;
 $borderStyleBS: none;
 $borderTopFooter: 1px solid $colorStylesFooter;
 $borderBottomFooter: 1px solid $colorStylesFooter;
 $borderInput: 1px solid $colorBorderFooter;
 $borderCalendar: 1px solid $colorCalendar;
+$boxShadowUnderline: 0 0 1px $nullColor;
 $borderRadiusButton: 3px;
 $borderRadiusTxtInput: 2px;
+$inputOptionsHeight: 32px;
+$heightUnderline: 4px;
 
 /* Images */
 
 $maxImgServ: 500px;
 $maxImgServ1200: 400px;
+$maxWidthAreaServ: 375px;
+$maxHeightAreaServ: 325px;
+$maxWidthImgIndex: 550px;
+$maxWidthImgSalon: 505px;
 
 /* Views */
 
@@ -88,7 +108,12 @@ $fullScreen: 100vw;
 $videoIndexView: 85vh;
 $googleMap: 80vw;
 $paddingSide: 1vw;
+$paddArchAdj: 2vw;
 $zIndexHeader: 999;
+$maxHeightIFrame: 55vh;
+$carruselInner768: 5vw;
+$carruselInner992: 14vw;
+
 
 /* Transitions, Animations, Transformations */
 

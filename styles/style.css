@@ -1,32 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -61,22 +52,16 @@ header nav div div div .redes__logo:hover {
 }
 
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
 /* Transitions, Animations, Transformations */
 /* Variables */
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -239,11 +224,8 @@ footer .endPage {
 }
 
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -261,8 +243,8 @@ footer .endPage {
     max-height: 325px;
   }
   .gridAreaServ .gridListaPrecios .precios {
-    -ms-grid-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
-        grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr !important;
+    -ms-grid-columns: 0.25fr 0.75fr 0.5fr 0.05fr;
+        grid-template-columns: 0.25fr 0.75fr 0.5fr 0.05fr;
   }
   .Turnos .reserva .formularioLayout {
     -ms-grid-rows: none !important;
@@ -284,8 +266,8 @@ footer .endPage {
     right: 5vw;
   }
   .gridAreaServ .gridListaPrecios .precios {
-    -ms-grid-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
-        grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr !important;
+    -ms-grid-columns: 0.75fr 1fr 0.75fr 0.25fr;
+        grid-template-columns: 0.75fr 1fr 0.75fr 0.25fr;
   }
 }
 
@@ -297,8 +279,8 @@ footer .endPage {
     right: 14vw;
   }
   .gridAreaServ .gridListaPrecios .precios {
-    -ms-grid-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
-        grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr !important;
+    -ms-grid-columns: 1.5fr 1.25fr 1fr 0.75fr;
+        grid-template-columns: 1.5fr 1.25fr 1fr 0.75fr;
   }
 }
 
@@ -408,11 +390,6 @@ footer .endPage {
   }
   body .gridAreaServ {
         grid-template-areas: "txt1" "imgn1" "txt2" "imgn2" "txt3" "imgn3" "txt4" "imgn4" "txt5" "imgn5" "txt6" "imgn6" "precios"    "footer";
-    /* .gridListaPrecios{
-                @include styleRespServ;
-                @include cFlexDisplay;
-                .gridTextLP, .gridTitleLP {padding: $paddingMobileTitleLP}
-            } */
   }
   body .gridAreaServ span img {
     width: -webkit-fit-content;
@@ -707,14 +684,15 @@ footer .endPage {
     padding-left: 2%;
     padding-right: 2%;
   }
+  body .gridAreaServ .gridListaPrecios .precios {
+    -ms-grid-columns: 2fr 1fr 1fr 1.25fr;
+        grid-template-columns: 2fr 1fr 1fr 1.25fr;
+  }
 }
 
 /* Colores  */
-/* Background color imagenes de Bootstrap */
 /* Background */
 /* Spacing */
-/* Padding izq index Seccion principal */
-/* Padding derecho index Seccion principal */
 /* Styles texts-conteiners */
 /* Images */
 /* Views */
@@ -1093,9 +1071,7 @@ body ol {
 .gridAreaServ .gridListaPrecios .precios {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 1.25fr;
-      grid-template-columns: 2fr 1fr 1fr 1.25fr;
-  padding: 1% 0 1% 0;
+  padding: 1% 0% 1% 0%;
 }
 
 .gridAreaServ .gridListaPrecios .precios .pServ {
