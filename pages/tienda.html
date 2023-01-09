@@ -47,7 +47,7 @@
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
                                 href="./turnos.html">TURNOS</a>
                             </li>
-                                                        <li class="nav-item ">
+                            <li class="nav-item ">
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
                                 href="./pages/tienda.html">TIENDA</a>
                             </li>
@@ -77,138 +77,69 @@
     </header>
 
     <div class="gridAreaLookbook">
-        <h1 class="tituloLB fw-semibold"> Lookbook </h1>
+        <h1 class="tituloLB fw-semibold"> Nuestra tienda </h1>
         <p class="textoLB">
-            Te mostramos algunos de nuestros trabajos terminados para que puedas conocer un poco más de nuestros servicios:   
+            Tenemos los mejores productos para vos y tu cabello!   
         </p>
 
         <!-- Slides de varias imagenes -->
 
-        <div class="container look">
-            <div class="row gap-2 p-2 ">
-                <div class="col carousel slide " id="control1" >
-                    <p class="text-center fs-4 fw-semibold">Mechas</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/mechas1.jpg" class="d-block" alt="imagenmechas1">
+        <div class="row row-cols-1 row-cols-md-4 g-4 .bg-body">
+            <div class="col ">
+                <div class="card" style= "background-color: transparent !important;" >
+                    <img src="../imagenes/tienda/producto1.jpg" class="card-img-top" alt="producto1" height="240" width="240">
+                    <div class="card-body justify-content-center">
+                        <h5 class="card-title text-center fs-5">Aceite de Cuidado 100 ml ABC</h5>
+                        <p class="card-text text-center fs-5"> $2500,00 </p>
+                        <p class="card-text text-center fs-6">Aceite ligero que se esparce fácilmente sin dejar grasoso. Reduce el frizz, sella las puntas abiertas y da un acabado brillante y suave.</p>
+                        <p class="card-text text-center fs-6"> Cod. ACEI100 </p>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr1">
                         </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/mechas2.jpg" class="d-block" alt="imagenmechas2">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
+                    </div>
                 </div>
-                <div class="col carousel slide " id="control2" >
-                    <p class="text-center fs-4 fw-semibold">Balayage</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/balayage1.jpg" class="d-block" alt="imagenbalayage1">
+            </div>
+            <div class="col">
+                <div class="card" style= "background-color: transparent !important;" >
+                    <img src="../imagenes/tienda/producto2.jpg" class="card-img-top" alt="producto2" height="240" width="240">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center fs-5">Laca de Fijacion Fuerte 300ml ABC</h5>
+                        <p class="card-text text-center fs-5"> $3900,00 </p>
+                        <p class="card-text text-center fs-6">Proporciona fijación invisible, fuerte y con control duradero con un secado rápido y efectivo. </p>
+                        <p class="card-text text-center fs-6"> Cod. LAFI300 </p>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr2">
                         </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/balayage2.jpg" class="d-block" alt="imagenbalayage2">
-                        </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/balayage3.jpg" class="d-block" alt="imagenbalayage3">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control2" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control2" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
-                </div>    
-                <div class="col carousel slide " id="control3" >
-                    <p class="text-center fs-4 fw-semibold">Babylight</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/babylight1.jpg" class="d-block" alt="imagenBabylight1">
-                        </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/babylight2.jpg" class="d-block" alt="imagenBabylight2">
-                        </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/babylight3.jpg" class="d-block" alt="imagenBabylight3">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control3" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control3" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
-                </div>            
-                <div class="col carousel slide " id="control4" >
-                    <p class="text-center fs-4 fw-semibold">Iluminacion</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/iluminacion1.jpg" class="d-block" alt="imageniluminacion1">
-                        </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/iluminacion2.jpg" class="d-block" alt="imageniluminacion2">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control4" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control4" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
+                    </div>
                 </div>
-                <div class="col carousel slide " id="control5" >
-                    <p class="text-center fs-4 fw-semibold">Desgaste</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/desgaste1.jpg" class="d-block" alt="imagendesgaste1">
+            </div>
+            <div class="col">
+                <div class="card" style= "background-color: transparent !important;" >
+                    <img src="../imagenes/tienda/producto3.jpg" class="card-img-top" alt="producto3" height="240" width="240">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fs-5">Polvo en spray 12g ABC</h5>
+                        <p class="card-text text-center fs-5"> $6300,00 </p>
+                        <p class="card-text text-center fs-6">Agrega volumen y movimiento instantáneos a la vez que proporciona un levantamiento de raíces y un agarre suave.</p>
+                        <p class="card-text text-center fs-6"> Cod. POLSP12 </p>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr3">
                         </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/desgaste2.jpg" class="d-block" alt="imagendesgaste2">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control5" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control5" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
+                    </div>
                 </div>
-                <div class="col carousel slide " id="control6" >
-                    <p class="text-center fs-4 fw-semibold">Contouring</p>
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active inner-item ">
-                        <img src="../imagenes/carrusel/contouring1.jpg" class="d-block" alt="imagencontouring1">
+            </div>
+            <div class="col">
+                <div class="card" style= "background-color: transparent !important;" >
+                    <img src="../imagenes/tienda/producto4.jpg" class="card-img-top" alt="producto4" height="240" width="240">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fs-5">Primer Spray 250ml ABC</h5>
+                        <p class="card-text text-center fs-5"> $4550,00 </p>
+                        <p class="card-text text-center fs-6">Proporciona un control ligero y protección contra el calor de hasta 230°C. Con formula vegana e ingredientes naturales.</p>
+                        <p class="card-text text-center fs-6"> Cod. SPRY250 </p>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr4">
                         </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/contouring2.jpg" class="d-block" alt="imagencontouring2">
-                        </div>
-                        <div class="carousel-item inner-item">
-                        <img src="../imagenes/carrusel/contouring3.jpg" class="d-block" alt="imagencontouring3">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#control6" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#control6" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>          
-                </div> 
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -281,6 +212,9 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

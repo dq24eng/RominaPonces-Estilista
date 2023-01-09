@@ -13,6 +13,9 @@
 
     <!-- Llamada a CSS externo -->
     <link rel="stylesheet" href="../styles/style.css">
+
+
+    
 </head>
 
 <body>
@@ -27,7 +30,6 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-              
                 <div class="collapse navbar-collapse row w-100" id="navbarNav">
                     <div class="col col-10-lg ps-5">
                         <ul class="navbar-nav justify-content-center gap-5 fs-5 fw-semibold header__menuOptions">
@@ -46,6 +48,10 @@
                             <li class="nav-item ">
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
                                 href="./turnos.html">TURNOS</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
+                                href="./pages/tienda.html">TIENDA</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
@@ -126,7 +132,7 @@
                 <input type="file" id="adjunto" name="adjunto">
                 
                 <div>
-                    <input type="submit" value="Enviar" class="footer__menuOptions--button">
+                    <input type="button" value="Enviar" class="footer__menuOptions--button" onclick="validacionFormCont ()">
                 </div>
                     
             </form>
@@ -199,6 +205,10 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+
     
 </body>
 </html>
