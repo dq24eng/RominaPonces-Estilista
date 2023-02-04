@@ -49,7 +49,7 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
-                                href="./pages/tienda.html">TIENDA</a>
+                                href="./tienda.html">TIENDA</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link text-light text-center w-100 hvr-underline-from-left" 
@@ -60,13 +60,15 @@
                     <div class="col-2 redes">
                         <ul class="nav justify-content-end gap-1 p-2">
                             <li class="nav-item justify-content-end d-none d-lg-block">
-                                <a class="navbar-brand" aria-current="page" href="https://www.facebook.com/rominaponcesestilista">
-                                    <img src="../imagenes/facebook.png" alt="logo" height="30" width="30" class="redes__logo">
-                                </a>
-                            </li>
-                            <li class="nav-item justify-content-end d-none d-lg-block">
-                                <a class="navbar-brand" href="https://www.instagram.com/romina.ponces.estilista/">
-                                    <img src="../imagenes/instagram.png" alt="logo" height="30" width="30" class="redes__logo">
+                                <a class="navbar-brand" aria-current="page" >
+
+                                    <button type="button" class="btn position-relative border border-0"             style="background-color:transparent">
+                                        <a id="btnCarrito">
+                                            <img src="../imagenes/carrito.png" alt="logoCarrito" height="45" width="45">
+                                            <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger border border-light rounded-circle visually-hidden" style="top: 25% !important; left: 75% !important;" id="carrito">
+                                            </span>
+                                        </a>
+                                    </button>
                                 </a>
                             </li>
                         </ul>
@@ -87,56 +89,56 @@
         <div class="row row-cols-1 row-cols-md-4 g-4 .bg-body">
             <div class="col ">
                 <div class="card" style= "background-color: transparent !important;" >
-                    <img src="../imagenes/tienda/producto1.jpg" class="card-img-top" alt="producto1" height="240" width="240">
+                    <img src="../imagenes/tienda/producto1.jpg" class="card-img-top" alt="Producto 1" height="240" width="80">
                     <div class="card-body justify-content-center">
                         <h5 class="card-title text-center fs-5">Aceite de Cuidado 100 ml ABC</h5>
                         <p class="card-text text-center fs-5"> $2500,00 </p>
                         <p class="card-text text-center fs-6">Aceite ligero que se esparce fácilmente sin dejar grasoso. Reduce el frizz, sella las puntas abiertas y da un acabado brillante y suave.</p>
                         <p class="card-text text-center fs-6"> Cod. ACEI100 </p>
                         <div class="d-flex justify-content-center">
-                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr1">
+                            <button class="text-center fs-6 w-50" id="producto1">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card" style= "background-color: transparent !important;" >
-                    <img src="../imagenes/tienda/producto2.jpg" class="card-img-top" alt="producto2" height="240" width="240">
+                    <img src="../imagenes/tienda/producto2.jpg" class="card-img-top" alt="Producto 2" height="240" width="240">
                     <div class="card-body ">
                         <h5 class="card-title text-center fs-5">Laca de Fijacion Fuerte 300ml ABC</h5>
                         <p class="card-text text-center fs-5"> $3900,00 </p>
                         <p class="card-text text-center fs-6">Proporciona fijación invisible, fuerte y con control duradero con un secado rápido y efectivo. </p>
                         <p class="card-text text-center fs-6"> Cod. LAFI300 </p>
                         <div class="d-flex justify-content-center">
-                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr2">
+                            <button class="text-center fs-6 w-50" id="producto2">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card" style= "background-color: transparent !important;" >
-                    <img src="../imagenes/tienda/producto3.jpg" class="card-img-top" alt="producto3" height="240" width="240">
+                    <img src="../imagenes/tienda/producto3.jpg" class="card-img-top" alt="Producto 3" height="240" width="240">
                     <div class="card-body">
                         <h5 class="card-title text-center fs-5">Polvo en spray 12g ABC</h5>
                         <p class="card-text text-center fs-5"> $6300,00 </p>
                         <p class="card-text text-center fs-6">Agrega volumen y movimiento instantáneos a la vez que proporciona un levantamiento de raíces y un agarre suave.</p>
                         <p class="card-text text-center fs-6"> Cod. POLSP12 </p>
                         <div class="d-flex justify-content-center">
-                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr3">
+                            <button class="text-center fs-6 w-50" id="producto3">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card" style= "background-color: transparent !important;" >
-                    <img src="../imagenes/tienda/producto4.jpg" class="card-img-top" alt="producto4" height="240" width="240">
+                    <img src="../imagenes/tienda/producto4.jpg" class="card-img-top" alt="Producto 5" height="240" width="240">
                     <div class="card-body text-center">
                         <h5 class="card-title fs-5">Primer Spray 250ml ABC</h5>
                         <p class="card-text text-center fs-5"> $4550,00 </p>
                         <p class="card-text text-center fs-6">Proporciona un control ligero y protección contra el calor de hasta 230°C. Con formula vegana e ingredientes naturales.</p>
                         <p class="card-text text-center fs-6"> Cod. SPRY250 </p>
                         <div class="d-flex justify-content-center">
-                            <input type="submit" value="Agregar al carrito"  class="text-center fs-6 w-50" id="AgCarr4">
+                            <button class="text-center fs-6 w-50" id="producto4">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>

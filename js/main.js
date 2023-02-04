@@ -17,63 +17,48 @@
 }*/
 
 class Producto{                 
-    constructor (nombre, codigo, precio, cant){
+    constructor (nombre, codigo, precio, cant, carrito){
         this.nombre = nombre;
         this.codigo = codigo;
         this.precio = precio;
-        this.cant = cant        //Cantidad a comprar 
+        this.cant = cant;       //Cantidad a comprar 
+        this.carrito = carrito;
+        
+        let bntAñadir = document.getElementById(carrito)
+        if (bntAñadir) bntAñadir.addEventListener("click", () => carritoCompras(carrito)) //Verificamos que exista el elemento
     }
 }
 
-let producto1 = new Producto ("Aceite de Cuidado 100 ml ABC","ACEI100",2500,0)
-let producto2 = new Producto ("Laca de Fijacion Fuerte 300ml ABC","LAFI300",3900,0)
-let producto3 = new Producto ("Polvo en spray 12g ABC","POLSP12",6300,0)
-let producto4 = new Producto ("Primer Spray 250ml ABC","SPRY250",4550,0)
+function carritoCompras (numberCarrito){
+    carrito++
+    let cantProdCarrito = document.getElementById("carrito")
+    cantProdCarrito.classList.remove("visually-hidden")  //Mostramos la cantidad de productos
+    cantProdCarrito.innerText = carrito.toString()
+    
+    for (i=0;i<allProducts.length;i++) if (allProducts[i].carrito == numberCarrito) allProducts[i].cant++    
+}
+
+function carritoWeb(){
+    if (carrito!=0){
+        sessionStorage.setItem ('clickCarritoPage', true)   //El valor de clickCarritoPage no se guarda cuando cambia de pagina HTML, por esto se debe almacenar 
+        clickCarrito.setAttribute('href', "./carrito.html")
+        clickCarrito.removeEventListener("click", carritoWeb, true) //Elimino el evento de escucha 
+    }
+    let carritoProducts = allProducts.filter((el) => el.cant >0) //Se crea nuevo arreglo con elementos a comprar 
+    let carritoProductsJSON = JSON.stringify(carritoProducts)
+    sessionStorage.setItem ("carritoProducts", carritoProductsJSON)
+}  
+
+let producto1 = new Producto ("Aceite de Cuidado 100 ml ABC","ACEI100",2500,0,"producto1")
+let producto2 = new Producto ("Laca de Fijacion Fuerte 300ml ABC","LAFI300",3900,0,"producto2")
+let producto3 = new Producto ("Polvo en spray 12g ABC","POLSP12",6300,0,"producto3")
+let producto4 = new Producto ("Primer Spray 250ml ABC","SPRY250",4550,0,"producto4")
 
 //Nota: la idea es en el futuro crear una pagina html extra para que el usuario propietario de la misma pueda ingresar nuevos productos
 //desde la página, cambiar su precio o eliminarlos, así se evita hacer esto desde el código
 
 let allProducts = [producto1, producto2, producto3, producto4] //Array de objetos
-
-function validacionNumero (){
-    let cantidad = prompt ("Ingrese la cantidad de productos: ")
-    while (isNaN(cantidad)){
-        cantidad = prompt ("Ingrese una cantidad válida: ")
-    }
-    return parseInt(cantidad)
-}
-
-function aPagar(){
-    let total = 0
-    for (j=0;j<allProducts.length;j++){
-        if (allProducts[j].cant != 0) total += allProducts[j].cant * allProducts[j].precio
-    }
-    return total*1.21
-}
-
-function validacionCod (cantidad){
-    for (i=0;i<cantidad;i++) {
-        foundCode = false
-        codigo = prompt ("Por favor, ingrese el código del " + (i+1) + "º producto que desea comprar: ")
-        for (const prop of allProducts){
-            if (prop.codigo == codigo) {
-                foundCode = true;
-                prop.cant += validacionNumero()
-            }
-        }
-        if (!foundCode) {
-            i--
-            alert ("Ingrese un código valido")
-        }
-    }
-    return aPagar()
-}
-
-alert ("Bienvenido! Gracias visitar nuestra tienda")
-cantProd = validacionNumero()
-let total = validacionCod(cantProd)
-alert ("El total a Pagar es: $" + total)
-
-
-
-
+let carrito = 0
+sessionStorage.setItem ('clickCarritoPage', false)
+let clickCarrito = document.getElementById("btnCarrito")
+if (clickCarrito) clickCarrito.addEventListener("click", carritoWeb)  //Verificamos que exista el elemento, de lo contrario otros HTML  tiran error
