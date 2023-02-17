@@ -70,6 +70,42 @@ function actualizacionPrecio() {
     document.querySelector(".total").innerHTML = `$ ${total}`
 }
 
+function comprarButton(){
+    let cantProd = document.getElementsByClassName("newElementCart")
+    if (cantProd.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Por favor, agregá productos a tu carrito para avanzar con la compra',
+            color: 'white',
+            showConfirmButton: false,
+            showCloseButton: true,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutUp'
+            }
+        }).then((result) => {
+            if ((result.isDenied) || (result.isDismissed)) window.location = "./tienda.html"
+        })
+    } else {
+        Swal.fire({
+            title: 'Gracias por tu compra!',
+            text: 'En breve recibirás tu producto en casa',
+            color: 'white',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Volver al inicio',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutUp'
+            }
+        }).then((result) => {
+            if ((result.isConfirmed) || (result.isDismissed)) window.location = "../index.html" //Dando click en el boton o escape siempre retornará al inicio de la Web
+        })
+    }
+}
+
 if (sessionStorage.getItem('clickCarritoPage')) miCarrito ()
-
-
+let btnComprar = document.querySelector(".btnComprar").addEventListener("click", comprarButton)

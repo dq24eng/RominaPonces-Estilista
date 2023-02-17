@@ -271,7 +271,7 @@ body {
                 display: flex;
                 justify-content: center;
             }
-            .firstDay{grid-column-start: $firstDay;}
+            .firstDay{/*grid-column-start: $firstDay;   AGREGADO EN JAVASCRIPT*/}
             .day {
                 &:hover{
                     background-color: $backgroundCalDays; 
@@ -280,6 +280,8 @@ body {
         }
     }
 }
+
+
 
 /* --------------------- PAGINA TIENDA ---------------------------- */
 

@@ -1406,3 +1406,14 @@ body ol {
   margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* ------------- SWEETALERT2 -------------- */
+/* CAMBIO DE COLOR DE SOMBRA DE LOS POPUPS */
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  background: rgba(0, 0, 0, 0.87)!important;
+}
+/* CAMBIO DE COLOR DEL BACKGROUND DEL POPUP */
+.swal2-container.swal2-center>.swal2-popup{
+  /*background:  rgb(36, 36, 38);*/
+  background: linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(28,28,28,1) 35%, rgba(24,24,24,1) 100%);
+}
