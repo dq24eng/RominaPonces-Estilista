@@ -1,8 +1,8 @@
 function miCarrito () {
 
     let productRow = document.createElement("div")
-    let carritoProductsJSON = sessionStorage.getItem("carritoProducts")
-    let carritoProducts = JSON.parse(carritoProductsJSON)
+    let carritoProductsJSON = localStorage.getItem("carritoProducts")
+    let carritoProducts = JSON.parse(carritoProductsJSON)  //Array de objetos a comprar
     let total = 0
 
     for (const producto of carritoProducts){
@@ -11,7 +11,7 @@ function miCarrito () {
                 <div class="col-6">
                     <div class="shopping-cart-item d-flex align-items-center">
                         <img src="../imagenes/tienda/${producto.carrito}.jpg" height="150" width="150">
-                        <h5 class="text-center fs-5">${producto.nombre}</h5>
+                        <h5 class="text-center fs-5 nameProductCarrito">${producto.nombre}</h5>
                     </div>
                 </div>
                 <div class="col-2" >
@@ -49,6 +49,9 @@ function miCarrito () {
 
 function deleteFunction(e){
     let btnDelClicked = e.target
+    let productDelete = btnDelClicked.closest(".newElementCart").childNodes[1].childNodes[1].innerText
+    let carritoProducts = JSON.parse(localStorage.getItem("carritoProducts")) 
+    localStorage.setItem("carritoProducts", JSON.stringify(carritoProducts.filter((el) => (el.nombre!=productDelete)))) // Eliminamos producto del array
     btnDelClicked.closest(".newElementCart").remove()
     actualizacionPrecio()
 }
@@ -66,7 +69,6 @@ function actualizacionPrecio() {
         let itemCant = parseInt(el.querySelector(".cantidadInput").value)
         total += itemPrice * itemCant
     })  
-    
     document.querySelector(".total").innerHTML = `$ ${total}`
 }
 
@@ -107,5 +109,5 @@ function comprarButton(){
     }
 }
 
-if (sessionStorage.getItem('clickCarritoPage')) miCarrito ()
+if (localStorage.getItem('clickCarritoPage')) miCarrito ()
 let btnComprar = document.querySelector(".btnComprar").addEventListener("click", comprarButton)

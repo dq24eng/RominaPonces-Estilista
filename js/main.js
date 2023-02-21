@@ -1,31 +1,32 @@
-/*function validacionFormCont () {
-
-    let nombreIngresado = document.getElementById('nombre').value           //Obtengo el nombre ingresado
-    if (nombreIngresado=="" || nombreIngresado==null) { 
-        alert('Por favor, ingrese un nombre válido')
-    } 
-    let apellidoIngresado = document.getElementById('apellido').value      //Obtengo el apellido ingresado
-    if (apellidoIngresado=="" || apellidoIngresado==null) {
-        alert('Por favor, ingrese un apellido válido')
-    } 
-    let numeroTel = parseInt(document.getElementById('telefono').value)     //Parseo numero de telefono a Int
-    if (isNaN(numeroTel) || numeroTel.toString().length!=10 ){   
-        // Valido que el numero de telefono ingresado sea un numero y que tenga 10 caracteres           
-        alert('Por favor, ingrese un número de telefono válido')
-    }
-
-}*/
-
 class Producto{                 
-    constructor (nombre, codigo, precio, cant, carrito){
+    constructor (nombre, codigo, precio, cant, carrito, descripcion){
         this.nombre = nombre;
         this.codigo = codigo;
         this.precio = precio;
         this.cant = cant;       //Cantidad a comprar 
         this.carrito = carrito;
-        
-        let bntAñadir = document.getElementById(carrito)
-        if (bntAñadir) bntAñadir.addEventListener("click", () => carritoCompras(carrito)) //Verificamos que exista el elemento
+        this.descripcion = descripcion;
+    }
+}
+
+function createProductos (){
+    for (const producto of allProducts) {
+        listadoProductos.innerHTML += `
+            <div class="col ">
+                <div class="card" style= "background-color: transparent !important;" >
+                    <img src="../imagenes/tienda/${producto.carrito}.jpg" class="card-img-top" alt="Producto 1" height="240" width="80">
+                    <div class="card-body justify-content-center">
+                        <h5 class="card-title text-center fs-5">${producto.nombre}</h5>
+                        <p class="card-text text-center fs-5"> $${producto.precio} </p>
+                        <p class="card-text text-center fs-6">${producto.descripcion}</p>
+                        <p class="card-text text-center fs-6"> Cod. ${producto.codigo} </p>
+                        <div class="d-flex justify-content-center">
+                            <button class="text-center fs-6 w-50 btns-agregar" id="${producto.carrito}">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
     }
 }
 
@@ -40,59 +41,92 @@ function carritoCompras (numberCarrito){
 
 function carritoWeb(){
     if (carrito!=0){
-        sessionStorage.setItem ('clickCarritoPage', true)   //El valor de clickCarritoPage no se guarda cuando cambia de pagina HTML, por esto se debe almacenar 
+        localStorage.setItem ('clickCarritoPage', true)   //El valor de clickCarritoPage no se guarda cuando cambia de pagina HTML, por esto se debe almacenar 
         clickCarrito.setAttribute('href', "./carrito.html")
         clickCarrito.removeEventListener("click", carritoWeb, true) //Elimino el evento de escucha 
     }
     let carritoProducts = allProducts.filter((el) => el.cant >0) //Se crea nuevo arreglo con elementos a comprar 
     let carritoProductsJSON = JSON.stringify(carritoProducts)
-    sessionStorage.setItem ("carritoProducts", carritoProductsJSON)
+    localStorage.setItem ("carritoProducts", carritoProductsJSON)
 }  
 
 function calculoMesAMostrar(clickBackBtn, clickNextBtn){
-    //console.log('llegue')
+
+    // La presente funcion tiene por finalidad mostrar el mes actual y los dos meses siguientes por si el usuario desea sacar 
+    // un turno para esa fecha, no muestra el mes anterior al mes actual y tampoco de 3 meses en adelante siguientes al mes actual
+
     let fecha = DateTime.now()
+    let disabledBackOption = false
+    let disabledNextOption = false
 
     if (!clickBackBtn & !clickNextBtn) {
         localStorage.setItem("fecha", JSON.stringify(fecha.c.month))
+        localStorage.setItem("ano", JSON.stringify(fecha.c.year))
+        disabledBackOption = true
     } else {
         let newMonth = JSON.parse(localStorage.getItem("fecha"))
-        //gitconsole.log(newMonth)
         if (clickBackBtn) {
             newMonth--
+            if (newMonth<1) {
+                newMonth = 12
+                let newYear = JSON.parse(localStorage.getItem("ano")) - 1
+                fecha.c.year = newYear
+                localStorage.setItem("ano", JSON.stringify(newYear))
+            }
+            if ((DateTime.now().c.month -1) == newMonth) disabledBackOption = true
             localStorage.setItem("fecha", JSON.stringify(newMonth))
-            //console.log(newMonth)
             fecha.c.month = newMonth
-        } else {
+            fecha.c.year = JSON.parse(localStorage.getItem("ano"))
+        } else { // clickNextBtn
             newMonth++
+            if (newMonth>12) {
+                newMonth = 1
+                let newYear = JSON.parse(localStorage.getItem("ano")) + 1
+                fecha.c.year = newYear
+                localStorage.setItem("ano", JSON.stringify(newYear))
+            }
+            if ((DateTime.now().c.month +2) == newMonth) disabledNextOption = true
             localStorage.setItem("fecha", JSON.stringify(newMonth))
-            //console.log(newMonth)
             fecha.c.month = newMonth
+            fecha.c.year = JSON.parse(localStorage.getItem("ano"))
         }
-        //fecha.c.month = newMonth
-        //calendar(fecha)
-        //console.log(newMonth)
     }
 
-    calendar (fecha)
+    if ((DateTime.now().c.month) == fecha.c.month) disabledBackOption = true
+    calendar (fecha, disabledBackOption, disabledNextOption)
 
 }
 
-function calendar (date){
+function calendar (date, disabledBackOption, disabledNextOption){
     //  ESTA FUNCION DIBUJA EL MES QUE SE DESEA VISUALIZAR
-    //console.log(date.setLocale('sp'))
-    //let mesMin = date.setLocale('es-ES').toFormat('MMMM') //Obtenemos el mes nombre del mes actual en español
-    //console.log(DateTime.local(2023,3).setLocale('es-ES').toFormat('MMMM'))
+
     let mesMin = DateTime.local(date.c.year,date.c.month).setLocale('es-ES').toFormat('MMMM')
     let mes = mesMin.charAt(0).toUpperCase()+mesMin.slice(1)     //Le hacemos mayuscula la primer letra
-    const dias = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado']
     fecha = (date.year).toString() + "-" + (date.month).toString() + "-01 00:00:01" //Primer dia del mes actual
-    //Fecha en formato "2022-06-01 00:05:05"
+    //Fecha en formato "2022-06-01 00:05:05" 
     nombreDia = dias[new Date (fecha).getDay()]                 //Obtengo el nombre del primer día del mes 
     firstDay = dias.indexOf(nombreDia) + 1
+    localStorage.setItem("firstDay", firstDay)
     let cantDiasMes = new Date(date.year, date.month, 0).getDate() // Con esto obtenemos la cant de dias del mes actual
     let diasHTML = ``
-    for (i=1;i<cantDiasMes+1;i++) i == 1 ? diasHTML += `<li class="firstDay day">${i}</li>` : diasHTML += `<li class="day">${i}</li>`
+    for (i=1;i<cantDiasMes+1;i++){
+        if (parseInt(localStorage.getItem("fecha")) == (DateTime.now().c.month)){ //Para dias anteriores al actual
+            if ((DateTime.now().c.day <= i)&&(weekDay(i)!='Dom')) {
+                i == 1 ? diasHTML += `<li class="firstDay day hoverClass">${i}</li>` : diasHTML += `<li class="day hoverClass">${i}</li>`
+            } else {
+                i == 1 ? diasHTML += `<li class="firstDay disabledDay">${i}</li>` 
+                    : diasHTML += `<li class=" disabledDay">${i}</li>`
+            }
+        }
+        if ((parseInt(localStorage.getItem("fecha")) > (DateTime.now().c.month))){
+            if (weekDay(i)!='Dom'){
+                i == 1 ? diasHTML += `<li class="firstDay day hoverClass">${i}</li>` : diasHTML += `<li class="day hoverClass">${i}</li>`
+            } else {
+                i == 1 ? diasHTML += `<li class="firstDay disabledDay">${i}</li>`: diasHTML += `<li class="disabledDay">${i}</li>`
+            }
+        } 
+    }
+
     let sectionCalendarHTML = `
     <div class="d-flex justify-content-between ">
         <div class="d-flex align-items-center " style="padding-left:10px">
@@ -113,33 +147,133 @@ function calendar (date){
         <li class="dayName">Sab</li>
     ` + diasHTML + `</ol> `
     document.querySelector(".calendar").innerHTML = sectionCalendarHTML
-    document.querySelector(".firstDay").setAttribute('style',`grid-column-start: ${firstDay}`)
+    document.querySelector(".firstDay").setAttribute('style',`grid-column-start: ${firstDay} !important`)
+    document.getElementById("btnBack").addEventListener("click", ()=> calculoMesAMostrar(true, false))
+    document.getElementById("btnNext").addEventListener("click", ()=> calculoMesAMostrar(false, true))
+    document.getElementById("btnBack").disabled = disabledBackOption
+    document.getElementById("btnNext").disabled = disabledNextOption
+    localStorage.setItem("value1Clicked", false)
+    document.querySelectorAll(".day").forEach(el => el.addEventListener("click", days ))
+}
+
+function days(e){
+
+    let btnClicked = e.target
+    document.querySelectorAll(".day").forEach(el => {el.removeAttribute("style")})
+    document.querySelector(".firstDay").setAttribute('style',`grid-column-start: ${localStorage.getItem("firstDay")} !important`)
+    btnClicked.style.background = 'rgba(95, 201, 205, 0.634)'
+    selectHours(btnClicked.textContent)
     
+}   
+
+function selectHours (day){
+
+    let selectHTML = `<option value="0" disabled selected>Seleccione una fecha...</option>`
+    let weekDayToM = weekDay(day)
+    if (weekDayToM != 'Dom') for (let i= 10; i < 19; i++) selectHTML += 
+        `<option value="${i}">${weekDayToM} ${day}/${localStorage.getItem("fecha")} - ${i}:00 am</option>`
+    document.getElementById("horario").innerHTML = selectHTML
+    localStorage.setItem("selectedDay", day)
+}
+
+function weekDay (day){
+    let weekDay = DateTime.local(parseInt(localStorage.getItem("ano")),parseInt(localStorage.getItem("fecha")),parseInt(day)).weekdayShort
+    let weekDayToM = weekDay.charAt(0).toUpperCase()+weekDay.slice(1)
+    return weekDayToM
+}
+
+function validacionFormTurnos () {
+
+    let validation = 0
+
+    let nombreIngresado = document.getElementById('nya').value           
+    if (nombreIngresado=="" || nombreIngresado==null) { 
+        document.querySelector(".nameTurnos").setAttribute("style", "color: rgb(215, 0, 0)")
+        validation++
+    } else { document.querySelector(".nameTurnos").setAttribute("style", "color: rgba(255,255,255,0)") }
+    let apellidoIngresado = document.getElementById('apellido').value      
+    if (apellidoIngresado=="" || apellidoIngresado==null) {
+        document.querySelector(".apellidoTurnos").setAttribute("style", "color: rgb(215, 0, 0)")
+        validation++
+    } else { document.querySelector(".apellidoTurnos").setAttribute("style", "color: rgba(255,255,255,0)") }
+    let numeroTel = parseInt(document.getElementById('telefono').value)     
+    if (isNaN(numeroTel) || numeroTel.toString().length!=10 ){   
+        document.querySelector(".telefonoTurnos").setAttribute("style", "color: rgb(215, 0, 0)")
+        validation++
+    } else { document.querySelector(".telefonoTurnos").setAttribute("style", "color: rgba(255,255,255,0)") }
+    let servicio = document.getElementById('servicio')
+    if (servicio.value=="0") {
+        document.querySelector(".servicioTurnos").setAttribute("style", "color: rgb(215, 0, 0)")
+        validation++
+    } else { document.querySelector(".servicioTurnos").setAttribute("style", "color: rgba(255,255,255,0)") }
+    let hours = document.getElementById('horario')
+    if (hours.value=="0") {
+        document.querySelector(".calendarTurnos").setAttribute("style", "color: rgb(215, 0, 0)")
+        validation++
+    } else { document.querySelector(".calendarTurnos").setAttribute("style", "color: rgba(255,255,255,0)") }
+
+    const diasAbr= ['Dom','Lun','Mar','Mié','Jue','Vier','Sáb']
+    let dayMinus = dias[diasAbr.indexOf(weekDay (localStorage.getItem("selectedDay")))]
+
+    if (validation>0) {
+        Toastify({
+            text: "Por favor, complete los campos faltantes",
+            duration: 5000,
+            close: true,
+            gravity: "top", 
+            position: "right", 
+            stopOnFocus: true,      
+            backgroundColor: "linear-gradient(to right, #992424, #9B0101)",
+            style: { background: "linear-gradient(to right, #992424, #9B0101)",},
+        }).showToast();
+    } else {
+        Swal.fire({
+            title: 'Tu turno fue reservado!',
+            text:`${nombreIngresado}, te esperamos el ${dayMinus.charAt(0).toUpperCase()+dayMinus.slice(1)} ${localStorage.getItem("selectedDay")}/${localStorage.getItem("fecha")} a las ${hours.value} hs`,
+            color: 'white',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Volver al inicio',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutUp'
+            }
+        }).then((result) => {
+            if ((result.isConfirmed) || (result.isDismissed)) window.location = "../index.html" //Dando click en el boton o escape siempre retornará al inicio de la Web
+        })
+    }
+
+    //Lo que resta hacer es anular la posibilidad de sacar un turno en el horario donde ya se reservó un turno. 
+
 }
 
 const DateTime = luxon.DateTime
+const dias = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado']
 
-let producto1 = new Producto ("Aceite de Cuidado 100 ml ABC","ACEI100",2500,0,"producto1")
-let producto2 = new Producto ("Laca de Fijacion Fuerte 300ml ABC","LAFI300",3900,0,"producto2")
-let producto3 = new Producto ("Polvo en spray 12g ABC","POLSP12",6300,0,"producto3")
-let producto4 = new Producto ("Primer Spray 250ml ABC","SPRY250",4550,0,"producto4")
+let producto1 = new Producto ("Aceite de Cuidado 100 ml ABC","ACEI100",2500,0,"producto1",
+    "Aceite ligero que se esparce fácilmente sin dejar grasoso. Reduce el frizz, sella las puntas abiertas y da un acabado brillante y suave.")
+let producto2 = new Producto ("Laca de Fijacion Fuerte 300ml ABC","LAFI300",3900,0,"producto2", 
+    "Proporciona fijación invisible, fuerte y con control duradero con un secado rápido y efectivo.")
+let producto3 = new Producto ("Polvo en spray 12g ABC","POLSP12",6300,0,"producto3",
+    "Agrega volumen y movimiento instantáneos a la vez que proporciona un levantamiento de raíces y un agarre suave.")
+let producto4 = new Producto ("Primer Spray 250ml ABC","SPRY250",4550,0,"producto4", 
+    "Proporciona un control ligero y protección contra el calor de hasta 230°C. Con formula vegana e ingredientes naturales.")
 
 //Nota: la idea es en el futuro crear una pagina html extra para que el usuario propietario de la misma pueda ingresar nuevos productos
 //desde la página, cambiar su precio o eliminarlos, así se evita hacer esto desde el código
 
 let allProducts = [producto1, producto2, producto3, producto4] //Array de objetos
+const listadoProductos = document.getElementById("productos")
+if (listadoProductos) createProductos ()
+const btnsAgregar = document.getElementsByClassName("btns-agregar")
+for (const btn of btnsAgregar) btn.addEventListener('click', () => carritoCompras(btn.id))
+
 let carrito = 0
-sessionStorage.setItem ('clickCarritoPage', false)
+localStorage.setItem ('clickCarritoPage', false)
 let clickCarrito = document.getElementById("btnCarrito")
 if (clickCarrito) clickCarrito.addEventListener("click", carritoWeb)  //Verificamos que exista el elemento, de lo contrario otros HTML  tiran error
-
-
-if (document.getElementsByClassName("calendar")) calculoMesAMostrar(false, false)
-let btnBack = document.getElementById("btnBack")
-if (btnBack) btnBack.addEventListener("click", ()=> calculoMesAMostrar(true, false))
-let btnNext = document.getElementById("btnNext")
-if (btnNext) btnNext.addEventListener("click", ()=> calculoMesAMostrar(false, true))
-
-// P E N D I E N T E S 
-// Cuando se seleccione el mes actual en turnos.html y se quiera ir al mes anterior, agregar la clase disabled al botón para deshabilitar esta opción
+if ((document.getElementsByClassName("calendar")).length!=0) calculoMesAMostrar(false, false)
+let enviarTurnos = document.getElementById("enviarBtn")
+if (enviarTurnos) enviarTurnos.addEventListener("click", validacionFormTurnos)
 
