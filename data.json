@@ -1,0 +1,11 @@
+[
+    {"nombre": "Aceite de Cuidado 100 ml ABC", "codigo": "ACEI100", "precio": 2500, "cant":0, "carrito":"producto1", 
+        "descripcion":"Aceite ligero que se esparce fácilmente sin dejar grasoso. Reduce el frizz, sella las puntas abiertas y da un acabado brillante y suave."},
+    {"nombre": "Laca de Fijacion Fuerte 300ml ABC", "codigo": "LAFI300", "precio": 3900, "cant":0, "carrito":"producto2", 
+        "descripcion":"Proporciona fijación invisible, fuerte y con control duradero con un secado rápido y efectivo."},
+    {"nombre": "Polvo en spray 12g ABC", "codigo": "POLSP12", "precio": 3600, "cant":0, "carrito":"producto3", 
+        "descripcion":"Agrega volumen y movimiento instantáneos a la vez que proporciona un levantamiento de raíces y un agarre suave."},
+    {"nombre": "Primer Spray 250ml ABC", "codigo": "SPRY250", "precio": 4550, "cant":0, "carrito":"producto4", 
+        "descripcion":"Proporciona un control ligero y protección contra el calor de hasta 230°C. Con formula vegana e ingredientes naturales."}
+    
+]

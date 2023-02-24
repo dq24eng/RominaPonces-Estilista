@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body > 
 
     <header>
         <nav class="navbar navbar-expand-lg bg-dark text-white">
@@ -79,26 +79,26 @@
         </nav>
     </header>
 
-    <section class="Turnos" > <!-- Deshabilito la seleccion de texto -->
+    <section class="Turnos" > 
 
-        <section class="reserva">
+        <section class="reserva" >
 
             <h1 class="titlesMainSection"> Reserva de turnos </h1>
 
-            <form action="turnos.php" method="get" enctype="text/plain" class="formularioLayout" id="formularioTurnos">
+            <form action="turnos.php" method="get" enctype="text/plain" class="formularioLayout" id="formularioTurnos" >
 
                 <p>Nombre:</p>
-                <input type="text" id="nya" name="nya" required class="footer__menuOptions--text" title="Nombre">  
+                <input type="text" id="nya" name="nya" required class="footer__menuOptions--text" title="Nombre" >  
                 <p class="nameTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Ingrese un nombre</p>
                 <p >Apellido:</p>
                 <input type="text" id="apellido" name="apellido" required class="footer__menuOptions--text" title="Apellido">  
-                <p class="apellidoTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Ingrese un apellido</p>
+                <p class="apellidoTurnos errorClass" style="color: rgba(255,255,255,0) ;"  onmousedown = 'return false' onselectstart = 'return false'>Ingrese un apellido</p>
                 <p>Teléfono:</p>
                 <input type="number" id="telefono" name="telefono" required class="footer__menuOptions--text" title="Telefono">  
-                <p class="telefonoTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Ingrese un numero de telefono</p>
+                <p class="telefonoTurnos errorClass" style="color: rgba(255,255,255,0) ;"  onmousedown = 'return false' onselectstart = 'return false'>Ingrese un numero de telefono</p>
                 <p>Servicio:</p>
                 <!-- Al seleccionar una opción, debiera aparecer un pequeño texto debajo aclarando costo y duración aproximada del servicio -->
-                <select id="servicio" class="footer__menuOptions--text" title="Servicio"> 
+                <select id="servicio" class="footer__menuOptions--text" title="Servicio" > 
                     <option value="0" disabled selected>Seleccione un servicio</option>
                     <option value="">Asesoramiento</option>
                     <option value="">Lavado</option>
@@ -106,8 +106,8 @@
                     <option value="">Corte</option>
                     <option value="">Coloracion</option>
                     <option value="">Tratamientos</option>
-                </select>
-                <p class="servicioTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Seleccione un servicio</p>
+                </select>   
+                <p class="servicioTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Seleccione un servicio</p> <!-- Deshabilito la seleccion de texto -->
 
                 <!-- Al seleccionar una fecha en el calendario, el menú desplegable se adapta a la misma y las opciones se muestran de la siguiente forma: FECHA SELECCIONADA + HORARIO (Variable según el día de la semana que fue seleccionado) -->
                 <div>
@@ -115,12 +115,12 @@
                 </div>
 
                 <div>
-                    <select name="horario" id="horario" class="footer__menuOptions--text" required title="Horario"> 
+                    <select name="horario" id="horario" class="footer__menuOptions--text" required title="Horario" > 
                         <option value="0" disabled selected>Seleccione una fecha...</option>
                     </select>
     
                 </div>
-                <p class="calendarTurnos errorClass" style="color: rgba(255,255,255,0) ;" onmousedown = 'return false' onselectstart = 'return false'>Seleccione un horario</p>
+                <p class="calendarTurnos errorClass" style="color: rgba(255,255,255,0) ;"  onmousedown = 'return false' onselectstart = 'return false'>Seleccione un horario</p>
                 <div>
                     <span>
                         <input type="button" value="Enviar" class="footer__menuOptions--button" id="enviarBtn">

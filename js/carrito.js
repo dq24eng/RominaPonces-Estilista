@@ -1,5 +1,7 @@
 function miCarrito () {
-
+    //Esta funcion se ejecuta una vez cargada la pagina del carrito
+    //Parsea los productos que se cargaron al carrito, crea los elementos HTML y posteriormente agrega eventos y atributos necesarios
+    //para cada elemento
     let productRow = document.createElement("div")
     let carritoProductsJSON = localStorage.getItem("carritoProducts")
     let carritoProducts = JSON.parse(carritoProductsJSON)  //Array de objetos a comprar
@@ -41,13 +43,14 @@ function miCarrito () {
     let secondChild = document.getElementById("btnComprar")                         //Asignamos a una variable el elemento que precede
     document.getElementById('carritoTotal').insertBefore(totalRow,secondChild)      //Insetamos nuevo elemento
 
-    productRow.querySelectorAll(".deleteBtn").forEach(el => el.addEventListener("click", deleteFunction ))  //Evento de escucha
+    productRow.querySelectorAll(".deleteBtn").forEach(el => el.addEventListener("click", deleteFunction ))  //Evento de eliminar item
     productRow.querySelectorAll(".cantidadInput").forEach(el => el.addEventListener("change", cambioCant))  //Evento de cambio cantidad
 
-    actualizacionPrecio()
+    actualizacionPrecio()       //Se actualiza el precio total de la compra
 }
 
 function deleteFunction(e){
+    //Funcion para elimiar items del carrito
     let btnDelClicked = e.target
     let productDelete = btnDelClicked.closest(".newElementCart").childNodes[1].childNodes[1].innerText
     let carritoProducts = JSON.parse(localStorage.getItem("carritoProducts")) 
@@ -57,12 +60,14 @@ function deleteFunction(e){
 }
 
 function cambioCant (e){
+    //Funcion de cambio de cantidad en carrito
     let newCant = e.target
-    if (newCant.value <= 0) newCant.value = 1
+    if (newCant.value <= 0) newCant.value = 1       //No se permiten cantidades igual o menores a cero
     actualizacionPrecio()
 }
 
 function actualizacionPrecio() {
+    //Funcion que lee los elementos existentes en el momento con sus cantidades y actualiza el Total a pagar 
     let total = 0
     let cartElement = document.querySelectorAll(".newElementCart").forEach((el)=> {
         let itemPrice = parseFloat(el.querySelector(".price").textContent.replace('$ ',''))
@@ -93,7 +98,7 @@ function comprarButton(){
     } else {
         Swal.fire({
             title: 'Gracias por tu compra!',
-            text: 'En breve recibirás tu producto en casa',
+            text: 'En breve recibirás tu producto.',
             color: 'white',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Volver al inicio',
